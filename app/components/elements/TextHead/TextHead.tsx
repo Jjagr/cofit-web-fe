@@ -1,10 +1,10 @@
 export enum Presets {
-    Heading1= "text-head1",
-    Heading2= "text-head2",
-    Heading3= "text-head3",
-    Heading4= "text-head4",
-    Heading5= "text-head5",
-    Heading6= "text-head6",
+    Heading1= "text-h1",
+    Heading2= "text-h2",
+    Heading3= "text-h3",
+    Heading4= "text-h4",
+    Heading5= "text-h5",
+    Heading6= "text-h6",
 }
 
 type Props = {
