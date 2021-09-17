@@ -7,6 +7,7 @@ export type Activity = {
     time: Date
     helpful: number
     comment: number
+    tag: Array<string>
 }
 
 export const DATA: Array<Activity>  = [
@@ -16,7 +17,8 @@ export const DATA: Array<Activity>  = [
         title: "My 7 Days Diet Meal Plan",
         time: new Date("September 17, 2021 15:27:00"),
         helpful: 50,
-        comment: 10
+        comment: 10,
+        tag: ["Meal"]
     },
     {
         type: ActType.MealPlan,
@@ -24,7 +26,8 @@ export const DATA: Array<Activity>  = [
         title: "My 7 Days Diet Meal Plan",
         time: new Date("September 15, 2021 07:00:00"),
         helpful: 50,
-        comment: 10
+        comment: 10,
+        tag: ["Meal"]
     },
     {
         type: ActType.MealPlan,
@@ -32,7 +35,8 @@ export const DATA: Array<Activity>  = [
         title: "My 7 Days Diet Meal Plan",
         time: new Date("September 15, 2021 07:00:00"),
         helpful: 50,
-        comment: 10
+        comment: 10,
+        tag: ["Meal"]
     },
 ];
 
