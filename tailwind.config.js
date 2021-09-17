@@ -6,6 +6,7 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     screens: {
+      xs: '480px',
       sm: '640px',
       md: '768px',
       lg: '1024px',
@@ -32,6 +33,7 @@ module.exports = {
         yellow: '#F4C13D',
         red: '#F43D3D',
       },
+      black: colors.black
     },
     spacing: {
       px: '1px',
@@ -683,6 +685,10 @@ module.exports = {
       110: '1.1',
       125: '1.25',
       150: '1.5',
+      200: '2',
+      300: '3',
+      350: '3.5',
+      400: '4',
     },
     sepia: {
       0: '0',
