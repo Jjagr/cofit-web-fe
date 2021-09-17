@@ -6,6 +6,10 @@
   @apply w-screen h-screen overflow-hidden;
 }
 
+.featureFitNestContainer {
+  @apply w-full flex items-center justify-center;
+}
+
 .videoStyle {
   @apply 
     transform absolute

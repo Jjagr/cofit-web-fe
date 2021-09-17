@@ -7,6 +7,7 @@ import Image from 'next/image'
 import styles from './Home.module.css'
 import Video from '@element/Video/Video'
 import ReactPlayer from 'react-player'
+import FeatureFitNestCard from '@module/FeatureFitNestCard/FeatureFitNestCard'
 
 const Home: NextPage = () => {
   return (
@@ -15,6 +16,9 @@ const Home: NextPage = () => {
         <Video overlay link={'assets/video/cofit-intro.mp4'} autoPlay style={"h-screen w-screen"} videoStyle={styles.videoStyle}/>
       </div>
       <div className={"h-96"}/>
+      <div className={styles.featureFitNestContainer}>
+        <FeatureFitNestCard/>
+      </div>
     </div>
   );
 };
