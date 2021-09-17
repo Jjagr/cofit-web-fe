@@ -1,0 +1,5 @@
+.nav, .content{
+    @apply
+        absolute
+        top-0
+}
