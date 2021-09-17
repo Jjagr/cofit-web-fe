@@ -51,7 +51,7 @@ const Home: NextPage = () => {
           videoStyle={styles.videoStyle}
         />
       </div>
-      <div className={"my-24 text-center text-h3 md:text-h1"}>
+      <div className={"my-24 text-center text-h5 md:text-h1"}>
         {" "}
         and <b>implement</b> it{" "}
       </div>
