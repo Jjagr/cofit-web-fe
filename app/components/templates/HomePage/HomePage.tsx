@@ -10,7 +10,7 @@ const Home: NextPage = () => {
   return (
     <div className={styles.mainContainer}>
       <div className={styles.videoContainer}>
-        <Video overlay link={'assets/video/cofit-intro.mp4'} autoPlay style="w-screen overflow-hidden -mt-16" />
+        <Video overlay link={'assets/video/cofit-intro.mp4'} autoPlay style={"h-screen w-screen"} videoStyle={styles.videoStyle}/>
       </div>
       <div className={"h-96"}/>
     </div>

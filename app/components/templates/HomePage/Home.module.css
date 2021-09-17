@@ -5,3 +5,13 @@
 .videoContainer {
   @apply w-screen h-screen overflow-hidden;
 }
+
+.videoStyle {
+  @apply 
+    transform absolute
+    xl:-top-8
+    w-full 
+    xl:h-auto h-full 
+    xl:scale-100 lg:scale-110 md:scale-200 sm:scale-350 scale-400
+    bg-black;
+}

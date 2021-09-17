@@ -6,10 +6,11 @@ type Props = {
     link: string,
     autoPlay?: boolean,
     style?: string,
+    videoStyle?: string,
     overlay?: boolean,
 }
 
-const Video = ({ link, autoPlay = false, style, overlay = false}: Props) => {
+const Video = ({ link, autoPlay = false, style, overlay = false, videoStyle}: Props) => {
     const [playing, setPlaying] = useState(false)
 
     const togglePlaying = () => setPlaying(!playing)
@@ -20,7 +21,7 @@ const Video = ({ link, autoPlay = false, style, overlay = false}: Props) => {
             onMouseLeave={togglePlaying}>
             {overlay && <div className={styles.overlay}/>}
             {autoPlay 
-                ? <ReactPlayer url={link} muted playing={playing} loop width={"100%"} height={"100%"}/>
+                ? <video src={link} muted autoPlay loop className={videoStyle}/>
                 : <ReactPlayer url={link} width={"100%"} height={"100%"}/>
             }
         </div>
