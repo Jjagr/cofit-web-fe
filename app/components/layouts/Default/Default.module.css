@@ -1,0 +1,6 @@
+.content{
+    width: 100%;
+    @apply
+        absolute
+        top-0
+}
