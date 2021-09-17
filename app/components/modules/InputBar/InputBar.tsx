@@ -3,7 +3,7 @@ import styles from './InputBar.module.css'
 type Props = {
     label?: string,
     placeholder?: string
-    password: boolean,
+    password?: boolean,
     inline: boolean,
     width: string,
     shadow: boolean,
@@ -11,7 +11,7 @@ type Props = {
     rightIcon?: JSX.Element,
     leftOnclick?: any,
     rightOnclick?: any,
-    onchange: any,
+    onchange?: any,
 }
 
 const InputBar = ({label, placeholder, password, inline, width, shadow, leftIcon, rightIcon, leftOnclick, rightOnclick, onchange}: Props) => {

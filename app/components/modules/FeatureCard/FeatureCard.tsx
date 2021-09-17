@@ -24,11 +24,9 @@ const FeatureCard = ({
   const [isHover, setIsHover] = useState(false);
   return (
     <div className={`mb-20 ${styles.card}`} style={{ width: width }}>
-      <a
-        href={link}
+      <div
         onMouseEnter={() => setIsHover(true)}
-        onMouseLeave={() => setIsHover(false)}
-      >
+        onMouseLeave={() => setIsHover(false)}>
         <div className={"relative"}>
           {isHover && (
             <div className={`absolute z-10 ${styles.fadeInImage}`}>
@@ -53,9 +51,9 @@ const FeatureCard = ({
             />
           </div>
         </div>
-        <div className="text-h2 font-bold">{title}</div>
-        <div className="text-body2 font-semibold">{subtitle}</div>
-      </a>
+        <div className="lg:text-h2 md:text-h3 text-h4 font-bold lg:my-0 my-6">{title}</div>
+        <div className="lg:text-body2 md:text-body3 text-body4 font-semibold">{subtitle}</div>
+      </div>
     </div>
   );
 };

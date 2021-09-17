@@ -1,7 +1,7 @@
 .navbar {
     padding: 24px 70px;
     @apply 
-        sticky 
+        fixed 
         top-0 
         z-50 
         flex 

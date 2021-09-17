@@ -1,0 +1,16 @@
+.mainContainer {
+    @apply 
+        absolute z-20
+        lg:w-1/2 w-4/5
+        flex flex-col
+        text-primary-50;
+}
+
+.subHeading {
+    @apply
+        mt-5
+        font-normal
+        text-center
+        lg:text-h2 sm:text-h4 text-h6
+        lg:leading-snug sm:leading-tight leading-7;
+}

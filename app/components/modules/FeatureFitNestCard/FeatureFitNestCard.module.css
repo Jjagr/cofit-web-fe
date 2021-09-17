@@ -1,0 +1,31 @@
+.mainContainer {
+    @apply bg-orange-red-gradient text-primary-50
+        lg:w-4/5 w-11/12
+        lg:px-28 md:px-16 px-4
+        lg:pb-10 md:pb-8 pb-6
+        lg:pt-0 pt-6
+        rounded-48 
+        shadow-xl;
+}
+
+.askBar {
+    @apply flex flex-row
+        items-center
+        cursor-pointer
+        transform transition-all ease-in-out duration-500
+        hover:scale-105
+        w-full
+        lg:h-16 h-12
+        px-6
+        bg-primary-100
+        shadow-lg rounded-12
+        mb-5
+        md:mt-0 mt-5;
+}
+
+.askBarPlaceholder {
+    @apply
+        ml-3
+        md:text-body1 sm:text-body2 text-body4
+        text-primary-500 ;
+}

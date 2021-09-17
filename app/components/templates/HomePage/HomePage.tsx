@@ -1,16 +1,20 @@
-import type { NextPage } from 'next'
-import { Presets, Align, Weight } from 'types/TextStyles'
-import HeadText from '@element/HeadText/HeadText'
+import type { NextPage } from "next";
+import { Presets, Align, Weight } from "types/TextStyles";
+import HeadText from "@element/HeadText/HeadText";
+import BodyText from "@element/BodyText/BodyText";
+import Head from "next/head";
+import Image from "next/image";
+import styles from "./Home.module.css";
+import Video from "@element/Video/Video";
+import { DATA, FEATURE } from "@constant/index";
+import FeatureCard from "@module/FeatureCard/FeatureCard";
+import FeatureFitNestCard from '@module/FeatureFitNestCard/FeatureFitNestCard'
+import IntroSlogan from '@module/IntroSlogan/IntroSlogan'
+import IntroFact from '@module/IntroFact/IntroFact'
 import ProfileSrc, {PostType} from '@module/ProfileSrc/ProfileSrc'
-import FeatureCard from '@module/FeatureCard/FeatureCard'
-import Video from '@element/Video/Video'
-import { DATA, FEATURE } from '@constant/index'
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from './Home.module.css'
-import ReactPlayer from 'react-player'
 
 import { useState, useEffect } from "react";
+import SubscribeCard from "@module/SubscribeCard/SubscribeCard";
 
 function useWindowSize() {
   const [windowSize, setWindowSize] = useState({
@@ -43,6 +47,7 @@ const Home: NextPage = () => {
   return (
     <div className={styles.mainContainer}>
       <div className={styles.videoContainer}>
+        <IntroSlogan />
         <Video
           overlay
           link={"assets/video/cofit-intro.mp4"}
@@ -51,9 +56,20 @@ const Home: NextPage = () => {
           videoStyle={styles.videoStyle}
         />
       </div>
-      <div className={"my-24 text-center text-h5 md:text-h1"}>
-        {" "}
-        and <b>implement</b> it{" "}
+      <IntroFact />
+
+      <div className={styles.introVision}>
+        COFIT exists to make
+        more people <span className={styles.bold}>understand </span>
+        about healthy lifestyle
+      </div>
+
+      <div className={styles.featureFitNestContainer}>
+        <FeatureFitNestCard />
+      </div>
+
+      <div className={styles.introVision}>
+        and <span className={styles.bold}>implement</span> it
       </div>
 
       {/* Feature Section */}
@@ -87,6 +103,8 @@ const Home: NextPage = () => {
           />
         </div>
       </div>
+
+      <SubscribeCard />
     </div>
   );
 };
