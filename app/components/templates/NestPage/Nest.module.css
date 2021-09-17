@@ -1,0 +1,9 @@
+
+@media (min-width: 1024px) {
+    .filter {
+        @apply w-1/4;
+    }
+    .content {
+        @apply w-3/4;
+    }
+}
