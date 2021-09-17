@@ -1,5 +1,7 @@
 import type { NextPage } from 'next'
-import Card from '@element/Card/Card'
+import { Presets, Align, Weight } from 'types/TextStyles'
+import HeadText from '@element/HeadText/HeadText'
+import BodyText from '@element/BodyText/BodyText'
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from './Home.module.css'
@@ -14,48 +16,19 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+        <HeadText
+          preset={Presets.Hero}
+          align={Align.Center}
+          text="Welcome to COFIT TEST"
+        />
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          {
-            [
-              {
-                link: "https://nextjs.org/docs",
-                title: "Documentation",
-                subtitle: "Find in-depth information about Next.js features and API"
-              },
-              {
-                link: "https://nextjs.org/learn",
-                title: "Learn",
-                subtitle: "Learn about Next.js in an interactive course with quizzes"
-              },
-              {
-                link: "https://github.com/vercel/next.js/tree/master/examples",
-                title: "Examples",
-                subtitle: "Discover and deploy boilerplate example Next.js projects"
-              },
-              {
-                link: "https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app",
-                title: "Deploy",
-                subtitle: "Instantly deploy your Next.js site to a public URL with Vercel." 
-              }
-            ].map(({link, title, subtitle}, key) => (
-              <Card 
-                key={key}
-                link={link}
-                title={title}
-                subtitle={subtitle}
-              />
-            ))
-          }
-        </div>
+        <BodyText 
+          preset={Presets.Body1}
+          align={Align.Center}
+          text="Asli susah banget mau push up aja tu
+          Kyk gimana caranya soalnya susah bgt dorong badan keatas
+          Mungkina da yang bisa jawab"
+        />
       </main>
 
       <footer className={styles.footer}>
