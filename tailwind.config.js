@@ -151,6 +151,7 @@ module.exports = {
       md: '0.375rem',
       lg: '0.5rem',
       xl: '0.75rem',
+      6: '6px',
       10: '10px',
       12: '12px',
       24: '24px',
