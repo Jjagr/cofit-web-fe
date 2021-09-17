@@ -1,0 +1,25 @@
+.activitycard {
+    position: relative;
+    border-radius: 36px;
+    background-position: center;
+    @apply
+        md:w-64
+        md:h-80
+        w-56
+        h-72
+}
+
+.overlay {
+    background: rgba(39, 39, 42, 0.4);
+    border-radius: 36px;
+    overflow: hidden;
+    height: 100%;
+    z-index: 2;
+    @apply
+        flex
+        flex-col-reverse
+        md:px-5
+        md:pb-4
+        px-3
+        pb-2
+}
