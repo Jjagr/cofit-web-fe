@@ -4,8 +4,8 @@
     background-position: center;
     min-width: 208px;
     @apply
-        md:w-64
-        md:h-80
+        xl:w-64
+        xl:h-80
         w-52
         h-72
 }
