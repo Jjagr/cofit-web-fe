@@ -58,7 +58,7 @@ const QuestionCard = ({tags, question}: Props) => {
                         <IconText
                             text={question.helpful}
                             icon={<Image 
-                                src="/assets/icon/chat-alt-2-gray.svg"
+                                src="/assets/icon/thumb-up-gray.svg"
                                 alt="comment"
                                 width={20}
                                 height={20}
@@ -71,7 +71,7 @@ const QuestionCard = ({tags, question}: Props) => {
                         <IconText
                             text={question.answers}
                             icon={<Image 
-                                src="/assets/icon/thumb-up-gray.svg"
+                                src="/assets/icon/chat-alt-2-gray.svg"
                                 alt="helpful"
                                 width={20}
                                 height={20}
