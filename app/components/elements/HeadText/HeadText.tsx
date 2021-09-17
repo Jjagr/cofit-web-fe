@@ -1,16 +1,22 @@
-import { Presets, Align } from 'types/TextStyles'
+import { Presets, Align, Weight } from 'types/TextStyles'
 
 type Props = {
     preset: Presets,
     align?: Align,
-    text: string
+    weight?: Weight,
+    text: string,
+    inline?: boolean
 };
 
-const HeadText = ({preset,align,text} : Props) => {
+const HeadText = ({ preset, align, text, weight, inline = false }: Props) => {
     return (
-        <p className={[preset,(align?align:Align.Center)].join(" ")}>
-            {text}
-        </p>
+        inline
+            ? <span className={[preset, (align ? align : Align.Center), (weight ? weight : Weight.Bold)].join(" ")}>
+                {text}
+            </span>
+            : <p className={[preset, (align ? align : Align.Center), (weight ? weight : Weight.Bold)].join(" ")}>
+                {text}
+            </p>
     );
 }
 

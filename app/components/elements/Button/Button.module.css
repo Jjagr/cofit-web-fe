@@ -1,7 +1,9 @@
 .button {
-    @apply inline-block cursor-pointer
+    @apply 
+        flex
+        items-center
+        cursor-pointer
         lg:px-6 px-5
-        lg:py-2 py-1
-        hover:shadow-sm shadow-lg 
-        lg:rounded-10 rounded-6;
+        lg:py-3 py-2
+        hover:shadow-sm shadow-lg;
 }

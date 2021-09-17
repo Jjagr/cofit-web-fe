@@ -1,0 +1,9 @@
+.mainContainer {
+    @apply 
+        bg-primary-800
+        text-primary-50
+        flex
+        w-full h-24
+        px-16
+        items-center;
+}

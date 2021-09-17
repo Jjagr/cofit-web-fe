@@ -1,0 +1,19 @@
+.navbar {
+    padding: 24px 70px;
+    @apply 
+        fixed 
+        top-0 
+        z-50 
+        flex 
+        justify-between
+        w-full 
+        items-center;
+}
+
+.circle {
+    width: 48px;
+    height: 48px;
+    margin-right: 16px;
+    @apply
+        rounded-full
+}
