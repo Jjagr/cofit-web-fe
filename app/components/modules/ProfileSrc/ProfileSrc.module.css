@@ -6,3 +6,9 @@
         bg-primary-400
         rounded-full
 }
+
+@media (max-width: 720px){
+    .circle {
+        display: none;
+    }
+}
