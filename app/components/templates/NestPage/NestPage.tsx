@@ -1,8 +1,12 @@
 import styles from './Nest.module.css';
 import type { NextPage } from "next";
+import { Presets, Align } from 'types/TextStyles'
 import { DATA } from '@constant/index';
 import Button from '@element/Button/Button';
+import HeadText from '@element/HeadText/HeadText';
+import Tag, { TagColor } from '@element/Tag/Tag';
 import InputBar from '@module/InputBar/InputBar';
+import List from '@module/List/List';
 import ActivityCard from '@module/ActivityCard/ActivityCard';
 import QuestionCard from '@module/QuestionCard/QuestionCard';
 
@@ -19,7 +23,39 @@ const Nest: NextPage = () => {
             />
             <div className="flex lg:flex-row justify-center flex-col pt-10">
                 <div className={`flex flex-col ${styles.filter} lg:pr-16`}>
-                    test
+                    <div>
+                        <HeadText
+                            preset={Presets.Heading6}
+                            align={Align.Left}
+                            text="Sort By"
+                        />
+                        <div className="flex flex-row pt-2">
+                            <Tag
+                                text="Newest"
+                                color={TagColor.GRAY}
+                            />
+                            <div className="w-1" />
+                            <Tag
+                                text="Helpful"
+                                color={TagColor.ORANGE}
+                            />
+                        </div>
+                    </div>
+                    <div className="pt-6">
+                        <List
+                            head="By Content"
+                            items={["All","Questions","Activities"]}
+                            checkbox={false}
+                        />
+                    </div>
+                    <div className="pt-6">
+                        <List
+                            head="Tag"
+                            items={["Workout","Exercise","Meal Plan","Meal","Ingredient"]}
+                            checkbox={true}
+                            name="tag"
+                        />
+                    </div>
                 </div>
                 <div className={`flex flex-col ${styles.content}`}>
                     <div className={`flex flex-row items-center overflow-x-auto justify-between`}>
