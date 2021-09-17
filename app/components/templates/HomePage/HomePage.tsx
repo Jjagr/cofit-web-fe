@@ -1,5 +1,7 @@
 import type { NextPage } from 'next'
-import Card from '@element/Card/Card'
+import { Presets, Align, Weight } from 'types/TextStyles'
+import HeadText from '@element/HeadText/HeadText'
+import BodyText from '@element/BodyText/BodyText'
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from './Home.module.css'
