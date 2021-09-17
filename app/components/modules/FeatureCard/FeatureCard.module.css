@@ -2,9 +2,53 @@
   text-align: center;
   color: inherit;
   text-decoration: none;
-  width: 500px;
 }
 
-.card image {
-  width: 500px;
+.overlay {
+  background: rgba(39, 39, 42, 0.2);
+  border-radius: 48px;
+}
+
+.imageContainer {
+  box-shadow: 3px 0px 24px 0px rgba(0,0,0,0.19);
+  -webkit-box-shadow: 3px 0px 24px 0px rgba(0,0,0,0.19);
+  -moz-box-shadow: 3px 0px 24px 0px rgba(0,0,0,0.19);
+  border-radius: 48px;
+  height: 340px;
+}
+
+.image {
+  border-radius: 48px;
+}
+
+.fadeInImage {
+  animation: fadeIn 0.5s;
+  -webkit-animation: fadeIn 0.5s;
+  -moz-animation: fadeIn 0.5s;
+  -o-animation: fadeIn 0.5s;
+  -ms-animation: fadeIn 0.5s;
+}
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
 }
