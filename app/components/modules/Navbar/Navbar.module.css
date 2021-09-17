@@ -1,0 +1,22 @@
+.navbar {
+    padding: 24px 70px;
+    @apply 
+        sticky 
+        top-0 
+        z-50 
+        flex 
+        justify-between
+        w-full 
+        text-primary-50
+        bg-opacity-0
+        items-center;
+}
+
+.circle {
+    width: 48px;
+    height: 48px;
+    margin-right: 16px;
+    @apply
+        bg-primary-50
+        rounded-full
+}
