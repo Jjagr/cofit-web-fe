@@ -1,8 +1,11 @@
-import type { NextPage } from 'next'
-import Card from '@element/Card/Card'
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from './Home.module.css'
+import type { NextPage } from "next";
+import Card from "@element/Card/Card";
+import Head from "next/head";
+import Image from "next/image";
+import styles from "./Home.module.css";
+
+import FeatureCard from "@module/FeatureCard/FeatureCard";
+import { FEATURE } from "@constant";
 
 const Home: NextPage = () => {
   return (
@@ -19,42 +22,39 @@ const Home: NextPage = () => {
         </h1>
 
         <p className={styles.description}>
-          Get started by editing{' '}
+          Get started by editing{" "}
           <code className={styles.code}>pages/index.js</code>
         </p>
 
         <div className={styles.grid}>
-          {
-            [
-              {
-                link: "https://nextjs.org/docs",
-                title: "Documentation",
-                subtitle: "Find in-depth information about Next.js features and API"
-              },
-              {
-                link: "https://nextjs.org/learn",
-                title: "Learn",
-                subtitle: "Learn about Next.js in an interactive course with quizzes"
-              },
-              {
-                link: "https://github.com/vercel/next.js/tree/master/examples",
-                title: "Examples",
-                subtitle: "Discover and deploy boilerplate example Next.js projects"
-              },
-              {
-                link: "https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app",
-                title: "Deploy",
-                subtitle: "Instantly deploy your Next.js site to a public URL with Vercel." 
-              }
-            ].map(({link, title, subtitle}, key) => (
-              <Card 
-                key={key}
-                link={link}
-                title={title}
-                subtitle={subtitle}
-              />
-            ))
-          }
+          {[
+            {
+              link: "https://nextjs.org/docs",
+              title: "Documentation",
+              subtitle:
+                "Find in-depth information about Next.js features and API",
+            },
+            {
+              link: "https://nextjs.org/learn",
+              title: "Learn",
+              subtitle:
+                "Learn about Next.js in an interactive course with quizzes",
+            },
+            {
+              link: "https://github.com/vercel/next.js/tree/master/examples",
+              title: "Examples",
+              subtitle:
+                "Discover and deploy boilerplate example Next.js projects",
+            },
+            {
+              link: "https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app",
+              title: "Deploy",
+              subtitle:
+                "Instantly deploy your Next.js site to a public URL with Vercel.",
+            },
+          ].map(({ link, title, subtitle }, key) => (
+            <Card key={key} link={link} title={title} subtitle={subtitle} />
+          ))}
         </div>
       </main>
 
@@ -64,14 +64,14 @@ const Home: NextPage = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
+          Powered by{" "}
           <span className={styles.logo}>
             <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
           </span>
         </a>
       </footer>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
