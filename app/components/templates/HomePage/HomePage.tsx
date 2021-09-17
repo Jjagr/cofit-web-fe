@@ -16,7 +16,7 @@ const Home: NextPage = () => {
       </div>
       <div className={"h-96"}/>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
