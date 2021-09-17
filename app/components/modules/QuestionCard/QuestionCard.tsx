@@ -10,11 +10,9 @@ import ProfileSrc, {PostType} from '@module/ProfileSrc/ProfileSrc';
 type Props = {
     tags?: Array<string>
     question?: any
-    helpful?: number
-    answers?: number 
 }
 
-const QuestionCard = ({tags, question, helpful, answers}: Props) => {
+const QuestionCard = ({tags, question}: Props) => {
     return (
         <div className={`${styles.questioncard}`}>
             <div className="flex justify-between">
@@ -71,7 +69,7 @@ const QuestionCard = ({tags, question, helpful, answers}: Props) => {
                     <div className="w-3" />
                     <div className={`${styles.answerdesc} flex flex-row`}>
                         <IconText
-                            text={`20`}
+                            text={question.answers}
                             icon={<Image 
                                 src="/assets/icon/thumb-up-gray.svg"
                                 alt="helpful"

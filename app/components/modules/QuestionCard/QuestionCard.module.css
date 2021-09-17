@@ -1,27 +1,17 @@
 .questioncard {
-  width: 374px;
   height: 112px;
   padding: 14px;
   @apply bg-primary-100
         rounded-12
-        relative;
+        relative
+        w-full;
 }
 
 @media (min-width: 768px) {
-    .questioncard {
-        width: 560px;
-        height: 240px;
-        padding: 28px;
-        @apply rounded-24;
-    }
-}
-
-@media (min-width: 1024px) {
   .questioncard {
-    width: 970px;
-    height: 264px;
-    padding: 32px;
-    @apply rounded-24;
+      height: 240px;
+      padding: 28px;
+      @apply rounded-24;
   }
 
   .helpfuldesc, .answerdesc {
@@ -34,5 +24,13 @@
 
   .answerdesc::after {
     content: ' answers';
+  }
+}
+
+@media (min-width: 1024px) {
+  .questioncard {
+    height: 264px;
+    padding: 32px;
+    @apply rounded-24;
   }
 }

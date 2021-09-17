@@ -59,14 +59,20 @@ const ActivityCard = ({ imgSrc, width, href, activity }: Props) => {
                         align={Align.Left}
                     />
                 </div>
-                <div className="pb-1">
-                    <Tag 
-                        text="Tag"
-                        color={activity.type===ActType.MealPlan 
-                            ? TagColor.ORANGE
-                            : TagColor.YELLOW
-                        }
-                    />
+                <div className="pb-1 flex flex-row">
+                    {
+                        activity.tag.map((aTag: string, idx: number) => (
+                            <div key={idx} className="pr-1">
+                                <Tag
+                                    text={aTag}
+                                    color={activity.type===ActType.MealPlan 
+                                        ? TagColor.ORANGE
+                                        : TagColor.YELLOW
+                                    }
+                                />
+                            </div>
+                        ))
+                    }
                 </div>
             </div>
         </div>
