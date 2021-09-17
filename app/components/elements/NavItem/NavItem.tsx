@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styles from './NavItem.module.css';
 
 type Props = {
@@ -8,9 +9,11 @@ type Props = {
 
 const NavItem = ({label, href}: Props) => {
     return (
-        <a href={href} className={styles.navitem}>
-            {label}
-        </a>
+        <Link href={href} passHref>
+            <div className={`${styles.navitem} cursor-pointer`}>
+                {label}
+            </div>
+        </Link>
     )
 }
 

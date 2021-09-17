@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { Presets } from 'types/TextStyles'
 import styles from './Navbar.module.css'
 import HeadText from '@element/HeadText/HeadText'
@@ -14,13 +15,15 @@ const Navbar = ({bg}: Props) => {
         <div 
             className={`${styles.navbar} ${isTransparent?"bg-opacity-0 text-primary-50":"bg-primary-50 text-primary-900"}`}
         >
-            <div className="flex justify-start items-center">
-                <div className={`${styles.circle} ${isTransparent?"bg-primary-50":"bg-primary-800"}`} />
-                <HeadText 
-                    text="COFIT"
-                    preset={Presets.Heading6}
-                />
-            </div>
+            <Link href="/" passHref>
+                <div className="flex justify-start items-center cursor-pointer">
+                        <div className={`${styles.circle} ${isTransparent?"bg-primary-50":"bg-primary-800"}`} />
+                        <HeadText
+                            text="COFIT"
+                            preset={Presets.Heading6}
+                        />
+                </div>
+            </Link>
             <div className="flex justify-end text-body2 font-medium">
                 <NavItem href="/nest" label="FitNest"/>
                 <NavItem href="/move" label="FitMove"/>
@@ -29,7 +32,10 @@ const Navbar = ({bg}: Props) => {
                 <Button
                     className="bg-secondary-orange text-primary-50"
                     color="none"
-                    onClick={()=> console.log("test")}
+                    onClick={()=> window.scrollTo({
+                        top: 10000,
+                        behavior: 'smooth'
+                    })}
                     rounded="rounded-24"
                 >Get started</Button>
             </div>

@@ -45,18 +45,18 @@ export const FEATURE = [
       image: "/image/move.png",
       link: "/",
       title: "FitMove",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra posuere sed vel commodo et. Pharetra ut tellus scelerisque nunc vitae quam et eleifend. Vitae varius orci aenean congue in nulla augue. Neque nullam dignissim orci turpis. Mi facilisi egestas sit sapien mi.",
+      desc: "Customizable workout program journal equipped with clear guidance",
     },
     {
       image: "/image/eat.png",
       link: "/",
       title: "FitEat",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra posuere sed vel commodo et. Pharetra ut tellus scelerisque nunc vitae quam et eleifend. Vitae varius orci aenean congue in nulla augue. Neque nullam dignissim orci turpis. Mi facilisi egestas sit sapien mi.",
+      desc: "Customizable meal plan journal equipped with clear detailed meal nutrition",
     },
     {
       image: "/image/log.png",
       link: "/",
       title: "FitLog",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra posuere sed vel commodo et. Pharetra ut tellus scelerisque nunc vitae quam et eleifend. Vitae varius orci aenean congue in nulla augue. Neque nullam dignissim orci turpis. Mi facilisi egestas sit sapien mi.",
+      desc: "Health tracker to boost people’s motivation to implement the healthy lifestyle.",
     },
   ];
