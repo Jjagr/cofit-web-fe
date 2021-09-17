@@ -8,7 +8,8 @@
       "@module/*": ["components/modules/*"],
       "@template/*": ["components/templates/*"],
       "@context/*": ["context/*"],
-      "@constant": ["constant"],
+      "@constant/*": ["constants/*"],
+      "@util/*": ["utils/*"],
       "@api/*": ["api/*"]
     },
     "lib": ["dom", "dom.iterable", "esnext"],
@@ -25,6 +26,6 @@
     "jsx": "preserve",
     "noImplicitAny": false
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "app/constant/index.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "app/context/index.js"],
   "exclude": ["node_modules"]
 }

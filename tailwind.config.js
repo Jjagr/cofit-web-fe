@@ -31,6 +31,7 @@ module.exports = {
       },
       secondary: {
         orange: '#F4873D',
+        "orange-light": '#FCE1CF',
         yellow: '#F4C13D',
         red: '#F43D3D',
       },

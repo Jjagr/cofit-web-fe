@@ -1,0 +1,14 @@
+.circle {
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+    @apply
+        bg-primary-400
+        rounded-full
+}
+
+@media (max-width: 720px){
+    .circle {
+        display: none;
+    }
+}

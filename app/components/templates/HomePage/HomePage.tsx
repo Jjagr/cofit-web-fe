@@ -6,12 +6,12 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "./Home.module.css";
 import Video from "@element/Video/Video";
-import ReactPlayer from "react-player";
-import { FEATURE } from "@constant";
+import { DATA, FEATURE } from "@constant";
 import FeatureCard from "@module/FeatureCard/FeatureCard";
 import FeatureFitNestCard from '@module/FeatureFitNestCard/FeatureFitNestCard'
 import IntroSlogan from '@module/IntroSlogan/IntroSlogan'
 import IntroFact from '@module/IntroFact/IntroFact'
+import ProfileSrc, {PostType} from '@module/ProfileSrc/ProfileSrc'
 
 import { useState, useEffect } from "react";
 import SubscribeCard from "@module/SubscribeCard/SubscribeCard";
