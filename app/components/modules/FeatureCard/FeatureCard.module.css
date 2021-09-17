@@ -10,11 +10,17 @@
 }
 
 .imageContainer {
-  box-shadow: 3px 0px 24px 0px rgba(0,0,0,0.19);
-  -webkit-box-shadow: 3px 0px 24px 0px rgba(0,0,0,0.19);
-  -moz-box-shadow: 3px 0px 24px 0px rgba(0,0,0,0.19);
+  box-shadow: 3px 0px 24px 0px rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 3px 0px 24px 0px rgba(0, 0, 0, 0.19);
+  -moz-box-shadow: 3px 0px 24px 0px rgba(0, 0, 0, 0.19);
   border-radius: 48px;
   height: 340px;
+}
+
+@media (max-width: 720px) {
+  .imageContainer {
+    height: 200px;
+  }
 }
 
 .image {
@@ -29,26 +35,46 @@
   -ms-animation: fadeIn 0.5s;
 }
 @keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @-moz-keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @-webkit-keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @-o-keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @-ms-keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
