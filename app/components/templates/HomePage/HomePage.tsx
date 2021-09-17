@@ -6,7 +6,7 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "./Home.module.css";
 import Video from "@element/Video/Video";
-import { DATA, FEATURE } from "@constant";
+import { DATA, FEATURE } from "@constant/index";
 import FeatureCard from "@module/FeatureCard/FeatureCard";
 import FeatureFitNestCard from '@module/FeatureFitNestCard/FeatureFitNestCard'
 import IntroSlogan from '@module/IntroSlogan/IntroSlogan'
