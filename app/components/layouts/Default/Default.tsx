@@ -8,7 +8,7 @@ type Props = {
 const Default = ({children}: Props) => {
     return (
         <div className="relative h-screen">
-            <Navbar />
+            <Navbar bg="transparent" />
             <div className={styles.content}>
                 {children}
             </div>

@@ -7,8 +7,6 @@
         flex 
         justify-between
         w-full 
-        text-primary-50
-        bg-opacity-0
         items-center;
 }
 
@@ -17,6 +15,5 @@
     height: 48px;
     margin-right: 16px;
     @apply
-        bg-primary-50
         rounded-full
 }
