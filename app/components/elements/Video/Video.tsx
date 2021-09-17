@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import ReactPlayer from 'react-player'
 import styles from './Video.module.css'
 
@@ -11,14 +10,8 @@ type Props = {
 }
 
 const Video = ({ link, autoPlay = false, style, overlay = false, videoStyle}: Props) => {
-    const [playing, setPlaying] = useState(false)
-
-    const togglePlaying = () => setPlaying(!playing)
-
     return (
-        <div className={`${style} relative`}
-            onMouseEnter={togglePlaying}
-            onMouseLeave={togglePlaying}>
+        <div className={`${style} relative`}>
             {overlay && <div className={styles.overlay}/>}
             {autoPlay 
                 ? <video src={link} muted autoPlay loop className={videoStyle}/>
