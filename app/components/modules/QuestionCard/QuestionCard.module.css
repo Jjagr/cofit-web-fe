@@ -1,0 +1,38 @@
+.questioncard {
+  width: 374px;
+  height: 112px;
+  padding: 14px;
+  @apply bg-primary-100
+        rounded-12
+        relative;
+}
+
+@media (min-width: 768px) {
+    .questioncard {
+        width: 560px;
+        height: 240px;
+        padding: 28px;
+        @apply rounded-24;
+    }
+}
+
+@media (min-width: 1024px) {
+  .questioncard {
+    width: 970px;
+    height: 264px;
+    padding: 32px;
+    @apply rounded-24;
+  }
+
+  .helpfuldesc, .answerdesc {
+    @apply text-body4 items-center font-normal
+  }
+
+  .helpfuldesc::after {
+    content: ' find this helpful';
+  }
+
+  .answerdesc::after {
+    content: ' answers';
+  }
+}
