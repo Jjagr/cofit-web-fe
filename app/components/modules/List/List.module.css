@@ -1,0 +1,8 @@
+.item {
+    padding: 10px 24px;
+}
+
+.item:hover {
+    cursor: pointer;
+    @apply bg-secondary-orange-light text-secondary-orange
+}

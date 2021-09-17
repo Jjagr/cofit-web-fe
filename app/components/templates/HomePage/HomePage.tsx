@@ -1,14 +1,14 @@
-import type { NextPage } from "next";
-import { Presets, Align, Weight } from "types/TextStyles";
-import HeadText from "@element/HeadText/HeadText";
-import BodyText from "@element/BodyText/BodyText";
-import Head from "next/head";
-import Image from "next/image";
-import styles from "./Home.module.css";
-import Video from "@element/Video/Video";
-import ReactPlayer from "react-player";
-import { FEATURE } from "@constant";
-import FeatureCard from "@module/FeatureCard/FeatureCard";
+import type { NextPage } from 'next'
+import { Presets, Align, Weight } from 'types/TextStyles'
+import HeadText from '@element/HeadText/HeadText'
+import ProfileSrc, {PostType} from '@module/ProfileSrc/ProfileSrc'
+import FeatureCard from '@module/FeatureCard/FeatureCard'
+import Video from '@element/Video/Video'
+import { DATA, FEATURE } from '@constant/index'
+import Head from 'next/head'
+import Image from 'next/image'
+import styles from './Home.module.css'
+import ReactPlayer from 'react-player'
 
 import { useState, useEffect } from "react";
 

@@ -9,11 +9,11 @@ type Props = {
 
 const BodyText = ({preset,align,weight,text} : Props) => {
     return (
-        <p className={[preset,(align?align:Align.Center),(weight?weight:Weight.Normal)].join(" ")}>
+        <div className={[preset,(align?align:Align.Center),(weight?weight:Weight.Normal)].join(" ")}>
             {text.split("\n").map((line,idx) => (
-                idx===0 ? line : <><br/>{line}</>
+                <p key={idx}>{line}</p>
             ))}
-        </p>
+        </div>
     );
 }
 

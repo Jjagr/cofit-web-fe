@@ -18,7 +18,7 @@ const Button = ({ color, children, className, onClick, rounded }: Props) => {
             ? `${className} ${styles.button} lg:${rounded} rounded-10 bg-black text-primary-50`
             : color === "white"
             ? `${className} ${styles.button} lg:${rounded} rounded-10 bg-primary-50`
-            : `${className} ${styles.button} lg:rounded-24 rounded-12`}>
+            : `${className} ${styles.button} lg:${rounded} rounded-10`}>
             {children}
         </div>
     )

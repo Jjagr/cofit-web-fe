@@ -1,0 +1,10 @@
+.tag {
+    border-radius: 12px;
+    padding: 4px 10px;
+    width: fit-content;
+    min-width: 52px;
+    @apply
+        text-body4
+        text-center
+        font-medium;
+}
