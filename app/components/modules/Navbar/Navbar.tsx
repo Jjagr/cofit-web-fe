@@ -1,15 +1,12 @@
-import Link from 'next/link'
-import Image from 'next/image'
-import { Presets } from 'types/TextStyles'
-import styles from './Navbar.module.css'
-import HeadText from '@element/HeadText/HeadText'
-import NavItem from '@element/NavItem/NavItem'
-import Button from '@element/Button/Button'
+import { useState } from 'react';
+import { useRouter } from 'next/router';
+import Link from 'next/link';
+import Image from 'next/image';
+import styles from './Navbar.module.css';
+import makeStyles from '@mui/material/styles/makeStyles';
 import Drawer from '@mui/material/Drawer';
-import { useState } from 'react'
-import Image from 'next/image'
-import makeStyles from '@mui/material/styles/makeStyles'
-import { useRouter } from 'next/router'
+import NavItem from '@element/NavItem/NavItem';
+import Button from '@element/Button/Button';
 
 type Props = {
     bg: "transparent" | "white"
