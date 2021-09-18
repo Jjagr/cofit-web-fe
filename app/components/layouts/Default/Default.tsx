@@ -1,19 +1,38 @@
 import styles from './Default.module.css';
 import Navbar from '@module/Navbar/Navbar';
 import Footer from '@module/Footer/Footer';
+import { useEffect, useState } from 'react';
 
 type Props = {
     children: React.ReactNode
 }
 
-const Default = ({children}: Props) => {
+const Default = ({ children }: Props) => {
+    const [clearNavbar, setClearNavbar] = useState(true)
+    let listener: any = null
+
+    useEffect(() => {
+        listener = document.addEventListener("scroll", e => {
+            var scrolled: any = document.scrollingElement?.scrollTop
+            if (scrolled >= window.screen.height) {
+                setClearNavbar(false)
+            } else {
+                setClearNavbar(true)
+            }
+        })
+
+        return () => {
+            document.removeEventListener("scroll", listener)
+        }
+    }, [])
+
     return (
         <div className="relative h-screen">
-            <Navbar bg="transparent" />
+            <Navbar bg={clearNavbar ? "transparent" : "white"} />
             <div className={styles.content}>
                 {children}
             </div>
-            <Footer/>
+            <Footer />
         </div>
     )
 }
