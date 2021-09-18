@@ -5,16 +5,27 @@ type Props = {
     align?: Align,
     weight?: Weight,
     text: string,
-    inline?: boolean
+    inline?: boolean,
+    color?: string
 };
 
-const HeadText = ({ preset, align, text, weight, inline = false }: Props) => {
+const HeadText = ({ preset, align, text, weight, inline = false, color }: Props) => {
     return (
         inline
-            ? <span className={[preset, (align ? align : Align.Center), (weight ? weight : Weight.Bold)].join(" ")}>
+            ? <span className={[
+                preset,
+                (align ? align : Align.Center),
+                (weight ? weight : Weight.Bold),
+                (color ? color : "")
+            ].join(" ")}>
                 {text}
             </span>
-            : <p className={[preset, (align ? align : Align.Center), (weight ? weight : Weight.Bold)].join(" ")}>
+            : <p className={[
+                preset,
+                (align ? align : Align.Center),
+                (weight ? weight : Weight.Bold),
+                (color ? color : "")
+            ].join(" ")}>
                 {text}
             </p>
     );
