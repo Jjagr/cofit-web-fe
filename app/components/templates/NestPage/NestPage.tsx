@@ -12,6 +12,7 @@ import InputBar from '@module/InputBar/InputBar';
 import List from '@module/List/List';
 import ActivityCard from '@module/ActivityCard/ActivityCard';
 import QuestionCard from '@module/QuestionCard/QuestionCard';
+import { route } from 'next/dist/server/router';
 
 const Nest: NextPage = () => {
     const askRef = useRef<HTMLInputElement>();
@@ -120,7 +121,7 @@ const Nest: NextPage = () => {
                             color="none"
                             rounded="rounded-10"
                             className="bg-secondary-orange text-primary-50 w-48"
-                            onClick={()=>console.log("test")}
+                            onClick={()=>router.push('move')}
                         >See More...</Button>
                     </div>
                     <div className="mt-9">
