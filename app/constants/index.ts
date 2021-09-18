@@ -23,7 +23,7 @@ export const QUESTIONS: Array<any> = [
     tags: ["Weight Loss", "Meal Plan"],
     answer: `Banyak orang yang mengatakan cara menguruskan badan adalah dengan berolahraga, tidak melewatkan sarapan, hanya boleh makan makanan bersih, dll. Tetapi sebenarnya cara menurunkan berat badan pada intinya adalah kalori defisit, 
 Apa itu kalori defisit? Kalori defisit adalah keadaan dimana jumlah energi yang masuk (bisa dihitung dari makanan yang kita makan) lebih sedikit dibandingkan jumlah energi yang keluar (bisa dihitung dari aktivitas) selama 1 hari. 
-Untuk mengetahui estimasi jumlah energi yang keluar pada satu hari atau Total Daily Enery Expenditure (TDEE) dapat menggunakan kalkulator pada website ini https://tdeecalculator.net/.
+Untuk mengetahui estimasi jumlah energi yang keluar pada satu hari atau Total Daily Energy Expenditure (TDEE) dapat menggunakan kalkulator pada website ini https://tdeecalculator.net/.
 Dari penjelasan sebelumnya, ternyata kita jadi tahu kalau sebenarnya kita boleh makan apapun termasuk makanan enak selama kita berhasil berada pada keadaan kalori defisit pada hari tersebut. 
 Yuk, cobain berada di keadaan kalori defisit sekitar 500 cal dari TDEE kamu setiap hari selama 1 minggu, dan lihat penurunan berat badan mu!`
   },
@@ -59,7 +59,8 @@ Bila mengonsumsi makanan atau minuman seperti kopi sebelum tidur, tentunya kuali
 Bila anda memiliki gangguan tidur seperti Sleep Apnea yang menyebabkan pernapasan seseorang berhenti sementara ketika tidur, tentunya akan mengurangi kualitas tidur.
 Lingkungan tidur tentunya juga mempengaruhi kualitas tidur, bila terdapat banyak gangguan seperti kasur yang kurang nyaman juga bisa menjadi faktor kenapa anda lelah setiap kali bangun tidur.
 Blue light exposure adalah cahaya dengan energi tinggi tetapi tidak setinggi UV, blue light dihasilkan dari berbagai gawai seperti handphone, laptop, dan lain-lain. Bila kita masih sering bermain handphone sebelum tidur tentunya akan mengurangi kualitas tidur.
-Sleep Inertia adalah keadaan otak yang masih berada pada transisi tidur ke keadaan bangun, sehingga tubuh masih terasa lelah`
+Sleep Inertia adalah keadaan otak yang masih berada pada transisi tidur ke keadaan bangun, sehingga tubuh masih terasa lelah.
+Nah, supaya bangun tidur seger, perlu mengesolve problem tadi yang kamu alamin. Semoga tidur makin nyenyak ya!`
   },
 ]
 
