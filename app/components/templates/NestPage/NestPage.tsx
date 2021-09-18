@@ -1,7 +1,8 @@
 import styles from './Nest.module.css';
 import type { NextPage } from "next";
+import { useRouter } from 'next/router'
 import { Presets, Align } from 'types/TextStyles'
-import { DATA, QUESTIONS } from '@constant/index';
+import { ACTIVITIES, QUESTIONS } from '@constant/index';
 import Button from '@element/Button/Button';
 import HeadText from '@element/HeadText/HeadText';
 import Tag, { TagColor } from '@element/Tag/Tag';
@@ -11,6 +12,12 @@ import ActivityCard from '@module/ActivityCard/ActivityCard';
 import QuestionCard from '@module/QuestionCard/QuestionCard';
 
 const Nest: NextPage = () => {
+    const router = useRouter();
+
+    const clickHanlder = (id) => {
+        router.push(`nest/${id}`);
+    }
+
     return (
         <div>
             <InputBar
@@ -60,7 +67,7 @@ const Nest: NextPage = () => {
                 <div className={`flex flex-col ${styles.content}`}>
                     <div className={`flex flex-row items-center overflow-x-auto justify-between`}>
                     {
-                        DATA.map((val,idx) => (
+                        ACTIVITIES.slice(0,3).map((val,idx) => (
                             <div key={idx} className="pr-3">
                                 <ActivityCard 
                                    
@@ -82,7 +89,7 @@ const Nest: NextPage = () => {
                     <div className="mt-9">
                         {
                             QUESTIONS.map(({question, tags},idx) => (
-                                <div key={idx} className="pb-4">
+                                <div key={idx} className="mb-4 cursor-pointer" onClick={()=>clickHanlder(idx)}>
                                     <QuestionCard 
                                         tags={tags}
                                         question={question}

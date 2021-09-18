@@ -16,9 +16,9 @@ export const QUESTIONS: Array<any> = [
       title: "Gimana cara kurus tapi tetep makan enak?",
       desc: `Sebenernya udah dari lama mau kurus tapi selalu penasaran\nBisa nggak si diet tapi dengan makanan yang enak`,
       user: "Bob Daniel",
-		  time: "2021-07-05T14:48:00.000Z",
+		  time: "2021-09-05T14:48:00.000Z",
       helpful: 52,
-      answers: 5,
+      answers: 1,
     },
     tags: ["Weight Loss", "Meal Plan"],
     answer: `Banyak orang yang mengatakan cara menguruskan badan adalah dengan berolahraga, tidak melewatkan sarapan, hanya boleh makan makanan bersih, dll. Tetapi sebenarnya cara menurunkan berat badan pada intinya adalah kalori defisit, 
@@ -34,9 +34,9 @@ Yuk, cobain berada di keadaan kalori defisit sekitar 500 cal dari TDEE kamu seti
 Tapi aku selalu gatau waktu yang tepat itu jam berapa dan berapa lama.
 Apakah jam 9 sudah terlalu siang karena aku selalu biasanya jam segini`,
       user: "Caroline Anggawati",
-		  time: "2021-03-07T14:48:00.000Z",
+		  time: "2021-09-07T14:48:00.000Z",
       helpful: 55,
-      answers: 6,
+      answers: 1,
     },
     tags: ["Vitamin"],
     answer:`Terdapat banyak faktor untuk mendapatkan vitamin D bagi manusia. Salah satunya adalah durasi dan waktu ketika berjemur di bawah cahaya matahari.
@@ -49,9 +49,9 @@ Ya, jadi intinya durasi dan waktu berjemur yang tepat bergantung, tetapi untuk m
       title: "Kenapa bangun tidur selalu lelah?",
       desc: `Ini selalu kejadian semenjak kuliah, badan selalu pegel - pegel gitu`,
       user: "Doe John",
-		  time: "2020-12-27T14:48:00.000Z",
+		  time: "2021-09-12T14:48:00.000Z",
       helpful: 61,
-      answers: 5,
+      answers: 1,
     },
     tags: ["Sleep"],
     answer: `Ada banyak faktor yang memengaruhi kualitas tidur, mulai dari konsumsi makanan atau minuman, gangguan tidur, lingkungan tidur, blue light exposure, dan sleep inertia
@@ -63,33 +63,33 @@ Sleep Inertia adalah keadaan otak yang masih berada pada transisi tidur ke keada
   },
 ]
 
-export const DATA: Array<Activity>  = [
+export const ACTIVITIES: Array<Activity>  = [
     {
         type: ActType.MealPlan,
-        user: "Jacelyn Felisha",
-        title: "My 7 Days Diet Meal Plan",
+        user: "Renaldi Arlin",
+        title: "3 Months Weight Loss Program",
         time: new Date("September 17, 2021 15:27:00"),
         helpful: 50,
         comment: 10,
-        tag: ["Meal"]
+        tag: ["Weight Loss"]
     },
     {
         type: ActType.MealPlan,
         user: "Jacelyn Felisha",
-        title: "My 7 Days Diet Meal Plan",
+        title: "Vegan Meal Plan",
         time: new Date("September 15, 2021 07:00:00"),
         helpful: 50,
         comment: 10,
-        tag: ["Meal"]
+        tag: ["Diet Plan","Vegan"]
     },
     {
         type: ActType.MealPlan,
-        user: "Jacelyn Felisha",
-        title: "My 7 Days Diet Meal Plan",
+        user: "Renaldi Arlin",
+        title: "Strength Training Program",
         time: new Date("September 15, 2021 07:00:00"),
         helpful: 50,
         comment: 10,
-        tag: ["Meal"]
+        tag: ["Workout Program"]
     },
 ];
 
