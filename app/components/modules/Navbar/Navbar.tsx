@@ -7,6 +7,8 @@ import makeStyles from '@mui/material/styles/makeStyles';
 import Drawer from '@mui/material/Drawer';
 import NavItem from '@element/NavItem/NavItem';
 import Button from '@element/Button/Button';
+import HeadText from '@element/HeadText/HeadText';
+import { Presets } from 'types/TextStyles';
 
 type Props = {
     bg: "transparent" | "white"
@@ -25,12 +27,7 @@ const Navbar = ({ bg }: Props) => {
             className={`${styles.navbar} ${isTransparent ? "bg-opacity-0 text-primary-50" : "bg-primary-50 text-primary-900"}`}>
             <Link href="/" passHref>
                 <div className="flex justify-start items-center cursor-pointer">
-                        <Image
-                            src="/image/COFIT.png"
-                            alt="Logo"
-                            width={100}
-                            height={24}
-                        />
+                    <HeadText preset={Presets.Heading4} text="COFIT" color="text-transparent bg-clip-text bg-orange-red-gradient"/>
                 </div>
             </Link>
             <div className={styles.navItemDesktop}>
