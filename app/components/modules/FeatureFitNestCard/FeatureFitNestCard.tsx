@@ -1,8 +1,8 @@
 import Typical from 'react-typical'
+import { useRouter } from 'next/router'
 
 import BodyText from '@element/BodyText/BodyText'
 import HeadText from '@element/HeadText/HeadText'
-import InputBar from '@module/InputBar/InputBar'
 
 import { Presets, Weight } from 'types/TextStyles'
 
@@ -17,10 +17,12 @@ const questions = [
 ]
 
 const FeatureFitNestCard = () => {
+    const router = useRouter()
+
     return (
         <div className={styles.mainContainer}>
             <HeadText preset={Presets.Heading2} text="FitNest" />
-            <div className={styles.askBar}>
+            <div onClick={() => router.push('/nest/0')} className={styles.askBar}>
                 <Image layout="fixed" width={16} height={16} src={'/assets/icon/question-mark-circle.svg'} />
                 <Typical
                     steps={questions}
@@ -29,7 +31,7 @@ const FeatureFitNestCard = () => {
                     className={styles.askBarPlaceholder}
                 />
             </div>
-            <BodyText preset={Presets.Body2} weight={Weight.Medium} text="The place for curious and informative people to ask and give information about healthy lifestyle! You could ask anything that is basic to something advanced, you could even share your program or meal plan." />
+            <BodyText preset={Presets.Body2} weight={Weight.Medium} text="Go ahead click the bar and ask anything!. This is the place for curious and informative people to ask and give information about healthy lifestyle! You could ask anything from basic to something advanced, you could even share your program or meal plan." />
         </div>
     )
 }
