@@ -1,0 +1,34 @@
+.suggestion {
+    @apply pb-10
+}
+
+@media (min-width: 1024px) {
+    .suggestion {
+        @apply w-1/4 pb-0;
+    }
+    .content {
+        @apply w-3/4;
+    }
+}
+
+.helpfuldesc {
+    @apply text-body4 items-center font-normal text-primary-500;
+}
+
+@media (min-width: 768px){
+    .helpfuldesc::after {
+        content: ' find this helpful';
+    }
+}
+
+.question {
+    @apply h-auto border-b border-primary-200 pb-2
+}
+
+.answers {
+    @apply mt-4
+}
+
+.comment {
+    @apply text-body3 font-normal ml-9 mt-2 pt-2 border-t border-primary-200;
+}
