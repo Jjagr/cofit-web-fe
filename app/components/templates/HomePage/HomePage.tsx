@@ -1,20 +1,13 @@
 import type { NextPage } from "next";
-import { Presets, Align, Weight } from "types/TextStyles";
-import HeadText from "@element/HeadText/HeadText";
-import BodyText from "@element/BodyText/BodyText";
-import Head from "next/head";
-import Image from "next/image";
 import styles from "./Home.module.css";
+import { FEATURE } from "@constant/index";
 import Video from "@element/Video/Video";
-import { DATA, FEATURE } from "@constant/index";
 import FeatureCard from "@module/FeatureCard/FeatureCard";
-import FeatureFitNestCard from '@module/FeatureFitNestCard/FeatureFitNestCard'
-import IntroSlogan from '@module/IntroSlogan/IntroSlogan'
-import IntroFact from '@module/IntroFact/IntroFact'
-import ProfileSrc, {PostType} from '@module/ProfileSrc/ProfileSrc'
-
-import { useState, useEffect } from "react";
+import FeatureFitNestCard from '@module/FeatureFitNestCard/FeatureFitNestCard';
+import IntroSlogan from '@module/IntroSlogan/IntroSlogan';
+import IntroFact from '@module/IntroFact/IntroFact';
 import SubscribeCard from "@module/SubscribeCard/SubscribeCard";
+import { useState, useEffect } from "react";
 
 function useWindowSize() {
   const [windowSize, setWindowSize] = useState({
