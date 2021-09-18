@@ -6,6 +6,7 @@ import Tag, {TagColor} from '@element/Tag/Tag';
 import IconText from '@element/IconText/IconText';
 import HeadText from '@element/HeadText/HeadText';
 import ProfileSrc, {PostType} from '@module/ProfileSrc/ProfileSrc';
+import { useRouter } from 'next/router'
 
 type Props = {
     imgSrc?: string
@@ -15,10 +16,13 @@ type Props = {
 }
 
 const ActivityCard = ({ imgSrc, width, href, activity }: Props) => {
+    const router = useRouter();
+
     return (
         <div 
             className={styles.activitycard} 
             style={{backgroundImage: `url(${imgSrc ? imgSrc : '/image/eat.png'})`}}
+            onClick={() => router.push('/move')}
         >
             <div className={styles.overlay}>
                 <div className="flex flex-row-reverse">

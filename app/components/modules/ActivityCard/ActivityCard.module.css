@@ -4,6 +4,7 @@
     background-position: center;
     min-width: 208px;
     @apply
+        cursor-pointer
         xl:w-64
         xl:h-80
         w-52
