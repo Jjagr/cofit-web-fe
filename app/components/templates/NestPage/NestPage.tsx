@@ -1,6 +1,7 @@
 import styles from './Nest.module.css';
 import type { NextPage } from "next";
 import { useRouter } from 'next/router'
+import { useEffect, useRef } from 'react';
 import { Presets, Align } from 'types/TextStyles'
 import { ACTIVITIES, QUESTIONS } from '@constant/index';
 import { useWindowSize } from '@util/WindowSize'
@@ -13,12 +14,23 @@ import ActivityCard from '@module/ActivityCard/ActivityCard';
 import QuestionCard from '@module/QuestionCard/QuestionCard';
 
 const Nest: NextPage = () => {
+    const askRef = useRef<HTMLInputElement>();
     const router = useRouter();
     const { height, width } = useWindowSize();
 
     const clickHanlder = (id) => {
         router.push(`nest/${id}`);
     }
+
+    useEffect(() => {
+        if (askRef && askRef.current){
+            askRef.current.addEventListener("keypress", (e) => {
+                if (e.key === 'Enter') {
+                    router.push("nest/ask");
+                }
+            })
+        }
+    },[])
 
     return (
         <div>
@@ -29,6 +41,7 @@ const Nest: NextPage = () => {
                 shadow={false}
                 placeholder='Ask anything "Cara kurus gimana?"'
                 onchange={()=>{}}
+                inputRef={askRef}
             />
             <div className="flex md:flex-row justify-center flex-col md:pt-10 pt-2">
                 <div className={`flex md:flex-col flex-col-reverse ${styles.filter} lg:pr-16 md:pr-4`}>
