@@ -5,7 +5,6 @@ import UnderNav from '@layout/UnderNav/UnderNav';
 
 const App = ({ router }) => {
     const id: number = router.asPath.split('/')[2];
-    console.log(QUESTIONS[id])
 
     return (
         <UnderNav>
