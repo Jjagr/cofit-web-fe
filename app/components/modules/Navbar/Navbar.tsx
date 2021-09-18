@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { Presets } from 'types/TextStyles'
 import styles from './Navbar.module.css'
 import HeadText from '@element/HeadText/HeadText'
@@ -17,14 +18,15 @@ const Navbar = ({bg}: Props) => {
         >
             <Link href="/" passHref>
                 <div className="flex justify-start items-center cursor-pointer">
-                        <div className={`${styles.circle} ${isTransparent?"bg-primary-50":"bg-primary-800"}`} />
-                        <HeadText
-                            text="COFIT"
-                            preset={Presets.Heading6}
+                        <Image
+                            src="/assets/icon/COFIT.svg"
+                            alt="Logo"
+                            width={100}
+                            height={24}
                         />
                 </div>
             </Link>
-            <div className="flex justify-end text-body2 font-medium">
+            <div className="flex justify-end text-body2 font-medium grad">
                 <NavItem href="/nest" label="FitNest"/>
                 <NavItem href="/move" label="FitMove"/>
                 <NavItem href="/eat" label="FitEat"/>
