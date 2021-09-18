@@ -13,6 +13,8 @@ const questions = [
     "Gimana cara kurus tapi tetep makan enak?",
     1000,
     "Berapa lama dan kapan berjemur untuk vitamin D?",
+    1000,
+    "Kenapa bangun tidur selalu lelah?",
     1000
 ]
 
