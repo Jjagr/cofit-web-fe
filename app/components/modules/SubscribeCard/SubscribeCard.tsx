@@ -12,7 +12,7 @@ const SubscribeCard = () => {
     const inputEmail = useRef(null);
 
     const postEmail = () => {
-        if (inputEmail.current !== undefined && inputEmail.current !== null) {
+        if (inputEmail.current !== undefined && inputEmail.current !== null && inputEmail.current['value'] !== '') {
             fetch('https://zmhr5a0ki5.execute-api.ap-southeast-1.amazonaws.com/prod/subscriber/add', {
                 method: "POST",
                 body: JSON.stringify({
