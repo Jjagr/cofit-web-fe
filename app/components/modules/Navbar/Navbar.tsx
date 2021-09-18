@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import styles from './Navbar.module.css';
 import makeStyles from '@mui/material/styles/makeStyles';
-import Drawer from '@mui/material/Drawer';
+import Drawer from '@mui/material/SwipeableDrawer';
 import NavItem from '@element/NavItem/NavItem';
 import Button from '@element/Button/Button';
 import HeadText from '@element/HeadText/HeadText';
@@ -46,12 +46,12 @@ const Navbar = ({ bg }: Props) => {
                 <Button rounded="rounded-10" color="none" onClick={toggleOpenDrawer}>
                     <Image src="/assets/icon/menu.svg" alt="" width={24} height={24} />
                 </Button>
-                <Drawer PaperProps={{
+                <Drawer onOpen={() => {}} PaperProps={{
                     sx: {
                         border: 'none'
                     }
                 }} open={openDrawer} onClose={toggleOpenDrawer} anchor="right">
-                    <div className="w-96 flex flex-col items-center py-8">
+                    <div className="w-72 flex flex-col items-center py-8">
                         <NavItem href="/nest" label="FitNest" />
                         <NavItem href="/move" label="FitMove" />
                         <NavItem href="/eat" label="FitEat" />
