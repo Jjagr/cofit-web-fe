@@ -1,6 +1,6 @@
-const countTimePassed = (time: Date) => {
+const countTimePassed = (time: string) => {
     let now = Date.now();
-    let duration: number = (now - Date.parse(time.toISOString()))/1000;
+    let duration: number = (now - (Date.parse(time)))/1000;
     
     let durationInDays = duration / (3600*24);
     
