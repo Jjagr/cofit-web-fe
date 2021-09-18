@@ -22,7 +22,7 @@ const FeatureFitNestCard = () => {
     return (
         <div className={styles.mainContainer}>
             <HeadText preset={Presets.Heading2} text="FitNest" />
-            <div onClick={() => router.push('/nest/0')} className={styles.askBar}>
+            <div onClick={() => router.push('/nest')} className={styles.askBar}>
                 <Image layout="fixed" width={16} height={16} src={'/assets/icon/question-mark-circle.svg'} />
                 <Typical
                     steps={questions}
