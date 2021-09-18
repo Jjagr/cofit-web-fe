@@ -12,9 +12,10 @@ type Props = {
     leftOnclick?: any,
     rightOnclick?: any,
     onchange?: any,
+    inputRef?: any
 }
 
-const InputBar = ({label, placeholder, password, inline, width, shadow, leftIcon, rightIcon, leftOnclick, rightOnclick, onchange}: Props) => {
+const InputBar = ({inputRef, label, placeholder, password, inline, width, shadow, leftIcon, rightIcon, leftOnclick, rightOnclick, onchange}: Props) => {
     return (
         <div className={width}>
             {label && <label htmlFor={label} className="text-body3 font-normal">{label}</label> }
@@ -26,6 +27,7 @@ const InputBar = ({label, placeholder, password, inline, width, shadow, leftIcon
                     </div>
                 )}
                 <input
+                    ref={inputRef}
                     name={label}
                     type={password ? "password" : "text"}
                     className={leftIcon ? styles['input-icon'] : styles.input}
