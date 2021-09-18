@@ -1,7 +1,7 @@
 import styles from './Nest.module.css';
 import type { NextPage } from "next";
 import { Presets, Align } from 'types/TextStyles'
-import { DATA } from '@constant/index';
+import { DATA, QUESTIONS } from '@constant/index';
 import Button from '@element/Button/Button';
 import HeadText from '@element/HeadText/HeadText';
 import Tag, { TagColor } from '@element/Tag/Tag';
@@ -19,7 +19,7 @@ const Nest: NextPage = () => {
                 width="w-full"
                 shadow={false}
                 placeholder='Ask anything "Cara kurus gimana?"'
-                onchange={()=>console.log("test")}
+                onchange={()=>{}}
             />
             <div className="flex lg:flex-row justify-center flex-col pt-10">
                 <div className={`flex flex-col ${styles.filter} lg:pr-16`}>
@@ -80,51 +80,16 @@ const Nest: NextPage = () => {
                         >See More...</Button>
                     </div>
                     <div className="mt-9">
-                        <div className="pb-4">
-                            <QuestionCard 
-                                tags={["Workout","Chest"]}
-                                question={{
-                                    title: "Bagaimana cara Push Up",
-                                    desc: `Asli susah banget mau push up aja tu
-                                    Kyk gimana caranya soalnya susah bgt dorong badan keatas
-                                    Mungkina da yang bisa jawab`,
-                                    user: "Jacelyn Felisha",
-                                    time: new Date("September 17, 2021 15:27:00"),
-                                    helpful: 20,
-                                    answers: 5
-                                }}
-                            />
-                        </div>
-                        <div className="pb-4">
-                            <QuestionCard 
-                                tags={["Workout","Chest"]}
-                                question={{
-                                    title: "Bagaimana cara Push Up",
-                                    desc: `Asli susah banget mau push up aja tu
-                                    Kyk gimana caranya soalnya susah bgt dorong badan keatas
-                                    Mungkina da yang bisa jawab`,
-                                    user: "Jacelyn Felisha",
-                                    time: new Date("September 17, 2021 15:27:00"),
-                                    helpful: 20,
-                                    answers: 5
-                                }}
-                            />
-                        </div>
-                        <div className="pb-4">
-                            <QuestionCard 
-                                tags={["Workout","Chest"]}
-                                question={{
-                                    title: "Bagaimana cara Push Up",
-                                    desc: `Asli susah banget mau push up aja tu
-                                    Kyk gimana caranya soalnya susah bgt dorong badan keatas
-                                    Mungkina da yang bisa jawab`,
-                                    user: "Jacelyn Felisha",
-                                    time: new Date("September 17, 2021 15:27:00"),
-                                    helpful: 20,
-                                    answers: 5
-                                }}
-                            />
-                        </div>
+                        {
+                            QUESTIONS.map(({question, tags},idx) => (
+                                <div key={idx} className="pb-4">
+                                    <QuestionCard 
+                                        tags={tags}
+                                        question={question}
+                                    />
+                                </div>
+                            ))
+                        }
                     </div>
                 </div>
             </div>

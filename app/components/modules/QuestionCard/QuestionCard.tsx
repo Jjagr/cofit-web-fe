@@ -50,7 +50,7 @@ const QuestionCard = ({tags, question}: Props) => {
                 <ProfileSrc
                     profile={question.user}
                     icon={true}
-                    time={new Date("September 15, 2021 07:00:00")}
+                    time={new Date(question.time)}
                     postType={PostType.QUESTION}
                 />
                 <div className="flex flex-row">
