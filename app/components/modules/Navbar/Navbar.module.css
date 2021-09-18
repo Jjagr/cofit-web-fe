@@ -10,6 +10,14 @@
         items-center;
 }
 
+.navItemDesktop {
+    @apply md:flex hidden justify-end text-body2 font-medium;
+}
+
+.navItemMobile {
+    @apply md:hidden inline-block;
+}
+
 .circle {
     width: 48px;
     height: 48px;
