@@ -1,14 +1,12 @@
-import Link from 'next/link'
-import { Presets } from 'types/TextStyles'
-import styles from './Navbar.module.css'
-import HeadText from '@element/HeadText/HeadText'
-import NavItem from '@element/NavItem/NavItem'
-import Button from '@element/Button/Button'
+import { useState } from 'react';
+import { useRouter } from 'next/router';
+import Link from 'next/link';
+import Image from 'next/image';
+import styles from './Navbar.module.css';
+import makeStyles from '@mui/material/styles/makeStyles';
 import Drawer from '@mui/material/Drawer';
-import { useState } from 'react'
-import Image from 'next/image'
-import makeStyles from '@mui/material/styles/makeStyles'
-import { useRouter } from 'next/router'
+import NavItem from '@element/NavItem/NavItem';
+import Button from '@element/Button/Button';
 
 type Props = {
     bg: "transparent" | "white"
@@ -27,11 +25,12 @@ const Navbar = ({ bg }: Props) => {
             className={`${styles.navbar} ${isTransparent ? "bg-opacity-0 text-primary-50" : "bg-primary-50 text-primary-900"}`}>
             <Link href="/" passHref>
                 <div className="flex justify-start items-center cursor-pointer">
-                    <div className={`${styles.circle} ${isTransparent ? "bg-primary-50" : "bg-primary-800"}`} />
-                    <HeadText
-                        text="COFIT"
-                        preset={Presets.Heading6}
-                    />
+                        <Image
+                            src="/assets/icon/COFIT.svg"
+                            alt="Logo"
+                            width={100}
+                            height={24}
+                        />
                 </div>
             </Link>
             <div className={styles.navItemDesktop}>

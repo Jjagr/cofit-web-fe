@@ -1,5 +1,5 @@
 .navbar {
-    padding: 24px 70px;
+    padding: 24px 20px;
     @apply 
         fixed 
         top-0 
@@ -8,6 +8,12 @@
         justify-between
         w-full 
         items-center;
+}
+
+@media (min-width: 768px){
+    .navbar {
+        padding: 24px 70px;
+    }
 }
 
 .navItemDesktop {

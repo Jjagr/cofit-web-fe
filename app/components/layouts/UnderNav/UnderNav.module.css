@@ -1,5 +1,11 @@
 .content {
     overflow: hidden;
     margin-top: 96px;
-    padding: 40px 70px;
+    padding: 40px 20px;
+}
+
+@media (min-width: 768px){
+    .content{
+        padding: 40px 70px;
+    }
 }

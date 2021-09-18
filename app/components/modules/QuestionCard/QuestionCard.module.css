@@ -1,5 +1,5 @@
 .questioncard {
-  height: 112px;
+  min-height: 112px;
   padding: 14px;
   @apply bg-primary-100
         rounded-12

@@ -1,38 +1,13 @@
 import type { NextPage } from "next";
 import styles from "./Home.module.css";
 import { FEATURE } from "@constant/index";
+import { useWindowSize } from '@util/WindowSize'
 import Video from "@element/Video/Video";
 import FeatureCard from "@module/FeatureCard/FeatureCard";
 import FeatureFitNestCard from '@module/FeatureFitNestCard/FeatureFitNestCard';
 import IntroSlogan from '@module/IntroSlogan/IntroSlogan';
 import IntroFact from '@module/IntroFact/IntroFact';
 import SubscribeCard from "@module/SubscribeCard/SubscribeCard";
-import { useState, useEffect } from "react";
-
-function useWindowSize() {
-  const [windowSize, setWindowSize] = useState({
-    width: 0,
-    height: 0,
-  });
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      const handleResize = () => {
-        setWindowSize({
-          width: window.innerWidth,
-          height: window.innerHeight,
-        });
-      };
-
-      window.addEventListener("resize", handleResize);
-
-      handleResize();
-
-      return () => window.removeEventListener("resize", handleResize);
-    }
-  }, []);
-  return windowSize;
-}
 
 const Home: NextPage = () => {
   const { height, width } = useWindowSize();

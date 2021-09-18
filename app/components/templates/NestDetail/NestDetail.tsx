@@ -28,7 +28,7 @@ const NestDetail = ({data}:Props) => {
                 onchange={()=>{}}
             />
             <div className="flex lg:flex-row justify-center flex-col pt-10">
-                <div className={`flex flex-col ${styles.suggestion} lg:pr-16`}>
+                <div className={`flex flex-col ${styles.suggestion} lg:pr-16 lg:block hidden`}>
                     <HeadText
                         preset={Presets.Heading6}
                         align={Align.Left}

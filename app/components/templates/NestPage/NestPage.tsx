@@ -3,6 +3,7 @@ import type { NextPage } from "next";
 import { useRouter } from 'next/router'
 import { Presets, Align } from 'types/TextStyles'
 import { ACTIVITIES, QUESTIONS } from '@constant/index';
+import { useWindowSize } from '@util/WindowSize'
 import Button from '@element/Button/Button';
 import HeadText from '@element/HeadText/HeadText';
 import Tag, { TagColor } from '@element/Tag/Tag';
@@ -13,6 +14,7 @@ import QuestionCard from '@module/QuestionCard/QuestionCard';
 
 const Nest: NextPage = () => {
     const router = useRouter();
+    const { height, width } = useWindowSize();
 
     const clickHanlder = (id) => {
         router.push(`nest/${id}`);
@@ -28,9 +30,9 @@ const Nest: NextPage = () => {
                 placeholder='Ask anything "Cara kurus gimana?"'
                 onchange={()=>{}}
             />
-            <div className="flex lg:flex-row justify-center flex-col pt-10">
-                <div className={`flex flex-col ${styles.filter} lg:pr-16`}>
-                    <div>
+            <div className="flex md:flex-row justify-center flex-col md:pt-10 pt-2">
+                <div className={`flex md:flex-col flex-col-reverse ${styles.filter} lg:pr-16 md:pr-4`}>
+                    {width > 768 ? <div>
                         <HeadText
                             preset={Presets.Heading6}
                             align={Align.Left}
@@ -48,14 +50,36 @@ const Nest: NextPage = () => {
                             />
                         </div>
                     </div>
-                    <div className="pt-6">
-                        <List
+                    : <select className={styles.dropdown}>
+                        <option value="" disabled selected hidden>Sort By</option>
+                        <option value="new" className="hover:bg-primary-200 bg-primary-100">
+                            Newest
+                        </option>
+                        <option value="help" className="hover:bg-primary-200 bg-primary-100">
+                            Helpful
+                        </option>
+                    </select> 
+                    }
+                    <div className="md:pt-6">
+                        {width > 768 
+                        ? <List
                             head="By Content"
                             items={["All","Questions","Activities"]}
                             checkbox={false}
                         />
+                        : <div className="flex flex-row">
+                            {["All","Questions","Activities"].map((tag,idx) => (
+                                <div key={idx} className="pr-4">
+                                    <Tag
+                                        color={idx===0 ? TagColor.ORANGE : TagColor.GRAY}
+                                        text={tag}
+                                    />
+                                </div>
+                            ))}
+                        </div>
+                        }
                     </div>
-                    <div className="pt-6">
+                    <div className="pt-6 md:block hidden">
                         <List
                             head="Tag"
                             items={["Workout","Exercise","Meal Plan","Meal","Ingredient"]}
@@ -67,7 +91,7 @@ const Nest: NextPage = () => {
                 <div className={`flex flex-col ${styles.content}`}>
                     <div className={`flex flex-row items-center overflow-x-auto justify-between`}>
                     {
-                        ACTIVITIES.slice(0,3).map((val,idx) => (
+                        ACTIVITIES.slice(0,(width>1024 ? 3 : 2)).map((val,idx) => (
                             <div key={idx} className="pr-3">
                                 <ActivityCard 
                                    
