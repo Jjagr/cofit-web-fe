@@ -26,7 +26,7 @@ const Navbar = ({ bg }: Props) => {
             <Link href="/" passHref>
                 <div className="flex justify-start items-center cursor-pointer">
                         <Image
-                            src="/assets/icon/COFIT.svg"
+                            src="/image/COFIT.png"
                             alt="Logo"
                             width={100}
                             height={24}
