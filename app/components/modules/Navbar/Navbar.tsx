@@ -33,10 +33,10 @@ const Navbar = ({ bg }: Props) => {
                         />
                 </div>
             </Link>
-            <div className="flex justify-end text-body2 font-medium grad">
-                <NavItem href="/nest" label="FitNest"/>
-                <NavItem href="/move" label="FitMove"/>
-                <NavItem href="/eat" label="FitEat"/>
+            <div className={styles.navItemDesktop}>
+                <NavItem href="/nest" label="FitNest" />
+                <NavItem href="/move" label="FitMove" />
+                <NavItem href="/eat" label="FitEat" />
                 <Button
                     className="bg-secondary-orange text-primary-50"
                     color="none"
