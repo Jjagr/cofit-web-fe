@@ -1,14 +1,14 @@
 import Head from 'next/head';
-import UnderNav from '@layout/UnderNav/UnderNav';
+import Default from '@layout/Default/Default';
 import ComingSoonPage from '@template/ComingSoonPage/ComingSoonPage';
 
 const App = () => (
-    <UnderNav>
+    <Default>
       <Head>
         <title>FitEat</title>
       </Head>
       <ComingSoonPage/>
-    </UnderNav>
+    </Default>
 );
   
 export default App;

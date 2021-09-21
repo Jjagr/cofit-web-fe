@@ -1,14 +1,14 @@
 import Head from 'next/head';
-import UnderNav from '@layout/UnderNav/UnderNav';
+import Default from '@layout/Default/Default';
 import Nest from '@template/NestPage/NestPage';
 
 const App = () => (
-    <UnderNav>
+    <Default>
       <Head>
         <title>FitNest</title>
       </Head>
       <Nest />
-    </UnderNav>
+    </Default>
 );
   
 export default App;  

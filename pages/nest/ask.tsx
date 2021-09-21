@@ -1,10 +1,10 @@
-import UnderNav from '@layout/UnderNav/UnderNav';
+import Default from '@layout/Default/Default';
 import ComingSoonPage from '@template/ComingSoonPage/ComingSoonPage';
 
 const App = () => (
-    <UnderNav>
+    <Default>
       <ComingSoonPage/>
-    </UnderNav>
+    </Default>
 );
   
 export default App;
