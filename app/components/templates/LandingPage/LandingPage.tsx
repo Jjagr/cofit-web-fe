@@ -32,9 +32,18 @@ const Landing: NextPage = () => {
             </button>
           </div>
         </div>
-        <div className="absolute right-20 top-40">
+        <div className="absolute right-20 top-40 z-10">
           <Image src={"/image/hero.svg"} alt={""} height={788} width={638} />
         </div>
+        <div className="absolute top-96" >
+          <Image
+            src={"/assets/vector/bottom-web.svg"}
+            alt={""}
+            height={788}
+            width={1440}
+          />
+        </div>
+        <div className="h-96 w-full mt-96 bg-primary-50"></div>
       </div>
 
       <div className={`${styles.mainContainer} xl:hidden`}>
@@ -64,6 +73,15 @@ const Landing: NextPage = () => {
             </button>
           </div>
         </div>
+        <div className="absolute" style={{top: "950px"}}>
+          <Image
+            src={"/assets/vector/bottom-phone.svg"}
+            alt={""}
+            height={788}
+            width={1280}
+          />
+        </div>
+        <div className="h-96 mt-40 w-full bg-primary-50"></div>
       </div>
     </>
   );
