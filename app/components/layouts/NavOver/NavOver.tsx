@@ -2,6 +2,7 @@ import styles from './NavOver.module.css';
 import Navbar from '@module/Navbar/Navbar';
 import Footer from '@module/Footer/Footer';
 import { useEffect, useState } from 'react';
+import TopNav from '@module/TopNav/TopNav';
 
 type Props = {
     children: React.ReactNode
@@ -27,8 +28,8 @@ const NavOver = ({ children }: Props) => {
     }, [])
 
     return (
-        <div className="relative h-screen">
-            <Navbar bg={clearNavbar ? "transparent" : "white"} />
+        <div className="relative h-screen container mx-auto">
+            <TopNav bg={clearNavbar ? "transparent" : "white"} />
             <div className={styles.content}>
                 {children}
             </div>

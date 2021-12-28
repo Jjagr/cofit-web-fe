@@ -1,13 +1,14 @@
-import Head from 'next/head';
-import Default from '@layout/NavOver/NavOver';
-import Home from '@template/HomePage/HomePage';
+import Head from "next/head";
+import Default from "@layout/NavOver/NavOver";
+import Home from "@template/HomePage/HomePage";
+import Landing from "@template/LandingPage/LandingPage";
 
 const App = () => (
-  <Default> 
+  <Default>
     <Head>
-        <title>COFIT</title>
+      <title>COFIT</title>
     </Head>
-    <Home />
+    <Landing />
   </Default>
 );
 

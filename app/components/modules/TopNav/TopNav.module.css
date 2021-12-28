@@ -1,0 +1,16 @@
+.navItemDesktop {
+  @apply md:flex hidden justify-end text-body2 font-medium;
+}
+
+.waveTop {
+  background-image: url(/assets/vector/navigation.svg);
+  height: 200px;
+  width: 100vw;
+}
+
+@media (min-width: 768px){
+    .waveTop{
+        height: 200px;
+        width: 384px;
+    }
+}

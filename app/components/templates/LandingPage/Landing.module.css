@@ -1,0 +1,10 @@
+.mainContainer {
+  @apply overflow-x-hidden;
+  background: linear-gradient(
+    112.82deg,
+    #f4873d 14.75%,
+    #f43d3d 85.59%,
+    #f43d3d 85.59%
+  );
+  min-height: 150vh;
+}
