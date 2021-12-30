@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import styles from "./Landing.module.css";
 import { useWindowSize } from "@util/WindowSize";
 import Image from "next/image";
+import TestiContainer from "@module/TestiContainer/TestiContainer";
 
 const Landing: NextPage = () => {
   const { height, width } = useWindowSize();
@@ -35,17 +36,47 @@ const Landing: NextPage = () => {
         <div className="absolute right-20 top-40 z-10">
           <Image src={"/image/hero.svg"} alt={""} height={788} width={638} />
         </div>
-        <div className="absolute top-96" >
+        <div className="absolute top-96 w-full">
           <Image
             src={"/assets/vector/bottom-web.svg"}
             alt={""}
             height={788}
-            width={1440}
+            width={1550}
           />
         </div>
-        <div className="h-96 w-full mt-96 bg-primary-50"></div>
+        <div className="absolute top-[1000px] w-full">
+          <div className="relative">
+            <Image
+              src={"/assets/vector/testi-web.svg"}
+              alt={""}
+              height={788}
+              width={1550}
+            />
+            <div className="absolute top-80 pl-[100px] text-h2 font-bold text-secondary-orange">Apa kata mereka tentang COFIT?</div>
+          </div>
+        </div>
+        <div className="flex mt-[1000px] mx-[160px]">
+          <div className="w-2/3">
+            <Image
+              src={"/image/mascot-1.svg"}
+              alt={""}
+              height={788}
+              width={638}
+            />
+          </div>
+          <div className="w-full flex justify-center mt-40">
+            <TestiContainer
+              data={[
+                { text: "Test", name: "tes", image: "tes" },
+                { text: "Test1", name: "tes", image: "tes" },
+                { text: "Test2", name: "tes", image: "tes" },
+              ]}
+            />
+          </div>
+        </div>
       </div>
 
+      {/* Mobile Top App Styling */}
       <div className={`${styles.mainContainer} xl:hidden`}>
         <div className="w-full flex justify-center mt-8">
           <Image src={"/image/hero.svg"} alt={""} height={788} width={600} />
@@ -73,7 +104,7 @@ const Landing: NextPage = () => {
             </button>
           </div>
         </div>
-        <div className="absolute" style={{top: "950px"}}>
+        <div className="absolute" style={{ top: "950px" }}>
           <Image
             src={"/assets/vector/bottom-phone.svg"}
             alt={""}
