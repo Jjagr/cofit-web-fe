@@ -1,58 +1,46 @@
+import React, { useState } from "react";
 import styles from "./FeatureCard.module.css";
 import Image from "next/image";
 import "tailwindcss/tailwind.css";
-
-import { useState } from "react";
+import Button from "@element/Button/Button";
 
 type Props = {
   image: string;
-  link: string;
   title: string;
-  subtitle: string;
-  width: string;
-  height: number;
+  caption: React.ReactNode;
+  alignText: 'left' | 'right';
 };
 
 const FeatureCard = ({
-  link,
   title,
-  subtitle,
+  caption,
   image,
-  width,
-  height,
+  alignText,
 }: Props) => {
   const [isHover, setIsHover] = useState(false);
+  const leftAlign: boolean = alignText==='left';
+
   return (
-    <div className={`mb-20 ${styles.card}`} style={{ width: width }}>
-      <div
-        onMouseEnter={() => setIsHover(true)}
-        onMouseLeave={() => setIsHover(false)}>
-        <div className={"relative"}>
-          {isHover && (
-            <div className={`absolute z-10 ${styles.fadeInImage}`}>
-              <div
-                className={`text-h3 font-bold text-primary-50 flex items-center justify-center ${styles.overlay}`}
-                style={{
-                  height: height,
-                  width: width,
-                }}
-              >
-                Coming Soon
-              </div>
-            </div>
-          )}
-          <div className={styles.imageContainer}>
-            <Image
-              alt={title}
-              src={image}
-              width={width}
-              height={height}
-              className={styles.image}
-            />
-          </div>
+    <div className={`${styles.cardContainer} flex-col-reverse ${leftAlign ? "xl:flex-row" : "xl:flex-row-reverse"}`}>
+      <div className={`${styles.cardText} ${leftAlign ? "xl:text-left" : "xl:text-right"} text-center`}>
+        <p className={`${styles.cardTitle}`}>{title}</p>
+        <div className={`${styles.cardCaption} xl:mb-8`}>
+          {caption}
         </div>
-        <div className="lg:text-h2 md:text-h3 text-h4 font-bold lg:my-0 my-6">{title}</div>
-        <div className="lg:text-body2 md:text-body3 text-body4 font-semibold">{subtitle}</div>
+        <Button
+          color="none"
+          className="xl:w-[235px] bg-orange-gradient text-primary-50 font-bold xs:rounded-24"
+          onClick={() => {}}
+          rounded="rounded-24"
+        >Yuk Coba Sekarang!</Button>
+      </div>
+      <div className={`${styles.cardImg}`}>
+        <Image 
+          src={image}
+          alt="feature"
+          width={454}
+          height={320}
+        />
       </div>
     </div>
   );
