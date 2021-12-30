@@ -2,7 +2,12 @@ const colors = require('tailwindcss/colors');
 
 module.exports = {
   important: true,
-  purge: [],
+  mode: 'jit',
+  purge: [
+    './public/**/*.html',
+    './app/**/*.{js,ts,jsx,tsx}',
+    './pages/**/*.{js,ts,jsx,tsx}',
+  ],
   presets: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
@@ -93,6 +98,7 @@ module.exports = {
     backgroundColor: (theme) => theme('colors'),
     backgroundImage: {
       none: 'none',
+      'orange-gradient': 'linear-gradient(112.82deg, #F4873D 14.75%, #F43D3D 85.59%, #F43D3D 85.59%)',
       'orange-yellow-y': 'linear-gradient(180deg, #F4C13D 0%, #F4873D 100%)',
       'orange-yellow-gradient':
         'linear-gradient(100.87deg, #F4C13D 15.58%, #F4873D 82.82%)',
