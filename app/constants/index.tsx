@@ -45,6 +45,7 @@ type Feature = {
   title: string;
   caption: React.ReactNode;
   alignText: 'left' | 'right';
+  comingSoon?: boolean;
 }
 
 export const FEATURE : Array<Feature> = [
@@ -71,5 +72,14 @@ export const FEATURE : Array<Feature> = [
       caption: <p>
         Susun <b>program workout sesuai dengan kebutuhanmu.</b> Kalian bisa membuatnya sendiri atau mengikuti program orang lain atau <b>membagikan program</b> buatanmu!
       </p>,
+    },
+    {
+      image: "/image/feature3.png",
+      alignText: "right",
+      title: "Pola makan menjadi lebih terjaga!",
+      caption: <p>
+        Workout juga perlu dilengkapi dengan <b>nutrisi yang seimbang.</b> Kalian bisa <b>menyusun program diet</b> dengan COFIT! Selain itu, kalian juga bisa <b>memesan katering makanan sehat</b> dengan kualitas yang terjamin.
+      </p>,
+      comingSoon: true,
     },
   ];

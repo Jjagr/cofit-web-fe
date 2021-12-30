@@ -8,3 +8,9 @@
   );
   min-height: 150vh;
 }
+
+.textGradient {
+  @apply
+    text-transparent
+    bg-clip-text;
+}
