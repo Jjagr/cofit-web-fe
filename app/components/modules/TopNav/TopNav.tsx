@@ -12,9 +12,9 @@ const TopNav = ({ bg }: Props) => {
 
   return (
     <>
-      <div className="xl:hidden fixed top-0 container">
+      <div className="xl:hidden relative top-0 container">
         <div
-          className={`fixed bg-no-repeat object-contain z-10 top-0 left-0 ${styles.waveTop}`}
+          className={`absolute bg-no-repeat object-contain top-0 left-0 ${styles.waveTop}`}
         ></div>
         <div className={`fixed bg-no-repeat object-contain z-10 top-8 left-8`}>
           <Image

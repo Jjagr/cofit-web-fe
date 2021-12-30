@@ -3,6 +3,8 @@ import styles from "./Landing.module.css";
 import { useWindowSize } from "@util/WindowSize";
 import Image from "next/image";
 import TestiContainer from "@module/TestiContainer/TestiContainer";
+import FeatureCard from "@module/FeatureCard/FeatureCard";
+import { FEATURE } from "@constant/index";
 
 const Landing: NextPage = () => {
   const { height, width } = useWindowSize();
@@ -44,7 +46,44 @@ const Landing: NextPage = () => {
             width={1550}
           />
         </div>
-        <div className="absolute top-[1000px] w-full">
+        <div className="h-60 mt-80 w-full bg-primary-50"></div>
+        <div className="w-full bg-primary-50 px-[200px]">
+          <p className="text-h1 font-bold text-center">
+            Visi kami untuk
+            <span className={`bg-orange-red-gradient ${styles.textGradient}`}>
+              {" "}
+              membuat semua orang mengerti
+            </span>{" "}
+            dan
+            <span className={`bg-orange-red-gradient ${styles.textGradient}`}>
+              {" "}
+              melakukan pola hidup sehat.
+            </span>
+          </p>
+        </div>
+        <div className="h-[180px] bg-primary-50"></div>
+        <div className="w-full bg-primary-50 px-[100px] flex flex-col items-center">
+          <p
+            className={`text-h2 bg-orange-red-gradient font-bold mb-[180px] ${styles.textGradient}`}
+          >
+            COFIT App hadir untukmu!
+          </p>
+          {FEATURE.map(
+            ({ title, caption, image, alignText, comingSoon }, idx) => {
+              return (
+                <FeatureCard
+                  key={idx}
+                  title={title}
+                  caption={caption}
+                  image={image}
+                  alignText={alignText}
+                  comingSoon={comingSoon}
+                />
+              );
+            }
+          )}
+        </div>
+        <div className="absolute top-[3500px] w-full">
           <div className="relative">
             <Image
               src={"/assets/vector/testi-web.svg"}
@@ -52,10 +91,12 @@ const Landing: NextPage = () => {
               height={788}
               width={1550}
             />
-            <div className="absolute top-80 pl-[100px] text-h2 font-bold text-secondary-orange">Apa kata mereka tentang COFIT?</div>
+            <div className="absolute top-80 pl-[100px] text-h2 font-bold text-secondary-orange">
+              Apa kata mereka tentang COFIT?
+            </div>
           </div>
         </div>
-        <div className="flex mt-[1000px] mx-[160px]">
+        <div className="flex mt-[400px] mx-[160px]">
           <div className="w-2/3">
             <Image
               src={"/image/mascot-1.svg"}
@@ -78,7 +119,7 @@ const Landing: NextPage = () => {
 
       {/* Mobile Top App Styling */}
       <div className={`${styles.mainContainer} xl:hidden`}>
-        <div className="w-full flex justify-center mt-8">
+        <div className="w-full flex justify-center mt-8 z-10">
           <Image src={"/image/hero.svg"} alt={""} height={788} width={600} />
         </div>
         <div className="px-8 text-center">
@@ -112,7 +153,45 @@ const Landing: NextPage = () => {
             width={1280}
           />
         </div>
-        <div className="h-96 mt-40 w-full bg-primary-50"></div>
+        <div className="h-[76px] mt-40 w-full bg-primary-50"></div>
+        <div className="w-full bg-primary-50 px-8 pt-10">
+          <p className="lg:text-h3 text-mobileh1 text-primary-800 font-bold text-center">
+            Visi kami untuk
+            <span className={`bg-orange-red-gradient ${styles.textGradient}`}>
+              {" "}
+              membuat semua orang mengerti
+            </span>{" "}
+            dan
+            <span className={`bg-orange-red-gradient ${styles.textGradient}`}>
+              {" "}
+              melakukan pola hidup sehat.
+            </span>
+          </p>
+        </div>
+        <div className="h-[100px] w-full bg-primary-50"></div>
+        <div className="w-full bg-primary-50 px-8">
+          <p
+            className={`lg:text-h3 text-mobileh1 text-center bg-orange-red-gradient font-bold mb-[100px] xl:mb-[180px] ${styles.textGradient}`}
+          >
+            COFIT App hadir untukmu!
+          </p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 justify-items-center">
+            {FEATURE.map(
+              ({ title, caption, image, alignText, comingSoon }, idx) => {
+                return (
+                  <FeatureCard
+                    key={idx}
+                    title={title}
+                    caption={caption}
+                    image={image}
+                    alignText={alignText}
+                    comingSoon={comingSoon}
+                  />
+                );
+              }
+            )}
+          </div>
+        </div>
       </div>
     </>
   );
