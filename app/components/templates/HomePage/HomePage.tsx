@@ -14,7 +14,7 @@ const Home: NextPage = () => {
 
   return (
     <div className={styles.mainContainer}>
-      <div className={styles.videoContainer}>
+      {/* <div className={styles.videoContainer}>
         <IntroSlogan />
         <Video
           overlay
@@ -38,10 +38,10 @@ const Home: NextPage = () => {
 
       <div className={styles.introVision}>
         and <span className={styles.bold}>implement</span> it
-      </div>
+      </div> */}
 
       {/* Feature Section */}
-      <div className={"flex flex-col"}>
+      {/* <div className={"flex flex-col"}>
         <div
           className={"flex justify-evenly flex-col items-center lg:flex-row "}
         >
@@ -72,7 +72,7 @@ const Home: NextPage = () => {
         </div>
       </div>
 
-      <SubscribeCard />
+      <SubscribeCard /> */}
     </div>
   );
 };
