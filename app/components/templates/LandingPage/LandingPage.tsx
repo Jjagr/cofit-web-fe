@@ -4,7 +4,8 @@ import { useWindowSize } from "@util/WindowSize";
 import Image from "next/image";
 import TestiContainer from "@module/TestiContainer/TestiContainer";
 import FeatureCard from "@module/FeatureCard/FeatureCard";
-import { FEATURE } from "@constant/index";
+import { FEATURE, TESTIMONI } from "@constant/index";
+import CardPrestasi from "@element/CardPrestasi/CardPrestasi";
 
 const Landing: NextPage = () => {
   const { height, width } = useWindowSize();
@@ -13,7 +14,7 @@ const Landing: NextPage = () => {
     <>
       <div className={`${styles.mainContainer} hidden xl:block`}>
         <div className="mt-64 w-1/2 xl:ml-28">
-          <h1 className="text-h3 2xl:text-h2 text-primary-50 font-semibold mb-4 2xl:mb-0">
+          <h1 className="text-h2 2xl:text-h2 text-primary-50 font-semibold mb-6 2xl:mb-0">
             Ingin workout tanpa ribet?
           </h1>
           <p className="w-2/3 text-body1 text-primary-50">
@@ -83,6 +84,8 @@ const Landing: NextPage = () => {
             }
           )}
         </div>
+        <div className="h-[100px] bg-primary-50"></div>
+
         <div className="absolute top-[3500px] w-full">
           <div className="relative">
             <Image
@@ -91,13 +94,15 @@ const Landing: NextPage = () => {
               height={788}
               width={1550}
             />
-            <div className="absolute top-80 pl-[100px] text-h2 font-bold text-secondary-orange">
+            <div
+              className={`absolute top-80 pl-[100px] text-h1 font-bold bg-orange-red-gradient ${styles.textGradient}`}
+            >
               Apa kata mereka tentang COFIT?
             </div>
           </div>
         </div>
-        <div className="flex mt-[400px] mx-[160px]">
-          <div className="w-2/3">
+        <div className="flex mt-[300px] mb-[100px] mx-[160px] items-center">
+          <div className="w-11/12">
             <Image
               src={"/image/mascot-1.svg"}
               alt={""}
@@ -105,15 +110,12 @@ const Landing: NextPage = () => {
               width={638}
             />
           </div>
-          <div className="w-full flex justify-center mt-40">
-            <TestiContainer
-              data={[
-                { text: "Test", name: "tes", image: "tes" },
-                { text: "Test1", name: "tes", image: "tes" },
-                { text: "Test2", name: "tes", image: "tes" },
-              ]}
-            />
+          <div className="w-full flex justify-center pt-28">
+            <TestiContainer data={TESTIMONI} />
           </div>
+        </div>
+        <div className="px-[160px] mb-[180px]">
+          <CardPrestasi />
         </div>
       </div>
 
@@ -190,6 +192,29 @@ const Landing: NextPage = () => {
                 );
               }
             )}
+          </div>
+        </div>
+        <div className="w-full bg-primary-50">
+          <p
+            className={`lg:text-h3 text-mobileh1 text-center font-bold xl:mb-[180px] bg-orange-red-gradient ${styles.textGradient}`}
+          >
+            Apa kata mereka <br />
+            tentang COFIT!
+          </p>
+          <div
+            className="px-5 bg-no-repeat bg-cover"
+            style={{
+              backgroundImage: `url(../../../assets/vector/testi-phone.svg)`,
+              height: "100%",
+              width: "100vw",
+            }}
+          >
+            <div className="pt-24">
+              <TestiContainer data={TESTIMONI} />
+            </div>
+            <div className="my-[100px]">
+              <CardPrestasi />
+            </div>
           </div>
         </div>
       </div>

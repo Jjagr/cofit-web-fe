@@ -4,7 +4,6 @@ import Image from "next/image";
 
 type Testi = {
   name: string;
-  image: string;
   text: string;
 };
 
@@ -19,13 +18,13 @@ const TestiContainer = ({ data }: Props) => {
     <div className="flex flex-col w-full">
       <div className="flex items-center justify-between">
         <Image
-          src={"/assets/icon/play.svg"}
+          src={"/assets/icon/left.svg"}
           alt={""}
           height={32}
           width={32}
           onClick={() => setOnTop((onTop + data.length - 1) % data.length)}
         />
-        <div className={`slides relative w-full h-60 mx-8`}>
+        <div className={`slides relative w-full h-56 mx-4 md:mx-8`}>
           {data.map((item, index) => {
             return (
               <div
@@ -35,14 +34,13 @@ const TestiContainer = ({ data }: Props) => {
                 <CardTesti
                   text={item.text}
                   name={item.name}
-                  image={item.image}
                 />
               </div>
             );
           })}
         </div>
         <Image
-          src={"/assets/icon/play.svg"}
+          src={"/assets/icon/right.svg"}
           alt={""}
           height={32}
           width={32}
