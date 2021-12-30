@@ -2,7 +2,6 @@
   box-shadow: 0px -25px 50px rgba(39, 39, 42, 0.02), 0px 40px 80px rgba(39, 39, 42, 0.02), -30px 0px 60px rgba(39, 39, 42, 0.02), 30px 0px 60px rgba(39, 39, 42, 0.02);
   @apply
     w-[296px]
-    h-[413px]
     xl:w-[1240px]
     xl:h-[420px]
     max-w-full
@@ -11,7 +10,7 @@
     p-[30px]
     xl:p-[50px]
     mb-14
-    bg-primary-50
+    bg-white
     flex
     items-center
     align-middle
@@ -31,7 +30,7 @@
 
 .cardTitle {
   @apply
-    text-[18px]
+    text-mobileh2
     text-primary-800
     font-bold
     xl:text-h2
