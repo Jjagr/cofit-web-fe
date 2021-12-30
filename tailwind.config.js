@@ -40,6 +40,7 @@ module.exports = {
         yellow: '#F4C13D',
         red: '#F43D3D',
       },
+      white: '#FFFFFF',
       black: colors.black
     },
     spacing: {
@@ -313,10 +314,8 @@ module.exports = {
       body3: ['14px', { lineHeight: '20px' }],
       body4: ['12px', { lineHeight: '16px' }],
       navbar: ['20px', { lineHeight: '30px' }],
-      mobile: {
-        h1: ['22px', { lineHeight: '36px' }],
-        h1: ['18px', { lineHeight: '28px' }],
-      }
+      mobileh1: ['22px', { lineHeight: '36px' }],
+      mobileh2: ['18px', { lineHeight: '28px' }],
     },
     fontWeight: {
       thin: '100',
