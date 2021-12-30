@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Default from "@layout/NavOver/NavOver";
-import Home from "@template/HomePage/HomePage";
 import Landing from "@template/LandingPage/LandingPage";
 
 const App = () => (
