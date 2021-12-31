@@ -1,14 +1,14 @@
 import Head from "next/head";
-import Default from "@layout/NavOver/NavOver";
+import NavOver from "@layout/NavOver/NavOver";
 import Landing from "@template/LandingPage/LandingPage";
 
 const App = () => (
-  <Default>
+  <NavOver>
     <Head>
       <title>COFIT</title>
     </Head>
     <Landing />
-  </Default>
+  </NavOver>
 );
 
 export default App;

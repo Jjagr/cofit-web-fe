@@ -13,42 +13,42 @@ const Landing: NextPage = () => {
   return (
     <>
       <div className={`${styles.mainContainer} hidden xl:block`}>
-        <div className="mt-64 w-1/2 xl:ml-28">
-          <h1 className="text-h2 2xl:text-h2 text-primary-50 font-semibold mb-6 2xl:mb-0">
-            Ingin workout tanpa ribet?
-          </h1>
-          <p className="w-2/3 text-body1 text-primary-50">
-            Sekarang, workout tidak perlu lagi sambil menghitung jumlah
-            gerakanmu dan menggapai smartphonemu untuk mengganti gerakan.{" "}
-          </p>
-          <div className="mt-10 flex">
-            <button className="mr-6 py-3 px-8 font-bold text-body1 text-secondary-orange rounded-full bg-primary-50">
-              Yuk coba sekarang!
-            </button>
-            <button className="mr-6 py-3 px-8 font-bold text-body1 text-primary-50 rounded-full border-2 border-primary-50 flex items-center">
-              <p className="mr-2">Lihat video</p>
-              <Image
-                src={"/assets/icon/play.svg"}
-                alt={""}
-                height={24}
-                width={24}
-              />
-            </button>
+        <div className="flex flex-row items-center h-[calc(100vh-112px)] mt-28">
+          <div className="-mt-28 w-1/2 xl:ml-28">
+            <h1 className="text-h2 2xl:text-h2 text-primary-50 font-semibold mb-6 2xl:mb-0">
+              Ingin workout tanpa ribet?
+            </h1>
+            <p className="w-2/3 text-body1 text-primary-50">
+              Sekarang, workout tidak perlu lagi sambil menghitung jumlah
+              gerakanmu dan menggapai smartphonemu untuk mengganti gerakan.{" "}
+            </p>
+            <div className="mt-10 flex">
+              <button className="mr-6 py-3 px-8 font-bold text-body1 text-secondary-orange rounded-full bg-primary-50">
+                Yuk coba sekarang!
+              </button>
+              <button className="mr-6 py-3 px-8 font-bold text-body1 text-primary-50 rounded-full border-2 border-primary-50 flex items-center">
+                <p className="mr-2">Lihat video</p>
+                <Image
+                  src={"/assets/icon/play.svg"}
+                  alt={""}
+                  height={24}
+                  width={24}
+                />
+              </button>
+            </div>
+          </div>
+          <div className="relative w-1/2 h-full z-10">
+            <Image src={"/image/hero.svg"} alt={""} layout="fill" />
           </div>
         </div>
-        <div className="absolute right-20 top-40 z-10">
-          <Image src={"/image/hero.svg"} alt={""} height={788} width={638} />
-        </div>
-        <div className="absolute top-96 w-full">
+        <div className="relative w-screen h-112 -mt-80">
           <Image
             src={"/assets/vector/bottom-web.svg"}
             alt={""}
-            height={788}
-            width={1550}
+            layout="fill"
           />
         </div>
-        <div className="h-60 mt-80 w-full bg-primary-50"></div>
-        <div className="w-full bg-primary-50 px-[200px]">
+        <div className="relative w-full -mt-16 bg-primary-50 px-[200px] z-10">
           <p className="text-h1 font-bold text-center">
             Visi kami untuk
             <span className={`bg-orange-red-gradient ${styles.textGradient}`}>
@@ -63,7 +63,7 @@ const Landing: NextPage = () => {
           </p>
         </div>
         <div className="h-[180px] bg-primary-50"></div>
-        <div className="w-full bg-primary-50 px-[100px] flex flex-col items-center">
+        <div className="relative z-10 w-full bg-primary-50 px-[100px] flex flex-col items-center">
           <p
             className={`text-h2 bg-orange-red-gradient font-bold mb-[180px] ${styles.textGradient}`}
           >
@@ -84,24 +84,21 @@ const Landing: NextPage = () => {
             }
           )}
         </div>
-        <div className="h-[100px] bg-primary-50"></div>
-
-        <div className="absolute top-[3500px] w-full">
-          <div className="relative">
+        <div className="relative w-full -mt-48">
+          <div className="relative w-screen h-[640px]">
             <Image
               src={"/assets/vector/testi-web.svg"}
               alt={""}
-              height={788}
-              width={1550}
+              layout="fill"
             />
-            <div
-              className={`absolute top-80 pl-[100px] text-h1 font-bold bg-orange-red-gradient ${styles.textGradient}`}
-            >
-              Apa kata mereka tentang COFIT?
-            </div>
+          </div>
+          <div
+            className={`absolute top-80 pl-[100px] text-h1 font-bold bg-orange-red-gradient ${styles.textGradient}`}
+          >
+            Apa kata mereka tentang COFIT?
           </div>
         </div>
-        <div className="flex mt-[300px] mb-[100px] mx-[160px] items-center">
+        <div className="flex mt-[-320px] mb-[100px] mx-[160px] items-center">
           <div className="w-11/12">
             <Image
               src={"/image/mascot-1.svg"}

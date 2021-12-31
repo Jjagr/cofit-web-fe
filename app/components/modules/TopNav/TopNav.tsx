@@ -8,11 +8,9 @@ type Props = {
 };
 
 const TopNav = ({ bg }: Props) => {
-  const [openDrawer, setOpenDrawer] = useState(false);
-
   return (
     <>
-      <div className="xl:hidden relative top-0 container">
+      <div className="xl:hidden relative top-0">
         <div
           className={`absolute bg-no-repeat object-contain top-0 left-0 ${styles.waveTop}`}
         ></div>
@@ -25,24 +23,20 @@ const TopNav = ({ bg }: Props) => {
           />
         </div>
       </div>
-      <div className="hidden xl:block relative container">
+      <div className="hidden xl:block relative">
         <div
-          className={`bg-no-repeat object-contain absolute w-full ${styles.waveTop}`}
-        ></div>
-        <div
-          className={`hidden fixed top-0 z-50 xl:flex w-full container justify-between xl:px-24 py-12`}
-        >
+          className={styles.waveTop}
+        />
+        <div className={bg === "transparent" ? styles.navDesktopContainer : styles.navDesktopContainerWhite}>
           <div
-            className={` bg-no-repeat object-contain`}
+            className={`bg-no-repeat object-contain`}
             style={{
               backgroundImage: `url(../../../assets/icon/full-logo.svg)`,
               height: "50px",
               width: "200px",
             }}
-          ></div>
-          <div
-            className={`${styles.navItemDesktop} text-primary-50 font-semibold text-xl`}
-          >
+          />
+          <div className={styles.navItemDesktop}>
             <NavItem href="#" label="Tentang Kami" />
             <NavItem href="#" label="Fitur" />
             <NavItem href="#" label="Testimoni" />
