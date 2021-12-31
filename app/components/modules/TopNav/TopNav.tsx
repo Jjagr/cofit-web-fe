@@ -1,4 +1,3 @@
-import { useState } from "react";
 import styles from "./TopNav.module.css";
 import NavItem from "@element/NavItem/NavItem";
 import Image from "next/image";
@@ -38,9 +37,9 @@ const TopNav = ({ bg }: Props) => {
           />
           <div className={styles.navItemDesktop}>
             <NavItem href="#" label="Tentang Kami" />
-            <NavItem href="#" label="Fitur" />
-            <NavItem href="#" label="Testimoni" />
-            <NavItem href="#" label="Kontak" />
+            <NavItem href="#fitur" label="Fitur" />
+            <NavItem href="#testimoni" label="Testimoni" />
+            <NavItem href="#kontak" label="Kontak" />
           </div>
         </div>
       </div>

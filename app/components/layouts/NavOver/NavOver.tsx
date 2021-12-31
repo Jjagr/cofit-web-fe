@@ -14,7 +14,7 @@ const NavOver = ({ children }: Props) => {
   useEffect(() => {
     listener.current = document.addEventListener("scroll", (e) => {
       var scrolled: any = document.scrollingElement?.scrollTop;
-      if (scrolled >= 200) {
+      if (scrolled >= 100) {
         setClearNavbar(false);
       } else {
         setClearNavbar(true);

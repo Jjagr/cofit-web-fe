@@ -2,14 +2,14 @@
 type Props = {
     text: string
     icon?: JSX.Element
-    color: string
+    className: string
 }
 
-const IconText = ({text, icon, color}: Props) => {
+const IconText = ({text, icon, className}: Props) => {
     return (
-        <div className={"flex flex-row items-center " + color}>
+        <div className={"flex flex-row items-center " + className}>
             {icon}
-            <p className="text-body4 font-regular bg-opacity-0 px-1">{text}</p>
+            <p className="font-regular bg-opacity-0 pl-2">{text}</p>
         </div>
     )
 }

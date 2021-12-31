@@ -41,7 +41,7 @@ const Landing: NextPage = () => {
             <Image src={"/image/hero.svg"} alt={""} layout="fill" />
           </div>
         </div>
-        <div className="relative w-screen h-112 -mt-80">
+        <div className="relative w-screen h-[30vw] -mt-80">
           <Image
             src={"/assets/vector/bottom-web.svg"}
             alt={""}
@@ -62,7 +62,7 @@ const Landing: NextPage = () => {
             </span>
           </p>
         </div>
-        <div className="h-[180px] bg-primary-50"></div>
+        <div id="fitur" className="h-[180px] bg-primary-50"></div>
         <div className="relative z-10 w-full bg-primary-50 px-[100px] flex flex-col items-center">
           <p
             className={`text-h2 bg-orange-red-gradient font-bold mb-[180px] ${styles.textGradient}`}
@@ -85,16 +85,15 @@ const Landing: NextPage = () => {
           )}
         </div>
         <div className="relative w-full -mt-48">
-          <div className="relative w-screen h-[640px]">
+          <div className="relative w-screen h-[40vw]">
             <Image
               src={"/assets/vector/testi-web.svg"}
               alt={""}
               layout="fill"
             />
           </div>
-          <div
-            className={`absolute top-80 pl-[100px] text-h1 font-bold bg-orange-red-gradient ${styles.textGradient}`}
-          >
+          <div id="testimoni" className="absolute top-48"/>
+          <div className={`absolute top-80 pl-[100px] text-h1 font-bold bg-orange-red-gradient ${styles.textGradient}`}>
             Apa kata mereka tentang COFIT?
           </div>
         </div>
