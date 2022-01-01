@@ -85,7 +85,7 @@ const Landing: NextPage = () => {
           )}
         </div>
         <div className="relative w-full -mt-48">
-          <div className="relative w-screen h-[40vw]">
+          <div className="relative w-screen h-[42vw]">
             <Image
               src={"/assets/vector/testi-web.svg"}
               alt={""}
