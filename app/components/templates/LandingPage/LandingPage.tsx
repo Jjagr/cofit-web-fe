@@ -32,7 +32,7 @@ const Landing: NextPage = () => {
               >
                 Yuk coba sekarang!
               </a>
-              <button className="mr-6 py-3 px-8 font-bold text-body1 text-primary-50 rounded-full border-2 border-primary-50 flex items-center">
+              <a href="#intro" className="mr-6 py-3 px-8 font-bold text-body1 text-primary-50 rounded-full border-2 border-primary-50 flex items-center">
                 <p className="mr-2">Lihat video</p>
                 <Image
                   src={"/assets/icon/play.svg"}
@@ -40,7 +40,7 @@ const Landing: NextPage = () => {
                   height={24}
                   width={24}
                 />
-              </button>
+              </a>
             </div>
           </div>
           <div className="relative w-1/2 h-full z-10">
@@ -116,6 +116,7 @@ const Landing: NextPage = () => {
         </div>
         <div className="relative w-[960px] mx-auto z-10">
           <CardPrestasi />
+          <div id="intro"/>
           <div className="flex justify-center items-center mt-[180px]">
             <Video
               style="w-[960px] h-[540px] rounded-[40px] overflow-hidden"
@@ -161,14 +162,14 @@ const Landing: NextPage = () => {
 
       {/* Mobile Top App Styling */}
       <div className={`${styles.mainContainer} xl:hidden`}>
-        <div className="w-full flex justify-center mt-8 z-10">
+        <div className="w-full flex justify-center mt-12 z-10">
           <Image src={"/image/hero.svg"} alt={""} height={788} width={600} />
         </div>
         <div className="px-8 text-center">
-          <h1 className="text-h3 text-primary-50 font-semibold mb-4">
+          <h1 className="text-mobileh1 text-primary-50 font-semibold mb-4">
             Ingin workout tanpa ribet?
           </h1>
-          <p className="text-body1 text-primary-50">
+          <p className="text-body3 text-primary-50">
             Sekarang, workout tidak perlu lagi sambil menghitung jumlah
             gerakanmu dan menggapai smartphonemu untuk mengganti gerakan.{" "}
           </p>
@@ -177,11 +178,14 @@ const Landing: NextPage = () => {
               href={LINKS.playstore}
               target="_blank"
               rel="noreferrer"
-              className="mb-3 w-11/12 text-center py-3 px-8 font-bold text-body1 text-secondary-orange rounded-full bg-primary-50"
+              className="mb-3 w-3/4 text-center py-3 px-8 font-bold text-body3 text-secondary-orange rounded-full bg-primary-50"
             >
               Yuk coba sekarang!
             </a>
-            <button className=" w-11/12 text-center py-3 px-8 font-bold text-body1 text-primary-50 rounded-full border-2 border-primary-50 flex items-center justify-center">
+            <a
+              href="#video-m"
+              className=" w-3/4 text-center py-3 px-8 font-bold text-body3 text-primary-50 rounded-full border-2 border-primary-50 flex items-center justify-center"
+            >
               <p className="mr-2">Lihat video</p>
               <Image
                 src={"/assets/icon/play.svg"}
@@ -189,19 +193,17 @@ const Landing: NextPage = () => {
                 height={24}
                 width={24}
               />
-            </button>
+            </a>
           </div>
         </div>
-        <div className="absolute" style={{ top: "950px" }}>
+        <div className="relative w-screen h-[25vw] mt-8">
           <Image
             src={"/assets/vector/bottom-phone.svg"}
             alt={""}
-            height={788}
-            width={1280}
+            layout="fill"
           />
         </div>
-        <div className="h-[76px] mt-40 w-full bg-primary-50"></div>
-        <div className="w-full bg-primary-50 px-8 pt-10">
+        <div className="relative z-10 w-full bg-primary-50 px-8 pt-10 -mt-8">
           <p className="lg:text-h3 text-mobileh1 text-primary-800 font-bold text-center">
             Visi kami untuk
             <span className={`bg-orange-red-gradient ${styles.textGradient}`}>
@@ -216,7 +218,7 @@ const Landing: NextPage = () => {
           </p>
         </div>
         <div className="h-[100px] w-full bg-primary-50"></div>
-        <div id="fitur" className="w-full bg-primary-50 px-8">
+        <div id="fitur-m" className="w-full bg-primary-50 px-8">
           <p
             className={`lg:text-h3 text-mobileh1 text-center bg-orange-red-gradient font-bold mb-[100px] xl:mb-[180px] ${styles.textGradient}`}
           >
@@ -239,7 +241,7 @@ const Landing: NextPage = () => {
             )}
           </div>
         </div>
-        <div id="testimoni" className="w-full bg-primary-50">
+        <div id="testimoni-m" className="w-full bg-primary-50">
           <p
             className={`lg:text-h3 text-mobileh1 text-center font-bold xl:mb-[180px] bg-orange-red-gradient ${styles.textGradient}`}
           >
@@ -257,10 +259,46 @@ const Landing: NextPage = () => {
             <div className="pt-24">
               <TestiContainer data={TESTIMONI} />
             </div>
-            <div className="my-[100px]">
-              <CardPrestasi />
-            </div>
           </div>
+        </div>
+        <div className="relative z-10 mt-[100px] px-5">
+          <CardPrestasi />
+          <div id="video-m" className="flex justify-center items-center mt-[100px]">
+            <Video
+              style="w-[calc(100vw-40px)] h-[calc((100vw-40px)*9/16)] rounded-[40px] overflow-hidden"
+              link={LINKS.intro}
+            />
+          </div>
+        </div>
+        <div className="relative w-screen h-[10vw] -mt-24">
+          <Image alt="" src="/assets/vector/video-pattern.svg" layout="fill" />
+        </div>
+        <div className="flex flex-col items-center -mt-2 pt-[160px] px-8 bg-primary-50">
+          <div className="relative w-[calc(100vw-64px)] h-[calc(19/20*(100vw-64px))]">
+            <Image
+              alt=""
+              src="/assets/vector/summary-illustration.svg"
+              layout="fill"
+            />
+          </div>
+          <div
+            className={`mt-10 text-mobileh1 text-center font-bold bg-orange-gradient ${styles.textGradient}`}
+          >
+            Ayo budayakan pola hidup sehat bersama COFIT App!
+          </div>
+          <a
+            href={LINKS.playstore}
+            target="_blank"
+            rel="noreferrer"
+            className="mt-10"
+          >
+            <Image
+              src={"/assets/vector/playstore.svg"}
+              alt={""}
+              height={60}
+              width={200}
+            />
+          </a>
         </div>
       </div>
     </>

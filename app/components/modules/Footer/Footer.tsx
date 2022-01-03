@@ -6,7 +6,7 @@ import styles from "./Footer.module.css";
 
 const Footer = () => {
   return (
-    <div id="kontak" className="mt-44">
+    <div id="kontak" className="xl:mt-44 mt-12">
       <div className={styles.mainContainer}>
         <div className={`flex flex-col items-start`}>
           <Image
@@ -128,10 +128,10 @@ const Footer = () => {
             <a href="#" className={styles.clickableFooter}>
               Tentang kami
             </a>
-            <a href="#fitur" className={styles.clickableFooter}>
+            <a href="#fitur-m" className={styles.clickableFooter}>
               Fitur
             </a>
-            <a href="#testimoni" className={styles.clickableFooter}>
+            <a href="#testimoni-m" className={styles.clickableFooter}>
               Testimoni
             </a>
           </div>
