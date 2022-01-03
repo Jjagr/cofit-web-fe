@@ -167,7 +167,7 @@ const Landing: NextPage = () => {
           </p>
         </div>
         <div className="h-[100px] w-full bg-primary-50"></div>
-        <div className="w-full bg-primary-50 px-8">
+        <div id="fitur" className="w-full bg-primary-50 px-8">
           <p
             className={`lg:text-h3 text-mobileh1 text-center bg-orange-red-gradient font-bold mb-[100px] xl:mb-[180px] ${styles.textGradient}`}
           >
@@ -190,7 +190,7 @@ const Landing: NextPage = () => {
             )}
           </div>
         </div>
-        <div className="w-full bg-primary-50">
+        <div id="testimoni" className="w-full bg-primary-50">
           <p
             className={`lg:text-h3 text-mobileh1 text-center font-bold xl:mb-[180px] bg-orange-red-gradient ${styles.textGradient}`}
           >
