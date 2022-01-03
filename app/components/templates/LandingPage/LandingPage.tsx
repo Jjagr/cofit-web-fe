@@ -6,6 +6,7 @@ import TestiContainer from "@module/TestiContainer/TestiContainer";
 import FeatureCard from "@module/FeatureCard/FeatureCard";
 import { FEATURE, LINKS, TESTIMONI } from "@constant/index";
 import CardPrestasi from "@element/CardPrestasi/CardPrestasi";
+import Video from "@element/Video/Video";
 
 const Landing: NextPage = () => {
   const { height, width } = useWindowSize();
@@ -113,8 +114,48 @@ const Landing: NextPage = () => {
             <TestiContainer data={TESTIMONI} />
           </div>
         </div>
-        <div className="px-[160px] mb-[180px]">
+        <div className="relative w-[960px] mx-auto z-10">
           <CardPrestasi />
+          <div className="flex justify-center items-center mt-[180px]">
+            <Video
+              style="w-[960px] h-[540px] rounded-[40px] overflow-hidden"
+              link={LINKS.intro}
+            />
+          </div>
+        </div>
+        <div className="relative w-screen h-[10vw] -mt-96">
+          <Image alt="" src="/assets/vector/video-pattern.svg" layout="fill" />
+        </div>
+        <div className="relative bg-primary-50 px-[100px] -mt-2 pt-[400px]">
+          <div className="flex flex-row items-center w-full">
+            <div className="flex flex-col items-start w-2/3">
+              <div
+                className={`text-h1 font-bold bg-orange-gradient ${styles.textGradient}`}
+              >
+                Ayo budayakan pola hidup sehat bersama COFIT App!
+              </div>
+              <a
+                href={LINKS.playstore}
+                target="_blank"
+                rel="noreferrer"
+                className="mt-8"
+              >
+                <Image
+                  src={"/assets/vector/playstore.svg"}
+                  alt={""}
+                  height={72}
+                  width={240}
+                />
+              </a>
+            </div>
+            <div className="relative w-1/3 h-[400px]">
+              <Image
+                alt=""
+                src="/assets/vector/summary-illustration.svg"
+                layout="fill"
+              />
+            </div>
+          </div>
         </div>
       </div>
 
