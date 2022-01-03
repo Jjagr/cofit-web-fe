@@ -21,6 +21,6 @@
         bg-primary-50
         xl:hidden flex flex-col
         w-full
-        px-8 py-12
+        px-8 pt-24 pb-12
         items-center;
 }

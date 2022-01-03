@@ -6,7 +6,7 @@ import styles from "./Footer.module.css";
 
 const Footer = () => {
   return (
-    <div id="kontak" className="xl:mt-44 mt-12">
+    <div id="kontak">
       <div className={styles.mainContainer}>
         <div className={`flex flex-col items-start`}>
           <Image

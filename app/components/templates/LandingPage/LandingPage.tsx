@@ -130,7 +130,7 @@ const Landing: NextPage = () => {
         <div className="relative w-screen h-[10vw] -mt-96">
           <Image alt="" src="/assets/vector/video-pattern.svg" layout="fill" />
         </div>
-        <div className="relative bg-primary-50 px-[100px] -mt-2 pt-[400px]">
+        <div className="relative bg-primary-50 px-[100px] -mt-2 pt-[400px] pb-44">
           <div className="flex flex-row items-center w-full">
             <div className="flex flex-col items-start w-2/3">
               <div
