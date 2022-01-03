@@ -13,7 +13,7 @@ const TopNav = ({ bg }: Props) => {
         <div
           className={`absolute bg-no-repeat object-contain top-0 left-0 ${styles.waveTop}`}
         ></div>
-        <div className={`fixed bg-no-repeat object-contain z-10 top-8 left-8`}>
+        <div className={`absolute bg-no-repeat object-contain z-10 top-8 left-8`}>
           <Image
             src={"/assets/icon/full-logo.svg"}
             alt={""}

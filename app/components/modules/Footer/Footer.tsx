@@ -227,7 +227,7 @@ const Footer = () => {
             />
           </a>
         </div>
-        <p className="mt-16">Copyright © 2021 COFIT. All rights reserved.</p>
+        <p className="mt-16 text-sm">Copyright © 2021 COFIT. All rights reserved.</p>
       </div>
     </div>
   );

@@ -4,6 +4,7 @@ import Image from "next/image";
 import "tailwindcss/tailwind.css";
 import Button from "@element/Button/Button";
 import Tag, { TagColor } from "@element/Tag/Tag";
+import { LINKS } from "@constant/index";
 
 type Props = {
   image: string;
@@ -36,7 +37,7 @@ const FeatureCard = ({
         <Button
           color="white"
           className="xl:w-[235px] bg-orange-gradient text-primary-50 font-bold xs:rounded-24"
-          onClick={() => {}}
+          onClick={() => {window.open(LINKS.playstore, "_blank");}}
           rounded="rounded-24"
         >Yuk Coba Sekarang!</Button>
       </div>

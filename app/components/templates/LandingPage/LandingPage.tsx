@@ -4,7 +4,7 @@ import { useWindowSize } from "@util/WindowSize";
 import Image from "next/image";
 import TestiContainer from "@module/TestiContainer/TestiContainer";
 import FeatureCard from "@module/FeatureCard/FeatureCard";
-import { FEATURE, TESTIMONI } from "@constant/index";
+import { FEATURE, LINKS, TESTIMONI } from "@constant/index";
 import CardPrestasi from "@element/CardPrestasi/CardPrestasi";
 
 const Landing: NextPage = () => {
@@ -22,10 +22,15 @@ const Landing: NextPage = () => {
               Sekarang, workout tidak perlu lagi sambil menghitung jumlah
               gerakanmu dan menggapai smartphonemu untuk mengganti gerakan.{" "}
             </p>
-            <div className="mt-10 flex">
-              <button className="mr-6 py-3 px-8 font-bold text-body1 text-secondary-orange rounded-full bg-primary-50">
+            <div className="relative mt-10 z-10 flex">
+              <a
+                href={LINKS.playstore}
+                target="_blank"
+                rel="noreferrer"
+                className="cursor-pointer mr-6 py-3 px-8 font-bold text-body1 text-secondary-orange rounded-full bg-primary-50"
+              >
                 Yuk coba sekarang!
-              </button>
+              </a>
               <button className="mr-6 py-3 px-8 font-bold text-body1 text-primary-50 rounded-full border-2 border-primary-50 flex items-center">
                 <p className="mr-2">Lihat video</p>
                 <Image
@@ -42,11 +47,7 @@ const Landing: NextPage = () => {
           </div>
         </div>
         <div className="relative w-screen h-[30vw] -mt-80">
-          <Image
-            src={"/assets/vector/bottom-web.svg"}
-            alt={""}
-            layout="fill"
-          />
+          <Image src={"/assets/vector/bottom-web.svg"} alt={""} layout="fill" />
         </div>
         <div className="relative w-full -mt-16 bg-primary-50 px-[200px] z-10">
           <p className="text-h1 font-bold text-center">
@@ -92,8 +93,10 @@ const Landing: NextPage = () => {
               layout="fill"
             />
           </div>
-          <div id="testimoni" className="absolute top-48"/>
-          <div className={`absolute top-80 pl-[100px] text-h1 font-bold bg-orange-red-gradient ${styles.textGradient}`}>
+          <div id="testimoni" className="absolute top-48" />
+          <div
+            className={`absolute top-80 pl-[100px] text-h1 font-bold bg-orange-red-gradient ${styles.textGradient}`}
+          >
             Apa kata mereka tentang COFIT?
           </div>
         </div>
@@ -128,10 +131,15 @@ const Landing: NextPage = () => {
             Sekarang, workout tidak perlu lagi sambil menghitung jumlah
             gerakanmu dan menggapai smartphonemu untuk mengganti gerakan.{" "}
           </p>
-          <div className="mt-10 flex flex-col items-center justify-center">
-            <button className="mb-3 w-11/12 text-center py-3 px-8 font-bold text-body1 text-secondary-orange rounded-full bg-primary-50">
+          <div className="relative z-10 mt-10 flex flex-col items-center justify-center">
+            <a
+              href={LINKS.playstore}
+              target="_blank"
+              rel="noreferrer"
+              className="mb-3 w-11/12 text-center py-3 px-8 font-bold text-body1 text-secondary-orange rounded-full bg-primary-50"
+            >
               Yuk coba sekarang!
-            </button>
+            </a>
             <button className=" w-11/12 text-center py-3 px-8 font-bold text-body1 text-primary-50 rounded-full border-2 border-primary-50 flex items-center justify-center">
               <p className="mr-2">Lihat video</p>
               <Image
