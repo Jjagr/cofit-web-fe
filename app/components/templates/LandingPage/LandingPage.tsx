@@ -32,7 +32,10 @@ const Landing: NextPage = () => {
               >
                 Yuk coba sekarang!
               </a>
-              <a href="#intro" className="mr-6 py-3 px-8 font-bold text-body1 text-primary-50 rounded-full border-2 border-primary-50 flex items-center">
+              <a
+                href="#intro"
+                className="mr-6 py-3 px-8 font-bold text-body1 text-primary-50 rounded-full border-2 border-primary-50 flex items-center"
+              >
                 <p className="mr-2">Lihat video</p>
                 <Image
                   src={"/assets/icon/play.svg"}
@@ -116,7 +119,7 @@ const Landing: NextPage = () => {
         </div>
         <div className="relative w-[960px] mx-auto z-10">
           <CardPrestasi />
-          <div id="intro"/>
+          <div id="intro" />
           <div className="flex justify-center items-center mt-[180px]">
             <Video
               style="w-[960px] h-[540px] rounded-[40px] overflow-hidden"
@@ -162,29 +165,31 @@ const Landing: NextPage = () => {
 
       {/* Mobile Top App Styling */}
       <div className={`${styles.mainContainer} xl:hidden`}>
-        <div className="w-full flex justify-center mt-12 z-10">
-          <Image src={"/image/hero.svg"} alt={""} height={788} width={600} />
-        </div>
-        <div className="px-8 text-center">
-          <h1 className="text-mobileh1 text-primary-50 font-semibold mb-4">
-            Ingin workout tanpa ribet?
-          </h1>
-          <p className="text-body3 text-primary-50">
-            Sekarang, workout tidak perlu lagi sambil menghitung jumlah
-            gerakanmu dan menggapai smartphonemu untuk mengganti gerakan.{" "}
-          </p>
-          <div className="relative z-10 mt-10 flex flex-col items-center justify-center">
+        <div className="h-[calc(100vh-50px)] w-screen mt-[50px] flex flex-col justify-evenly">
+          <div className="w-[81vw] h-[108vw] relative flex justify-center self-center z-10">
+            <Image src={"/image/hero.svg"} alt={""} layout="fill" />
+          </div>
+          <div className="px-8 text-center">
+            <h1 className="text-mobileh1 text-primary-50 font-semibold mb-4">
+              Ingin workout tanpa ribet?
+            </h1>
+            <p className="text-body3 text-primary-50">
+              Sekarang, workout tidak perlu lagi sambil menghitung jumlah
+              gerakanmu dan menggapai smartphonemu untuk mengganti gerakan.{" "}
+            </p>
+          </div>
+          <div className="mt-8 relative z-10 flex flex-col items-center justify-center">
             <a
               href={LINKS.playstore}
               target="_blank"
               rel="noreferrer"
-              className="mb-3 w-3/4 text-center py-3 px-8 font-bold text-body3 text-secondary-orange rounded-full bg-primary-50"
+              className="mb-3 w-2/3 text-center py-3 px-8 font-bold text-body3 text-secondary-orange rounded-full bg-primary-50"
             >
               Yuk coba sekarang!
             </a>
             <a
               href="#video-m"
-              className=" w-3/4 text-center py-3 px-8 font-bold text-body3 text-primary-50 rounded-full border-2 border-primary-50 flex items-center justify-center"
+              className=" w-2/3 text-center py-3 px-8 font-bold text-body3 text-primary-50 rounded-full border-2 border-primary-50 flex items-center justify-center"
             >
               <p className="mr-2">Lihat video</p>
               <Image
@@ -263,7 +268,10 @@ const Landing: NextPage = () => {
         </div>
         <div className="relative z-10 mt-[100px] px-5">
           <CardPrestasi />
-          <div id="video-m" className="flex justify-center items-center mt-[100px]">
+          <div
+            id="video-m"
+            className="flex justify-center items-center mt-[100px]"
+          >
             <Video
               style="w-[calc(100vw-40px)] h-[calc((100vw-40px)*9/16)] rounded-[40px] overflow-hidden"
               link={LINKS.intro}
