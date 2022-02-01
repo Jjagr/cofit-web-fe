@@ -1,6 +1,8 @@
 import CardTesti from "@element/CardTesti/CardTesti";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
+
+import { motion } from "framer-motion";
 
 type Testi = {
   name: string;
@@ -14,8 +16,36 @@ type Props = {
 const TestiContainer = ({ data }: Props) => {
   const [onTop, setOnTop] = useState(0);
 
+  const [show, setShow] = useState(false);
+  const [timer, setTimer] = useState(true);
+
+  const changeOnTop = () => {
+    setTimeout(() => {
+      setOnTop((onTop + 1) % data.length);
+      setTimer(true);
+    }, 5000);
+  };
+
+  useEffect(() => {
+    if (timer) {
+      setTimer(false);
+      changeOnTop();
+    }
+  }, [onTop, timer]);
+
+  const variantsRiseUp = {
+    onscreen: { opacity: 1, y: 0, x: 0 },
+    offscreen: { opacity: 0, y: "100%" },
+  };
+
   return (
-    <div className="flex flex-col w-full">
+    <motion.div
+      initial={"offscreen"}
+      whileInView={"onscreen"}
+      viewport={{ once: true }}
+      variants={variantsRiseUp}
+      className="flex flex-col w-full"
+    >
       <div className="flex items-center justify-between">
         <Image
           src={"/assets/icon/left.svg"}
@@ -29,12 +59,11 @@ const TestiContainer = ({ data }: Props) => {
             return (
               <div
                 key={index}
-                className={`absolute w-full h-full ${onTop === index ? "z-10" : "z-0"}`}
+                className={`absolute w-full h-full ${
+                  onTop === index ? "z-10" : "z-0"
+                }`}
               >
-                <CardTesti
-                  text={item.text}
-                  name={item.name}
-                />
+                <CardTesti text={item.text} name={item.name} />
               </div>
             );
           })}
@@ -62,7 +91,7 @@ const TestiContainer = ({ data }: Props) => {
           );
         })}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

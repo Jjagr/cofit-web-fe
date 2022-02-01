@@ -1,9 +1,26 @@
 .mainContainer {
     @apply 
-        bg-primary-800
-        text-primary-50
-        flex
-        w-full h-24
-        px-16
+        bg-primary-50
+        text-primary-800
+        xl:flex flex-row hidden
+        w-full h-[280px]
+        px-28
+        justify-between items-center;
+}
+
+.clickableFooter {
+    @apply 
+        mb-3 
+        xl:text-base md:text-sm text-xs
+        bg-clip-text hover:bg-orange-red-gradient hover:text-transparent 
+        cursor-pointer;
+}
+
+.mobileMainContainer {
+    @apply 
+        bg-primary-50
+        xl:hidden flex flex-col
+        w-full
+        px-8 pt-24 pb-12
         items-center;
 }

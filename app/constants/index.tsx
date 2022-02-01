@@ -128,3 +128,11 @@ export const TESTIMONI: Array<Testi> = [
     name: "IA",
   },
 ];
+
+export const LINKS = {
+  instagram: "https://www.instagram.com/cofit.app/",
+  youtube: "https://www.youtube.com/channel/UC9EHbyK86NRf46pwsnQv-PQ/featured",
+  gmail: "https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&su=Hi+COFIT+App!&to=jjagrteam@gmail.com",
+  playstore: "https://play.google.com/store/apps/details?id=app.cofit",
+  intro: "https://www.youtube.com/watch?v=MMOuCyUpBIY",
+}

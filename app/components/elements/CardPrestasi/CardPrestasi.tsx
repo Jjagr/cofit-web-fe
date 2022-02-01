@@ -27,10 +27,9 @@ const CardPrestasi = () => {
         </div>
         <ol
           style={{
-            display: "list-item",
             listStyleType: "decimal",
           }}
-          className="ml-5"
+          className="ml-5 text-lg"
         >
           <li>Winner Diginove STEI ITB 2021</li>
           <li>1st Winner Pitching Competition ICoDSE 2021</li>

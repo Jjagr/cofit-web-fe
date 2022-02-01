@@ -1,41 +1,38 @@
-import styles from './NavOver.module.css';
-import Navbar from '@module/Navbar/Navbar';
-import Footer from '@module/Footer/Footer';
-import { useEffect, useState } from 'react';
-import TopNav from '@module/TopNav/TopNav';
+import styles from "./NavOver.module.css";
+import Footer from "@module/Footer/Footer";
+import { useEffect, useRef, useState } from "react";
+import TopNav from "@module/TopNav/TopNav";
 
 type Props = {
-    children: React.ReactNode
-}
+  children: React.ReactNode;
+};
 
 const NavOver = ({ children }: Props) => {
-    const [clearNavbar, setClearNavbar] = useState(true)
-    let listener: any = null
+  const [clearNavbar, setClearNavbar] = useState(true);
+  let listener: any = useRef();
 
-    useEffect(() => {
-        listener = document.addEventListener("scroll", e => {
-            var scrolled: any = document.scrollingElement?.scrollTop
-            if (scrolled >= window.screen.height) {
-                setClearNavbar(false)
-            } else {
-                setClearNavbar(true)
-            }
-        })
+  useEffect(() => {
+    listener.current = document.addEventListener("scroll", (e) => {
+      var scrolled: any = document.scrollingElement?.scrollTop;
+      if (scrolled >= 100) {
+        setClearNavbar(false);
+      } else {
+        setClearNavbar(true);
+      }
+    });
 
-        return () => {
-            document.removeEventListener("scroll", listener)
-        }
-    }, [])
+    return () => {
+      document.removeEventListener("scroll", listener);
+    };
+  }, []);
 
-    return (
-        <div className="relative h-screen container mx-auto">
-            <TopNav bg={clearNavbar ? "transparent" : "white"} />
-            <div className={styles.content}>
-                {children}
-            </div>
-            <Footer />
-        </div>
-    )
-}
+  return (
+    <div className="relative h-screen mx-auto">
+      <TopNav bg={clearNavbar ? "transparent" : "white"} />
+      <div className={styles.content}>{children}</div>
+      <Footer />
+    </div>
+  );
+};
 
-export default NavOver
+export default NavOver;
