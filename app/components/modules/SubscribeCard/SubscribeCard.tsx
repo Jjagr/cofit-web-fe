@@ -28,7 +28,7 @@ const SubscribeCard = () => {
     return (
         <div className={styles.mainContainer}>
             <div className={styles.footerTitle}>
-                LET’S GET FIT WITH COFIT
+                LET’S GET FIT WITH GROOFIT
             </div>
             <div className="h-8" />
             <BodyText preset={Presets.Body2} weight={Weight.Medium} text="Tell us your email so you could be the first to try our lovely product!" />

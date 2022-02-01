@@ -27,7 +27,7 @@ const Navbar = ({ bg }: Props) => {
             className={`${styles.navbar} ${isTransparent ? "bg-opacity-0 text-primary-50" : "bg-primary-50 text-primary-900"}`}>
             <Link href="/" passHref>
                 <div className="flex justify-start items-center cursor-pointer">
-                    <HeadText preset={Presets.Heading4} text="COFIT" color="text-transparent bg-clip-text bg-orange-red-gradient" />
+                    <HeadText preset={Presets.Heading4} text="Groofit" color="text-transparent bg-clip-text bg-orange-red-gradient" />
                 </div>
             </Link>
             <div className={styles.navItemDesktop}>

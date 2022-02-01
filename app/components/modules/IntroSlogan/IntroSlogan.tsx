@@ -6,7 +6,7 @@ import { Presets, Weight } from "types/TextStyles"
 const IntroSlogan = () => {
     return(
         <div className={styles.mainContainer}>
-            <HeadText preset={Presets.Hero} text="COFIT"/>
+            <HeadText preset={Presets.Hero} text="Groofit"/>
             <div className={styles.subHeading}>
                 <span className="font-bold">Community </span>
                 where people help each other to be

@@ -5,7 +5,7 @@ import Landing from "@template/LandingPage/LandingPage";
 const App = () => (
   <Default>
     <Head>
-      <title>COFIT</title>
+      <title>Groofit</title>
     </Head>
     <Landing />
   </Default>

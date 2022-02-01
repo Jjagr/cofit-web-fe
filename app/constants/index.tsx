@@ -56,7 +56,7 @@ export const FEATURE: Array<Feature> = [
     caption: (
       <p>
         Sekarang tidak perlu pusing lagi <b>menghitung jumlah gerakan</b> yang
-        sudah dilakukan! Tak hanya itu, COFIT juga akan membantu{" "}
+        sudah dilakukan! Tak hanya itu, Groofit juga akan membantu{" "}
         <b>memeriksa akurasi gerakanmu</b>!
       </p>
     ),
@@ -67,7 +67,7 @@ export const FEATURE: Array<Feature> = [
     title: "Olahraga bersama tanpa peduli jarak dan waktu",
     caption: (
       <p>
-        <b>Olahraga bareng</b> dengan COFIT jadi lebih mudah! Kalian bisa
+        <b>Olahraga bareng</b> dengan Groofit jadi lebih mudah! Kalian bisa
         melihat <b>Real Time Leaderboard</b> jumlah gerakan teman dari{" "}
         <b>Movement Assistant</b> yang <b>bikin semangat</b>!
       </p>
@@ -92,7 +92,7 @@ export const FEATURE: Array<Feature> = [
     caption: (
       <p>
         Workout juga perlu dilengkapi dengan <b>nutrisi yang seimbang.</b>{" "}
-        Kalian bisa <b>menyusun program diet</b> dengan COFIT! Selain itu,
+        Kalian bisa <b>menyusun program diet</b> dengan Groofit! Selain itu,
         kalian juga bisa <b>memesan katering makanan sehat</b> dengan kualitas
         yang terjamin.
       </p>
@@ -124,7 +124,7 @@ export const TESTIMONI: Array<Testi> = [
     name: "GER",
   },
   {
-    text: "“Movement assistantnya keren banget, baru pernah lihat di COFIT.”",
+    text: "“Movement assistantnya keren banget, baru pernah lihat di Groofit.”",
     name: "IA",
   },
 ];

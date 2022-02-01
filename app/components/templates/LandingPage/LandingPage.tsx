@@ -6,39 +6,63 @@ import TestiContainer from "@module/TestiContainer/TestiContainer";
 import FeatureCard from "@module/FeatureCard/FeatureCard";
 import { FEATURE, TESTIMONI } from "@constant/index";
 import CardPrestasi from "@element/CardPrestasi/CardPrestasi";
+import { motion } from "framer-motion";
 
 const Landing: NextPage = () => {
   const { height, width } = useWindowSize();
+
+  const variantsRiseUp = {
+    onscreen: { opacity: 1, y: 0, x: 0 },
+    offscreen: { opacity: 0, y: "100%" },
+  };
+
+  const variantsLeftRight = {
+    onscreen: { opacity: 1, x: 0 },
+    offscreen: { opacity: 0, x: "-100%" },
+  };
 
   return (
     <>
       <div className={`${styles.mainContainer} hidden xl:block`}>
         <div className="mt-64 w-1/2 xl:ml-28">
-          <h1 className="text-h2 2xl:text-h2 text-primary-50 font-semibold mb-6 2xl:mb-0">
-            Ingin workout tanpa ribet?
-          </h1>
-          <p className="w-2/3 text-body1 text-primary-50">
-            Sekarang, workout tidak perlu lagi sambil menghitung jumlah
-            gerakanmu dan menggapai smartphonemu untuk mengganti gerakan.{" "}
-          </p>
-          <div className="mt-10 flex">
-            <button className="mr-6 py-3 px-8 font-bold text-body1 text-secondary-orange rounded-full bg-primary-50">
-              Yuk coba sekarang!
-            </button>
-            <button className="mr-6 py-3 px-8 font-bold text-body1 text-primary-50 rounded-full border-2 border-primary-50 flex items-center">
-              <p className="mr-2">Lihat video</p>
-              <Image
-                src={"/assets/icon/play.svg"}
-                alt={""}
-                height={24}
-                width={24}
-              />
-            </button>
-          </div>
+          <motion.div
+            initial={"offscreen"}
+            whileInView={"onscreen"}
+            viewport={{ once: true }}
+            variants={variantsLeftRight}
+          >
+            <h1 className="text-h2 2xl:text-h2 text-primary-50 font-semibold mb-6 2xl:mb-0">
+              Ingin workout tanpa ribet?
+            </h1>
+            <p className="w-2/3 text-body1 text-primary-50">
+              Sekarang, workout tidak perlu lagi sambil menghitung jumlah
+              gerakanmu dan menggapai smartphonemu untuk mengganti gerakan.{" "}
+            </p>
+            <div className="mt-10 flex">
+              <button className="mr-6 py-3 px-8 font-bold text-body1 text-secondary-orange rounded-full bg-primary-50">
+                Yuk coba sekarang!
+              </button>
+              <button className="mr-6 py-3 px-8 font-bold text-body1 text-primary-50 rounded-full border-2 border-primary-50 flex items-center">
+                <p className="mr-2">Lihat video</p>
+                <Image
+                  src={"/assets/icon/play.svg"}
+                  alt={""}
+                  height={24}
+                  width={24}
+                />
+              </button>
+            </div>
+          </motion.div>
         </div>
-        <div className="absolute right-20 top-40 z-10">
+        <motion.div
+          initial={"offscreen"}
+          whileInView={"onscreen"}
+          viewport={{ once: true }}
+          variants={variantsRiseUp}
+          className="absolute right-20 top-40 z-10"
+        >
           <Image src={"/image/hero.svg"} alt={""} height={788} width={638} />
-        </div>
+        </motion.div>
         <div className="absolute top-96 w-full">
           <Image
             src={"/assets/vector/bottom-web.svg"}
@@ -49,26 +73,42 @@ const Landing: NextPage = () => {
         </div>
         <div className="h-60 mt-80 w-full bg-primary-50"></div>
         <div className="w-full bg-primary-50 px-[200px]">
-          <p className="text-h1 font-bold text-center">
-            Visi kami untuk
-            <span className={`bg-orange-red-gradient ${styles.textGradient}`}>
-              {" "}
-              membuat semua orang mengerti
-            </span>{" "}
-            dan
-            <span className={`bg-orange-red-gradient ${styles.textGradient}`}>
-              {" "}
-              melakukan pola hidup sehat.
-            </span>
-          </p>
+          <motion.div
+            initial={"offscreen"}
+            whileInView={"onscreen"}
+            viewport={{ once: true }}
+            variants={variantsRiseUp}
+            transition={{ opacity: { duration: 0.5 } }}
+          >
+            <p className="text-h1 font-bold text-center">
+              Visi kami untuk
+              <span className={`bg-orange-red-gradient ${styles.textGradient}`}>
+                {" "}
+                membuat semua orang mengerti
+              </span>{" "}
+              dan
+              <span className={`bg-orange-red-gradient ${styles.textGradient}`}>
+                {" "}
+                melakukan pola hidup sehat.
+              </span>
+            </p>
+          </motion.div>
         </div>
         <div className="h-[180px] bg-primary-50"></div>
         <div className="w-full bg-primary-50 px-[100px] flex flex-col items-center">
-          <p
-            className={`text-h2 bg-orange-red-gradient font-bold mb-[180px] ${styles.textGradient}`}
+          <motion.div
+            initial={"offscreen"}
+            whileInView={"onscreen"}
+            viewport={{ once: true }}
+            variants={variantsRiseUp}
+            transition={{ opacity: { duration: 0.5 } }}
           >
-            COFIT App hadir untukmu!
-          </p>
+            <p
+              className={`text-h2 bg-orange-red-gradient font-bold mb-[180px] ${styles.textGradient}`}
+            >
+              Groofit App hadir untukmu!
+            </p>
+          </motion.div>
           {FEATURE.map(
             ({ title, caption, image, alignText, comingSoon }, idx) => {
               return (
@@ -94,11 +134,19 @@ const Landing: NextPage = () => {
               height={788}
               width={1550}
             />
-            <div
-              className={`absolute top-80 pl-[100px] text-h1 font-bold bg-orange-red-gradient ${styles.textGradient}`}
+            <motion.div
+              initial={"offscreen"}
+              whileInView={"onscreen"}
+              viewport={{ once: true }}
+              variants={variantsRiseUp}
+              transition={{ opacity: { duration: 0.5 } }}
             >
-              Apa kata mereka tentang COFIT?
-            </div>
+              <div
+                className={`absolute top-80 pl-[100px] text-h1 font-bold bg-orange-red-gradient ${styles.textGradient}`}
+              >
+                Apa kata mereka tentang Groofit?
+              </div>
+            </motion.div>
           </div>
         </div>
         <div className="flex mt-[300px] mb-[100px] mx-[160px] items-center">
@@ -175,7 +223,7 @@ const Landing: NextPage = () => {
           <p
             className={`lg:text-h3 text-mobileh1 text-center bg-orange-red-gradient font-bold mb-[100px] xl:mb-[180px] ${styles.textGradient}`}
           >
-            COFIT App hadir untukmu!
+            Groofit App hadir untukmu!
           </p>
           <div className="grid grid-cols-1 lg:grid-cols-2 justify-items-center">
             {FEATURE.map(
@@ -199,7 +247,7 @@ const Landing: NextPage = () => {
             className={`lg:text-h3 text-mobileh1 text-center font-bold xl:mb-[180px] bg-orange-red-gradient ${styles.textGradient}`}
           >
             Apa kata mereka <br />
-            tentang COFIT!
+            tentang Groofit!
           </p>
           <div
             className="px-5 bg-no-repeat bg-cover"
