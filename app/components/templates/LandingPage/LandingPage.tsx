@@ -208,11 +208,11 @@ const Landing: NextPage = () => {
               whileInView={{ scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="relative w-1/3 h-[400px]"
+              className="relative w-1/3 h-[480px]"
             >
               <Image
                 alt=""
-                src="/assets/vector/summary-illustration.svg"
+                src="/image/Mockup-CTA.png"
                 layout="fill"
               />
             </motion.div>
@@ -364,11 +364,11 @@ const Landing: NextPage = () => {
             whileInView={{ scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="relative w-[calc(100vw-64px)] h-[calc(19/20*(100vw-64px))]"
+            className="relative w-[calc(100vw-64px)] h-[calc(19/20*(100vw-40px))]"
           >
             <Image
               alt=""
-              src="/assets/vector/summary-illustration.svg"
+              src="/image/Mockup-CTA.png"
               layout="fill"
             />
           </motion.div>
