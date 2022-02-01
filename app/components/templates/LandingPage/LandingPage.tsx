@@ -138,7 +138,7 @@ const Landing: NextPage = () => {
             variants={variantsRiseUp}
             className={`absolute top-80 pl-[100px] text-h1 font-bold bg-orange-red-gradient ${styles.textGradient}`}
           >
-            Apa kata mereka tentang COFIT?
+            Apa kata mereka tentang Groofit?
           </motion.div>
         </div>
         <div className="flex mt-[-320px] mb-[100px] mx-[160px] items-center">
@@ -183,7 +183,7 @@ const Landing: NextPage = () => {
                 variants={variantsRiseUp}
                 className={`text-h1 font-bold bg-orange-gradient ${styles.textGradient}`}
               >
-                Ayo budayakan pola hidup sehat bersama COFIT App!
+                Ayo budayakan pola hidup sehat bersama Groofit!
               </motion.div>
               <motion.a
                 initial={"offscreen"}
@@ -379,7 +379,7 @@ const Landing: NextPage = () => {
             variants={variantsRiseUp}
             className={`mt-10 text-mobileh1 text-center font-bold bg-orange-gradient ${styles.textGradient}`}
           >
-            Ayo budayakan pola hidup sehat bersama COFIT App!
+            Ayo budayakan pola hidup sehat bersama Groofit!
           </motion.div>
           <motion.a
             initial={"offscreen"}
