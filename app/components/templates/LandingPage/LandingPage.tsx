@@ -22,6 +22,10 @@ const Landing: NextPage = () => {
     offscreen: { opacity: 0, x: "-100%" },
   };
 
+  const transitionDuration = {
+    duration: 1,
+  };
+
   return (
     <>
       <div className={`${styles.mainContainer} hidden xl:block`}>
@@ -31,6 +35,7 @@ const Landing: NextPage = () => {
             whileInView={"onscreen"}
             viewport={{ once: true }}
             variants={variantsLeftRight}
+            transition={transitionDuration}
             className="-mt-28 w-1/2 xl:ml-28 z-10"
           >
             <h1 className="text-h2 2xl:text-h2 text-primary-50 font-semibold mb-6 2xl:mb-0">
@@ -69,12 +74,18 @@ const Landing: NextPage = () => {
             whileInView={"onscreen"}
             viewport={{ once: true }}
             variants={variantsRiseUp}
+            transition={transitionDuration}
           >
             <Image src={"/image/hero.svg"} alt={""} layout="fill" />
           </motion.div>
         </div>
         <div className="relative w-screen h-[30vw] -mt-64">
-          <Image src={"/assets/vector/bottom-web.svg"} alt={""} layout="fill" className={'-z-10'}/>
+          <Image
+            src={"/assets/vector/bottom-web.svg"}
+            alt={""}
+            layout="fill"
+            className={"-z-10"}
+          />
         </div>
         <div className="relative w-full -mt-16 bg-primary-50 px-[200px] z-10">
           <motion.div
@@ -83,6 +94,7 @@ const Landing: NextPage = () => {
             whileInView={"onscreen"}
             viewport={{ once: true }}
             variants={variantsRiseUp}
+            transition={transitionDuration}
           >
             Visi kami untuk
             <span className={`bg-orange-red-gradient ${styles.textGradient}`}>
@@ -104,6 +116,7 @@ const Landing: NextPage = () => {
             viewport={{ once: true }}
             variants={variantsRiseUp}
             className={`text-h2 bg-orange-red-gradient font-bold mb-[180px] ${styles.textGradient}`}
+            transition={transitionDuration}
           >
             Groofit hadir untukmu!
           </motion.div>
@@ -132,6 +145,7 @@ const Landing: NextPage = () => {
           </div>
           <div id="testimoni" className="absolute top-48" />
           <motion.div
+            transition={transitionDuration}
             initial={"offscreen"}
             whileInView={"onscreen"}
             viewport={{ once: true }}
@@ -143,10 +157,10 @@ const Landing: NextPage = () => {
         </div>
         <div className="flex mt-[-280px] mb-[100px] mx-[160px] items-center">
           <motion.div
+            transition={{ duration: 0.5 }}
             initial={{ scale: 0 }}
             whileInView={{ scale: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
             className="w-11/12"
           >
             <Image
@@ -177,6 +191,7 @@ const Landing: NextPage = () => {
           <div className="flex flex-row items-center w-full">
             <div className="flex flex-col items-start w-2/3">
               <motion.div
+                transition={transitionDuration}
                 initial={"offscreen"}
                 whileInView={"onscreen"}
                 viewport={{ once: true }}
@@ -186,6 +201,7 @@ const Landing: NextPage = () => {
                 Ayo budayakan pola hidup sehat bersama Groofit!
               </motion.div>
               <motion.a
+                transition={transitionDuration}
                 initial={"offscreen"}
                 whileInView={"onscreen"}
                 viewport={{ once: true }}
@@ -204,17 +220,13 @@ const Landing: NextPage = () => {
               </motion.a>
             </div>
             <motion.div
+              transition={transitionDuration}
               initial={{ scale: 0 }}
               whileInView={{ scale: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
               className="relative w-1/3 h-[400px]"
             >
-              <Image
-                alt=""
-                src="/image/Mockup-CTA.png"
-                layout="fill"
-              />
+              <Image alt="" src="/image/Mockup-CTA.png" layout="fill" />
             </motion.div>
           </div>
         </div>
@@ -223,6 +235,7 @@ const Landing: NextPage = () => {
       {/* Mobile Top App Styling */}
       <div className={`${styles.mainContainer} xl:hidden`}>
         <motion.div
+          transition={transitionDuration}
           initial={"offscreen"}
           whileInView={"onscreen"}
           viewport={{ once: true }}
@@ -273,6 +286,7 @@ const Landing: NextPage = () => {
         </div>
         <div className="relative z-10 w-full bg-primary-50 px-8 pt-10 -mt-8">
           <motion.p
+            transition={transitionDuration}
             initial={"offscreen"}
             whileInView={"onscreen"}
             viewport={{ once: true }}
@@ -294,6 +308,7 @@ const Landing: NextPage = () => {
         <div className="h-[100px] w-full bg-primary-50"></div>
         <div id="fitur-m" className="w-full bg-primary-50 px-8">
           <motion.p
+            transition={transitionDuration}
             initial={"offscreen"}
             whileInView={"onscreen"}
             viewport={{ once: true }}
@@ -321,6 +336,7 @@ const Landing: NextPage = () => {
         </div>
         <div id="testimoni-m" className="w-full bg-primary-50">
           <motion.div
+            transition={transitionDuration}
             initial={"offscreen"}
             whileInView={"onscreen"}
             viewport={{ once: true }}
@@ -363,25 +379,23 @@ const Landing: NextPage = () => {
             initial={{ scale: 0 }}
             whileInView={{ scale: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
+            transition={transitionDuration}
             className="relative w-[calc(100vw-64px)] h-[calc(19/20*(100vw-40px))]"
           >
-            <Image
-              alt=""
-              src="/image/Mockup-CTA.png"
-              layout="fill"
-            />
+            <Image alt="" src="/image/Mockup-CTA.png" layout="fill" />
           </motion.div>
           <motion.div
             initial={"offscreen"}
             whileInView={"onscreen"}
             viewport={{ once: true }}
+            transition={transitionDuration}
             variants={variantsRiseUp}
             className={`mt-10 text-mobileh1 text-center font-bold bg-orange-gradient ${styles.textGradient}`}
           >
             Ayo budayakan pola hidup sehat bersama Groofit!
           </motion.div>
           <motion.a
+            transition={transitionDuration}
             initial={"offscreen"}
             whileInView={"onscreen"}
             viewport={{ once: true }}

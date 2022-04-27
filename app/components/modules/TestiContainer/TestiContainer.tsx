@@ -45,6 +45,7 @@ const TestiContainer = ({ data }: Props) => {
       viewport={{ once: true }}
       variants={variantsRiseUp}
       className="flex flex-col w-full"
+      transition={{ duration: 1 }}
     >
       <div className="flex items-center justify-between">
         <Image

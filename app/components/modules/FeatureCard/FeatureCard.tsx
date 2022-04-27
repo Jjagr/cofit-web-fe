@@ -36,7 +36,7 @@ const FeatureCard = ({
       whileInView={"onscreen"}
       viewport={{ once: true }}
       variants={variantsRiseUp}
-      transition={{ opacity: { duration: 0.5 } }}
+      transition={{ opacity: { duration: 0.5 }, duration: 1 }}
       className={`${styles.cardContainer} flex-col-reverse ${
         leftAlign ? "xl:flex-row" : "xl:flex-row-reverse"
       }`}
@@ -54,7 +54,9 @@ const FeatureCard = ({
         <Button
           color="white"
           className="xl:w-[235px] bg-orange-gradient text-primary-50 font-bold xs:rounded-24"
-          onClick={() => {window.open(LINKS.playstore, "_blank");}}
+          onClick={() => {
+            window.open(LINKS.playstore, "_blank");
+          }}
           rounded="rounded-24"
         >
           Yuk coba sekarang!

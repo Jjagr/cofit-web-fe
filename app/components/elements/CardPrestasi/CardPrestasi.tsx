@@ -12,7 +12,7 @@ const CardPrestasi = () => {
       whileInView={"onscreen"}
       viewport={{ once: true }}
       variants={variantsRiseUp}
-      transition={{ opacity: { duration: 0.5 } }}
+      transition={{ opacity: { duration: 0.5 }, duration: 1 }}
       className="flex flex-col md:flex-row bg-primary-50 rounded-36 p-5 px-8 md:p-10 items-center justify-between"
     >
       <div className="hidden md:block">
