@@ -13,7 +13,7 @@ const TopNav = ({ bg }: Props) => {
         <div
           className={`absolute bg-no-repeat object-contain top-0 left-0 ${styles.waveTop}`}
         ></div>
-        <div className={`absolute bg-no-repeat object-contain z-10 top-8 left-8`}>
+        <div className={`absolute bg-no-repeat bg-contain object-contain z-10 top-8 left-8`}>
           <Image
             src={"/assets/icon/full-logo.svg"}
             alt={""}
@@ -28,7 +28,7 @@ const TopNav = ({ bg }: Props) => {
         />
         <div className={bg === "transparent" ? styles.navDesktopContainer : styles.navDesktopContainerWhite}>
           <div
-            className={`bg-no-repeat object-contain`}
+            className={`bg-no-repeat object-contain bg-contain`}
             style={{
               backgroundImage: `url(../../../assets/icon/full-logo.svg)`,
               height: "50px",

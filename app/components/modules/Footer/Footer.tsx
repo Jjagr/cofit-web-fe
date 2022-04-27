@@ -72,7 +72,7 @@ const Footer = () => {
                   height={24}
                 />
               }
-              text="@groofit.app"
+              text="@groofit.id"
             />
           </a>
           <a href={LINKS.youtube} target="_blank" rel="noreferrer">
@@ -107,11 +107,11 @@ const Footer = () => {
             </span>
           </div>
           <Image
-            src={"/image/qr-code.png"}
-            className="-ml-4"
+            src={"/image/qr-code.svg"}
+            className="object-cover shadow-xl"
             alt={""}
-            height={120}
-            width={120}
+            height={90}
+            width={90}
           />
         </div>
       </div>
@@ -178,7 +178,7 @@ const Footer = () => {
                     height={16}
                   />
                 }
-                text="@groofit.app"
+                text="@groofit.id"
               />
             </a>
             <a href={LINKS.youtube} target="_blank" rel="noreferrer">

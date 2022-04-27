@@ -130,9 +130,9 @@ export const TESTIMONI: Array<Testi> = [
 ];
 
 export const LINKS = {
-  instagram: "https://www.instagram.com/groofit.app/",
-  youtube: "https://www.youtube.com/channel/UC9EHbyK86NRf46pwsnQv-PQ/featured",
+  instagram: "https://www.instagram.com/groofit.id/",
+  youtube: "https://www.youtube.com/channel/UC9EHbyK86NRf46pwsnQv-PQ",
   gmail: "https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&su=Hi+Groofit!&to=jjagrteam@gmail.com",
-  playstore: "https://play.google.com/store/apps/details?id=app.cofit",
-  intro: "https://www.youtube.com/watch?v=MMOuCyUpBIY",
+  playstore: "https://play.google.com/store/apps/details?id=fit.groo",
+  intro: "https://youtu.be/qjTrlqej8mI",
 }

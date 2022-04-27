@@ -208,7 +208,7 @@ const Landing: NextPage = () => {
               whileInView={{ scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="relative w-1/3 h-[480px]"
+              className="relative w-1/3 h-[400px]"
             >
               <Image
                 alt=""
