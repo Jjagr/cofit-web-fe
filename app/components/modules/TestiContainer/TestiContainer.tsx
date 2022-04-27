@@ -53,6 +53,7 @@ const TestiContainer = ({ data }: Props) => {
           height={32}
           width={32}
           onClick={() => setOnTop((onTop + data.length - 1) % data.length)}
+          className={"cursor-pointer"}
         />
         <div className={`slides relative w-full h-56 mx-4 md:mx-8`}>
           {data.map((item, index) => {
@@ -74,6 +75,7 @@ const TestiContainer = ({ data }: Props) => {
           height={32}
           width={32}
           onClick={() => setOnTop((onTop + 1) % data.length)}
+          className={"cursor-pointer"}
         />
       </div>
       <div className={"flex justify-center mt-8"}>

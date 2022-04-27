@@ -57,7 +57,7 @@ const FeatureCard = ({
           onClick={() => {window.open(LINKS.playstore, "_blank");}}
           rounded="rounded-24"
         >
-          Yuk Coba Sekarang!
+          Yuk coba sekarang!
         </Button>
       </div>
       <div className={`${styles.cardImg}`}>

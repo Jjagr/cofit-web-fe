@@ -31,16 +31,16 @@ const Landing: NextPage = () => {
             whileInView={"onscreen"}
             viewport={{ once: true }}
             variants={variantsLeftRight}
-            className="-mt-28 w-1/2 xl:ml-28"
+            className="-mt-28 w-1/2 xl:ml-28 z-10"
           >
             <h1 className="text-h2 2xl:text-h2 text-primary-50 font-semibold mb-6 2xl:mb-0">
               Ingin workout tanpa ribet?
             </h1>
-            <p className="w-2/3 text-body1 text-primary-50">
+            <p className="w-4/5 text-body1 text-primary-50">
               Sekarang, workout tidak perlu lagi sambil menghitung jumlah
               gerakanmu dan menggapai smartphonemu untuk mengganti gerakan.{" "}
             </p>
-            <div className="relative mt-10 z-10 flex">
+            <div className="mt-10 flex">
               <a
                 href={LINKS.playstore}
                 target="_blank"
@@ -73,8 +73,8 @@ const Landing: NextPage = () => {
             <Image src={"/image/hero.svg"} alt={""} layout="fill" />
           </motion.div>
         </div>
-        <div className="relative w-screen h-[30vw] -mt-80">
-          <Image src={"/assets/vector/bottom-web.svg"} alt={""} layout="fill" />
+        <div className="relative w-screen h-[30vw] -mt-64">
+          <Image src={"/assets/vector/bottom-web.svg"} alt={""} layout="fill" className={'-z-10'}/>
         </div>
         <div className="relative w-full -mt-16 bg-primary-50 px-[200px] z-10">
           <motion.div
@@ -136,12 +136,12 @@ const Landing: NextPage = () => {
             whileInView={"onscreen"}
             viewport={{ once: true }}
             variants={variantsRiseUp}
-            className={`absolute top-80 pl-[100px] text-h1 font-bold bg-orange-red-gradient ${styles.textGradient}`}
+            className={`absolute top-72 pl-[100px] text-h1 font-bold bg-orange-red-gradient ${styles.textGradient}`}
           >
             Apa kata mereka tentang Groofit?
           </motion.div>
         </div>
-        <div className="flex mt-[-320px] mb-[100px] mx-[160px] items-center">
+        <div className="flex mt-[-280px] mb-[100px] mx-[160px] items-center">
           <motion.div
             initial={{ scale: 0 }}
             whileInView={{ scale: 1 }}
@@ -193,7 +193,7 @@ const Landing: NextPage = () => {
                 href={LINKS.playstore}
                 target="_blank"
                 rel="noreferrer"
-                className="mt-8"
+                className="mt-8 cursor-pointer"
               >
                 <Image
                   src={"/assets/vector/playstore.svg"}
@@ -246,7 +246,7 @@ const Landing: NextPage = () => {
               href={LINKS.playstore}
               target="_blank"
               rel="noreferrer"
-              className="mb-3 w-2/3 text-center py-3 px-8 font-bold text-body3 text-secondary-orange rounded-full bg-primary-50"
+              className="mb-3 w-2/3 text-center py-3 px-8 font-bold text-body3 text-secondary-orange rounded-full bg-primary-50 cursor-pointer"
             >
               Yuk coba sekarang!
             </a>
@@ -389,7 +389,7 @@ const Landing: NextPage = () => {
             href={LINKS.playstore}
             target="_blank"
             rel="noreferrer"
-            className="mt-10"
+            className="mt-10 cursor-pointer"
           >
             <Image
               src={"/assets/vector/playstore.svg"}
