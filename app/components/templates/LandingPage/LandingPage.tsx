@@ -226,7 +226,7 @@ const Landing: NextPage = () => {
               viewport={{ once: true }}
               className="relative w-1/3 h-[400px]"
             >
-              <Image alt="" src="/image/Mockup-CTA.png" layout="fill" />
+              <Image alt="" src="/image/Mockup-CTA.svg" layout="fill" />
             </motion.div>
           </div>
         </div>

@@ -50,7 +50,7 @@ type Feature = {
 
 export const FEATURE: Array<Feature> = [
   {
-    image: "/image/feature1.png",
+    image: "/image/feature1.svg",
     alignText: "left",
     title: "Workout menjadi lebih mudah",
     caption: (
@@ -62,7 +62,7 @@ export const FEATURE: Array<Feature> = [
     ),
   },
   {
-    image: "/image/feature2.png",
+    image: "/image/feature2.svg",
     alignText: "right",
     title: "Olahraga bersama tanpa peduli jarak dan waktu",
     caption: (
@@ -74,7 +74,7 @@ export const FEATURE: Array<Feature> = [
     ),
   },
   {
-    image: "/image/feature3.png",
+    image: "/image/feature3.svg",
     alignText: "left",
     title: "Program Workout",
     caption: (
@@ -86,7 +86,7 @@ export const FEATURE: Array<Feature> = [
     ),
   },
   {
-    image: "/image/feature4.png",
+    image: "/image/feature4.svg",
     alignText: "right",
     title: "Pola makan menjadi lebih terjaga!",
     caption: (
