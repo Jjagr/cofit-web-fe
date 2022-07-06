@@ -51,7 +51,7 @@ const TopNav = ({ bg }: Props) => {
           </div>
         </div>
       </div>
-      <div className={styles.waveRight}></div>
+      <div className={bg === "gradient" ? styles.waveRight : ""}></div>
     </>
   );
 };

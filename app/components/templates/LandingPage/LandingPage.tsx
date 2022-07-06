@@ -175,7 +175,7 @@ const Landing: NextPage = () => {
           </div>
         </div>
         <div className="relative w-[960px] mx-auto z-10">
-          <CardPrestasi />
+          {/* <CardPrestasi /> */}
           <div id="intro" />
           <div className="flex justify-center items-center mt-[180px]">
             <Video
@@ -360,7 +360,7 @@ const Landing: NextPage = () => {
           </div>
         </div>
         <div className="relative z-10 mt-[100px] px-5">
-          <CardPrestasi />
+          {/* <CardPrestasi /> */}
           <div
             id="video-m"
             className="flex justify-center items-center mt-[100px]"
