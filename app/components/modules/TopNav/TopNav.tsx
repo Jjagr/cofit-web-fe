@@ -51,7 +51,7 @@ const TopNav = ({ bg }: Props) => {
           </div>
         </div>
       </div>
-      <div className={`md:${`styles.waveRight`}`}></div>
+      <div className={styles.waveRight}></div>
     </>
   );
 };
