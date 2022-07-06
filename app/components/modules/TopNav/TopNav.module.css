@@ -8,6 +8,13 @@
   height: 200px;
 }
 
+.waveRight {
+  @apply bg-no-repeat object-contain absolute w-full top-0 right-0 bg-right-bottom;
+  background-image: url(/assets/vector/navigation-gradient.svg);
+  height: 200px;
+}
+
+
 .navDesktopContainer {
   @apply hidden fixed top-0 z-50 xl:flex w-full justify-between xl:px-28 py-8 text-primary-50;
 }

@@ -1,5 +1,6 @@
 .mainContainer {
     @apply 
+        pt-10
         bg-primary-50
         text-primary-800
         xl:flex flex-row hidden
@@ -11,6 +12,8 @@
 .clickableFooter {
     @apply 
         mb-3 
+        font-semibold md:font-normal
+        text-secondary-orange md:text-black
         xl:text-base md:text-sm text-xs
         bg-clip-text hover:bg-orange-red-gradient hover:text-transparent 
         cursor-pointer;
@@ -22,5 +25,5 @@
         xl:hidden flex flex-col
         w-full
         px-8 pt-24 pb-12
-        items-center;
+        items-start;
 }

@@ -2,6 +2,7 @@ import styles from "./NavOver.module.css";
 import Footer from "@module/Footer/Footer";
 import { useEffect, useRef, useState } from "react";
 import TopNav from "@module/TopNav/TopNav";
+import { useRouter } from "next/router";
 
 type Props = {
   children: React.ReactNode;
@@ -10,6 +11,8 @@ type Props = {
 const NavOver = ({ children }: Props) => {
   const [clearNavbar, setClearNavbar] = useState(true);
   let listener: any = useRef();
+
+  const router = useRouter();
 
   useEffect(() => {
     listener.current = document.addEventListener("scroll", (e) => {
@@ -28,7 +31,15 @@ const NavOver = ({ children }: Props) => {
 
   return (
     <div className="relative h-screen mx-auto">
-      <TopNav bg={clearNavbar ? "transparent" : "white"} />
+      <TopNav
+        bg={
+          clearNavbar
+            ? router.pathname == "/legal"
+              ? "gradient"
+              : "transparent"
+            : "white"
+        }
+      />
       <div className={styles.content}>{children}</div>
       <Footer />
     </div>
