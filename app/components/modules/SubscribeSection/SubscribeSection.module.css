@@ -1,0 +1,26 @@
+
+.mainContainer {
+  @apply
+    relative
+    w-full
+    flex flex-row
+    justify-between 
+    items-center
+    -mt-16
+    bg-primary-50
+    px-[100px]
+    pb-[200px];
+}
+
+.textContainer {
+  @apply
+    flex flex-col
+    w-[620px]
+    gap-6;
+}
+
+.row {
+  @apply
+    flex flex-row
+    items-end;
+}

@@ -6,6 +6,7 @@ type Props = {
     password?: boolean,
     inline: boolean,
     width: string,
+    backgroundColor?: string,
     shadow: boolean,
     leftIcon?: JSX.Element,
     rightIcon?: JSX.Element,
@@ -15,12 +16,12 @@ type Props = {
     inputRef?: any
 }
 
-const InputBar = ({inputRef, label, placeholder, password, inline, width, shadow, leftIcon, rightIcon, leftOnclick, rightOnclick, onchange}: Props) => {
+const InputBar = ({inputRef, label, placeholder, password, inline, width, backgroundColor, shadow, leftIcon, rightIcon, leftOnclick, rightOnclick, onchange}: Props) => {
     return (
         <div className={width}>
             {label && <label htmlFor={label} className="text-body3 font-normal">{label}</label> }
             {inline ? <br/>:null}
-            <div className={styles.container + " " + (shadow ? styles.shadow:null)}>
+            <div className={styles.container + " " + (shadow ? styles.shadow:null) + " " + (backgroundColor || "bg-primary-200")}>
                 {leftIcon && (
                     <div className={styles["left-icon"]} onClick={leftOnclick}>
                         {leftIcon}
@@ -30,7 +31,7 @@ const InputBar = ({inputRef, label, placeholder, password, inline, width, shadow
                     ref={inputRef}
                     name={label}
                     type={password ? "password" : "text"}
-                    className={leftIcon ? styles['input-icon'] : styles.input}
+                    className={leftIcon ? styles['input-icon'] : `${styles.input} ${backgroundColor || "bg-primary-200"}`}
                     placeholder={placeholder}
                     onChange={onchange}
                 />

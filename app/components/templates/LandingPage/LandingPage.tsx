@@ -8,6 +8,7 @@ import { FEATURE, LINKS, TESTIMONI } from "@constant/index";
 import CardPrestasi from "@element/CardPrestasi/CardPrestasi";
 import { motion } from "framer-motion";
 import Video from "@element/Video/Video";
+import SubscribeSection from "@module/SubscribeSection/SubscribeSection";
 
 const Landing: NextPage = () => {
   const { height, width } = useWindowSize();
@@ -87,7 +88,8 @@ const Landing: NextPage = () => {
             className={"-z-10"}
           />
         </div>
-        <div className="relative w-full -mt-16 bg-primary-50 px-[200px] z-10">
+        <SubscribeSection/>
+        <div className="relative w-full bg-primary-50 px-[200px] z-10">
           <motion.div
             className="text-h1 font-bold text-center"
             initial={"offscreen"}
