@@ -14,6 +14,7 @@
 
 .textContainer {
   @apply
+    xl:pt-0 pt-8
     xl:mr-32
     xl:text-left text-center
     flex flex-col

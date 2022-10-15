@@ -6,7 +6,7 @@
     border-primary-200 
     rounded-10 
     py-3
-    px-3
+    xl:px-3 px-0
     block;
 }
 

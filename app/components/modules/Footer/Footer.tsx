@@ -17,7 +17,7 @@ const Footer = () => {
             height={56}
             width={189}
           />
-          <p className="mt-8">Copyright © 2021 Groofit. All rights reserved.</p>
+          <p className="mt-8">Copyright © 2022 Groofit. All rights reserved.</p>
         </div>
         <div className="flex flex-col items-start">
           <div className="text-h4 font-semibold mb-5">Informasi</div>
@@ -255,7 +255,7 @@ const Footer = () => {
           <ReactTooltip id="footer" place="bottom" type="warning"  effect="solid">Coming soon on iOS</ReactTooltip>
         </div>
         <p className="mt-16 text-sm">
-          Copyright © 2021 Groofit. All rights reserved.
+          Copyright © 2022 Groofit. All rights reserved.
         </p>
       </div>
     </div>

@@ -43,7 +43,7 @@ const SubscribeSection = (props: any) => {
 
         <BodyText
           preset={Presets.Body1}
-          text="Jadilah 1000 orang pertama yang mendaftar untuk mendapatkan akses pertama pada aplikasi Groofit dan reward berupa early-user badge pada akun Groofitmu."
+          text="Jadilah 150 orang pertama yang mendaftar untuk mendapatkan akses pertama pada aplikasi Groofit dan reward berupa early-user badge pada akun Groofitmu."
           weight={Weight.Normal}
           align={Align.Left}
         />

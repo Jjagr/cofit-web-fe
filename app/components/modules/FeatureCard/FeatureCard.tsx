@@ -53,9 +53,19 @@ const FeatureCard = ({
         <div className={`${styles.cardCaption} xl:mb-8`}>{caption}</div>
         <Button
           color="white"
-          className="xl:w-[235px] bg-orange-gradient text-primary-50 font-bold xs:rounded-24"
+          className="xl:flex hidden xl:w-[235px] bg-orange-gradient text-primary-50 font-bold xs:rounded-24"
           onClick={() => {
             window.location.href = '#subscribe';
+          }}
+          rounded="rounded-24"
+        >
+          Yuk coba sekarang!
+        </Button>
+        <Button
+          color="white"
+          className="xl:hidden flex xl:w-[235px] bg-orange-gradient text-primary-50 font-bold xs:rounded-24"
+          onClick={() => {
+            window.location.href = '#subscribe-m';
           }}
           rounded="rounded-24"
         >
