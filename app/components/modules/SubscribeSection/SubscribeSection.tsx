@@ -15,7 +15,7 @@ const SubscribeSection = (props: any) => {
   const MAX_USER_COUNT: number = 150;
 
   const inputEmail = useRef(null);
-  const API_URL = 'https://dev-api.groo.fit'
+  const API_URL = 'https://api.groo.fit'
 
   const postEmail = () => {
     if (inputEmail.current !== undefined && inputEmail.current !== null && inputEmail.current['value'] !== '') {
