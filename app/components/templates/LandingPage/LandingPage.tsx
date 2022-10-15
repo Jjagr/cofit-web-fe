@@ -9,6 +9,7 @@ import CardPrestasi from "@element/CardPrestasi/CardPrestasi";
 import { motion } from "framer-motion";
 import Video from "@element/Video/Video";
 import SubscribeSection from "@module/SubscribeSection/SubscribeSection";
+import ReactTooltip from 'react-tooltip';
 
 const Landing: NextPage = () => {
   const { height, width } = useWindowSize();
@@ -48,8 +49,7 @@ const Landing: NextPage = () => {
             </p>
             <div className="mt-10 flex">
               <a
-                href={LINKS.playstore}
-                target="_blank"
+                href="#subscribe"
                 rel="noreferrer"
                 className="cursor-pointer mr-6 py-3 px-8 font-bold text-body1 text-secondary-orange rounded-full bg-primary-50"
               >
@@ -80,7 +80,7 @@ const Landing: NextPage = () => {
             <Image src={"/image/hero.svg"} alt={""} layout="fill" />
           </motion.div>
         </div>
-        <div className="relative w-screen h-[30vw] -mt-64">
+        <div id="subscribe" className="relative w-screen h-[30vw] -mt-64">
           <Image
             src={"/assets/vector/bottom-web.svg"}
             alt={""}
@@ -88,7 +88,16 @@ const Landing: NextPage = () => {
             className={"-z-10"}
           />
         </div>
-        <SubscribeSection/>
+        <div className="bg-primary-50">
+          <motion.div
+            initial={"offscreen"}
+            whileInView={"onscreen"}
+            viewport={{ once: true }}
+            variants={variantsRiseUp}
+            transition={transitionDuration}>
+            <SubscribeSection />
+          </motion.div>
+        </div>
         <div className="relative w-full bg-primary-50 px-[200px] z-10">
           <motion.div
             className="text-h1 font-bold text-center"
@@ -202,24 +211,28 @@ const Landing: NextPage = () => {
               >
                 Ayo budayakan pola hidup sehat bersama Groofit!
               </motion.div>
-              <motion.a
+              <motion.div
                 transition={transitionDuration}
                 initial={"offscreen"}
                 whileInView={"onscreen"}
                 viewport={{ once: true }}
                 variants={variantsRiseUp}
-                href={LINKS.playstore}
-                target="_blank"
-                rel="noreferrer"
                 className="mt-8 cursor-pointer"
               >
-                <Image
-                  src={"/assets/vector/playstore.svg"}
-                  alt={""}
-                  height={72}
-                  width={240}
-                />
-              </motion.a>
+                <a href={LINKS.playstore}
+                  target="_blank"
+                  rel="noreferrer"
+                  data-tip
+                  data-for="landing1">
+                  <Image
+                    src={"/assets/vector/playstore.svg"}
+                    alt={""}
+                    height={72}
+                    width={240}
+                  />
+                </a>
+                <ReactTooltip id="landing1" place="bottom" type="warning" effect="solid">Coming soon on iOS</ReactTooltip>
+              </motion.div>
             </div>
             <motion.div
               transition={transitionDuration}
@@ -258,8 +271,7 @@ const Landing: NextPage = () => {
           </div>
           <div className="mt-8 relative z-10 flex flex-col items-center justify-center">
             <a
-              href={LINKS.playstore}
-              target="_blank"
+              href="#subscribe-m"
               rel="noreferrer"
               className="mb-3 w-2/3 text-center py-3 px-8 font-bold text-body3 text-secondary-orange rounded-full bg-primary-50 cursor-pointer"
             >
@@ -285,6 +297,16 @@ const Landing: NextPage = () => {
             alt={""}
             layout="fill"
           />
+        </div>
+        <div id="subscribe-m" className="bg-primary-50">
+          <motion.div
+            initial={"offscreen"}
+            whileInView={"onscreen"}
+            viewport={{ once: true }}
+            variants={variantsRiseUp}
+            transition={transitionDuration}>
+            <SubscribeSection />
+          </motion.div>
         </div>
         <div className="relative z-10 w-full bg-primary-50 px-8 pt-10 -mt-8">
           <motion.p
@@ -396,24 +418,27 @@ const Landing: NextPage = () => {
           >
             Ayo budayakan pola hidup sehat bersama Groofit!
           </motion.div>
-          <motion.a
+          <motion.div
             transition={transitionDuration}
             initial={"offscreen"}
             whileInView={"onscreen"}
             viewport={{ once: true }}
             variants={variantsRiseUp}
-            href={LINKS.playstore}
-            target="_blank"
-            rel="noreferrer"
             className="mt-10 cursor-pointer"
           >
-            <Image
-              src={"/assets/vector/playstore.svg"}
-              alt={""}
-              height={60}
-              width={200}
-            />
-          </motion.a>
+            <a href={LINKS.playstore}
+              target="_blank"
+              rel="noreferrer"
+              data-tip
+              data-for="landing2">
+              <Image
+                src={"/assets/vector/playstore.svg"}
+                alt={""}
+                height={60}
+                width={200}
+              />
+            </a>
+          </motion.div>
         </div>
       </div>
     </>

@@ -2,6 +2,7 @@ import { LINKS } from "@constant/index";
 import IconText from "@element/IconText/IconText";
 import Image from "next/image";
 import Link from "next/link";
+import ReactTooltip from "react-tooltip";
 
 import styles from "./Footer.module.css";
 
@@ -238,6 +239,8 @@ const Footer = () => {
           </div>
           <a
             href={LINKS.playstore}
+            data-tip
+            data-for="footer"
             target="_blank"
             rel="noreferrer"
             className="mt-4"
@@ -249,6 +252,7 @@ const Footer = () => {
               width={200}
             />
           </a>
+          <ReactTooltip id="footer" place="bottom" type="warning"  effect="solid">Coming soon on iOS</ReactTooltip>
         </div>
         <p className="mt-16 text-sm">
           Copyright © 2021 Groofit. All rights reserved.

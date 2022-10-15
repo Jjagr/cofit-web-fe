@@ -55,7 +55,7 @@ const FeatureCard = ({
           color="white"
           className="xl:w-[235px] bg-orange-gradient text-primary-50 font-bold xs:rounded-24"
           onClick={() => {
-            window.open(LINKS.playstore, "_blank");
+            window.location.href = '#subscribe';
           }}
           rounded="rounded-24"
         >

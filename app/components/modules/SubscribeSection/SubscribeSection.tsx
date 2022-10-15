@@ -6,11 +6,30 @@ import CustomCountdown from "@module/CustomCountdown/CustomCountdown";
 import { Align, Presets, Weight } from "types/TextStyles";
 import styles from "./SubscribeSection.module.css";
 import { LINKS } from "@constant/index";
+import { useRef } from 'react'
 import Image from "next/image";
+import ReactTooltip from "react-tooltip";
 
 const SubscribeSection = (props: any) => {
-  const USER_COUNT: number = 12;
+  const USER_COUNT: number = 19;
   const MAX_USER_COUNT: number = 150;
+
+  const inputEmail = useRef(null);
+  const API_URL = 'https://dev-api.groo.fit'
+
+  const postEmail = () => {
+    if (inputEmail.current !== undefined && inputEmail.current !== null && inputEmail.current['value'] !== '') {
+      fetch(`${API_URL}/firstusers/add`, {
+        method: "POST",
+        body: JSON.stringify({
+          email: inputEmail.current['value']
+        }),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      }).then(() => alert("Thank you so much! Can't wait when you tried our product"))
+    }
+  }
 
   return (
     <section className={styles.mainContainer}>
@@ -45,9 +64,10 @@ const SubscribeSection = (props: any) => {
             />
           </div>
         </div>
-  
-        <div className={styles.row + " gap-3"}>
+
+        <div className={styles.inputEmail + " gap-3"}>
           <InputBar
+            inputRef={inputEmail}
             width="w-full h-[min-content]"
             inline={false}
             shadow={false}
@@ -58,22 +78,26 @@ const SubscribeSection = (props: any) => {
           <Button
             color="white"
             className="px-8 bg-orange-gradient text-primary-50 font-bold xs:rounded-24"
-            onClick={() => {}}
+            onClick={postEmail}
             rounded="rounded-24"
           >Daftar</Button>
         </div>
       </div>
 
-      <div className="flex flex-col gap-6 items-center pr-[100px]">
-        <HeadText
-          preset={Presets.Heading4}
-          text="Groofit hadir dalam"
-        />
-        
-        <CustomCountdown/>
+      <div className="flex flex-col gap-6 items-center">
+        <div className="xl:mt-0 mt-16">
+          <HeadText
+            preset={Presets.Heading4}
+            text="Groofit hadir dalam"
+          />
+        </div>
+
+        <CustomCountdown />
 
         <a
           href={LINKS.playstore}
+          data-tip
+          data-for="subs"
           target="_blank"
           rel="noreferrer"
           className="cursor-pointer">
@@ -84,6 +108,7 @@ const SubscribeSection = (props: any) => {
             width={200}
           />
         </a>
+        <ReactTooltip id="subs" place="bottom" type="warning" effect="solid">Coming soon on iOS</ReactTooltip>
       </div>
     </section>
   );

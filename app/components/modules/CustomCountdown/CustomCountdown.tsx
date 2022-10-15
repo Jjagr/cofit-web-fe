@@ -2,9 +2,6 @@ import Countdown from 'react-countdown';
 import CountdownBox from '../../elements/CountdownBox/CountdownBox';
 
 const CustomCountdown = () => {
-
-  const COUNTDOWN_DAYS = 5;
-
   type RenderProps = {
     days: number,
     hours: number,
@@ -32,7 +29,7 @@ const CustomCountdown = () => {
   
   return (
     <Countdown 
-      date={ Date.now() + (COUNTDOWN_DAYS * 86400000) }
+      date={ new Date(2022, 9, 20, 0, 0, 0) }
       renderer={renderer}
     />
   )

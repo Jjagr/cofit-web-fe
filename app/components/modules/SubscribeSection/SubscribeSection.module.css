@@ -3,19 +3,20 @@
   @apply
     relative
     w-full
-    flex flex-row
-    justify-between 
+    flex xl:flex-row flex-col
+    xl:justify-between
     items-center
     -mt-16
     bg-primary-50
-    px-[100px]
+    xl:px-[256px] px-10
     pb-[200px];
 }
 
 .textContainer {
   @apply
+    xl:mr-32
+    xl:text-left text-center
     flex flex-col
-    w-[620px]
     gap-6;
 }
 
@@ -23,4 +24,10 @@
   @apply
     flex flex-row
     items-end;
+}
+
+.inputEmail {
+  @apply
+    flex xl:flex-row flex-col
+    xl:items-end;
 }
