@@ -6,16 +6,16 @@ import CustomCountdown from "@module/CustomCountdown/CustomCountdown";
 import { Align, Presets, Weight } from "types/TextStyles";
 import styles from "./SubscribeSection.module.css";
 import { LINKS } from "@constant/index";
-import { useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Image from "next/image";
 import ReactTooltip from "react-tooltip";
 
 const SubscribeSection = (props: any) => {
   const USER_COUNT: number = 19;
   const MAX_USER_COUNT: number = 150;
-
   const inputEmail = useRef(null);
   const API_URL = 'https://api.groo.fit'
+  const [userInfo, setUserInfo] = useState(0)
 
   const postEmail = () => {
     if (inputEmail.current !== undefined && inputEmail.current !== null && inputEmail.current['value'] !== '') {
@@ -30,6 +30,17 @@ const SubscribeSection = (props: any) => {
       }).then(() => alert("Thank you so much! Can't wait when you tried our product"))
     }
   }
+
+  const getUsers = () => {
+    fetch(`${API_URL}/firstusers/info`)
+      .then(res => res.json())
+      .then(result => {
+        setUserInfo(result.data.count)
+      })
+      .catch(e => console.error(e))
+  }
+
+  useEffect(() => getUsers(), [])
 
   return (
     <section className={styles.mainContainer}>
@@ -51,7 +62,7 @@ const SubscribeSection = (props: any) => {
         <div className={styles.row}>
           <HeadText
             preset={Presets.Heading2}
-            text={USER_COUNT.toString()}
+            text={userInfo.toString()}
             weight={Weight.Bold}
             align={Align.Left}
           />
