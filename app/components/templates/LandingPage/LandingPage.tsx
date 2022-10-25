@@ -49,7 +49,8 @@ const Landing: NextPage = () => {
             </p>
             <div className="mt-10 flex">
               <a
-                href="#subscribe"
+                target="_blank"
+                href={LINKS.playstore}
                 rel="noreferrer"
                 className="cursor-pointer mr-6 py-3 px-8 font-bold text-body1 text-secondary-orange rounded-full bg-primary-50"
               >
@@ -88,7 +89,7 @@ const Landing: NextPage = () => {
             className={"-z-10"}
           />
         </div>
-        <div className="bg-primary-50">
+        {/* <div className="bg-primary-50">
           <motion.div
             initial={"offscreen"}
             whileInView={"onscreen"}
@@ -97,8 +98,8 @@ const Landing: NextPage = () => {
             transition={transitionDuration}>
             <SubscribeSection />
           </motion.div>
-        </div>
-        <div className="relative w-full bg-primary-50 px-[200px] z-10">
+        </div> */}
+        <div className="relative w-full bg-primary-50 px-[200px] z-10 -mt-8">
           <motion.div
             className="text-h1 font-bold text-center"
             initial={"offscreen"}
@@ -271,7 +272,8 @@ const Landing: NextPage = () => {
           </div>
           <div className="mt-8 relative z-10 flex flex-col items-center justify-center">
             <a
-              href="#subscribe-m"
+              target="_blank"
+              href={LINKS.playstore}
               rel="noreferrer"
               className="mb-3 w-2/3 text-center py-3 px-8 font-bold text-body3 text-secondary-orange rounded-full bg-primary-50 cursor-pointer"
             >
@@ -298,7 +300,7 @@ const Landing: NextPage = () => {
             layout="fill"
           />
         </div>
-        <div id="subscribe-m" className="bg-primary-50">
+        {/* <div id="subscribe-m" className="bg-primary-50">
           <motion.div
             initial={"offscreen"}
             whileInView={"onscreen"}
@@ -307,7 +309,7 @@ const Landing: NextPage = () => {
             transition={transitionDuration}>
             <SubscribeSection />
           </motion.div>
-        </div>
+        </div> */}
         <div className="relative z-10 w-full bg-primary-50 px-8 pt-10 -mt-8">
           <motion.p
             transition={transitionDuration}
