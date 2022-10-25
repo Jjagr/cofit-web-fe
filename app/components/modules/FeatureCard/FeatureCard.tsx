@@ -55,7 +55,7 @@ const FeatureCard = ({
           color="white"
           className="xl:flex hidden xl:w-[235px] bg-orange-gradient text-primary-50 font-bold xs:rounded-24"
           onClick={() => {
-            window.location.href = '#subscribe';
+            window.open(LINKS.playstore, "_blank");
           }}
           rounded="rounded-24"
         >
@@ -65,7 +65,7 @@ const FeatureCard = ({
           color="white"
           className="xl:hidden flex xl:w-[235px] bg-orange-gradient text-primary-50 font-bold xs:rounded-24"
           onClick={() => {
-            window.location.href = '#subscribe-m';
+            window.open(LINKS.playstore, "_blank");
           }}
           rounded="rounded-24"
         >
