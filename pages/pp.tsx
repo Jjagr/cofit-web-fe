@@ -1,7 +1,7 @@
 import NavOver from "@layout/NavOver/NavOver";
 import Head from "next/head";
 
-const Legal = () => {
+const Pp = () => {
   return (
     <NavOver>
       <Head>
@@ -567,4 +567,4 @@ const Legal = () => {
   );
 };
 
-export default Legal;
+export default Pp;

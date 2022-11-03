@@ -33,10 +33,10 @@ const Footer = () => {
         </div>
         <div className="flex flex-col items-start">
           <div className="text-h4 font-semibold mb-5">Legal</div>
-          <Link href={"/legal"} passHref={true}>
+          <Link href={"/pp"} passHref={true}>
             <div className={styles.clickableFooter}>Privacy Policy</div>
           </Link>
-          <Link href={"/legal"} passHref={true}>
+          <Link href={"/tou"} passHref={true}>
             <div className={styles.clickableFooter}>Terms of Use</div>
           </Link>
         </div>
@@ -150,10 +150,10 @@ const Footer = () => {
           </div>
           <div className="flex flex-col items-start">
             <div className="text-h4 font-semibold mb-3 md:mb-5">Legal</div>
-            <Link href={"/legal"} passHref={true}>
+            <Link href={"/pp"} passHref={true}>
               <div className={styles.clickableFooter}>Privacy Policy</div>
             </Link>
-            <Link href={"/legal"} passHref={true}>
+            <Link href={"/tou"} passHref={true}>
               <div className={styles.clickableFooter}>Term of Use</div>
             </Link>
           </div>

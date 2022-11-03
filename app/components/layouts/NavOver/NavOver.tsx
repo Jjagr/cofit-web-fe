@@ -34,7 +34,7 @@ const NavOver = ({ children }: Props) => {
       <TopNav
         bg={
           clearNavbar
-            ? router.pathname == "/legal"
+            ? router.pathname == "/pp" || router.pathname == "/tou"
               ? "gradient"
               : "transparent"
             : "white"
