@@ -6,7 +6,7 @@ const Tou = () => {
   return (
     <NavOver>
       <Head>
-        <title>Privacy Policy</title>
+        <title>Terms of Use</title>
       </Head>
       <div className="md:p-[120px] pt-24 p-8">
         <div dangerouslySetInnerHTML={{ __html: TOUHTML }} />
