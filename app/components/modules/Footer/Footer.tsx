@@ -109,7 +109,7 @@ const Footer = () => {
             />
           </a>
         </div>
-        <div className="flex flex-col items-start">
+        {/* <div className="flex flex-col items-start">
           <div className="text-h4 font-semibold">
             Unduh
             <span className="bg-orange-red-gradient text-transparent bg-clip-text">
@@ -124,7 +124,7 @@ const Footer = () => {
             height={90}
             width={90}
           />
-        </div>
+        </div> */}
       </div>
       <div className={styles.mobileMainContainer}>
         <Image
@@ -229,7 +229,7 @@ const Footer = () => {
             />
           </a>
         </div>
-        <div className="flex flex-col items-start mt-16">
+        {/* <div className="flex flex-col items-start mt-16">
           <div className="text-h4 font-bold md:font-semibold">
             Unduh
             <span className="bg-orange-red-gradient text-transparent bg-clip-text">
@@ -253,7 +253,7 @@ const Footer = () => {
             />
           </a>
           <ReactTooltip id="footer" place="bottom" type="warning"  effect="solid">Coming soon on iOS</ReactTooltip>
-        </div>
+        </div> */}
         <p className="mt-16 text-sm">
           Copyright © 2022 Groofit. All rights reserved.
         </p>

@@ -10,6 +10,7 @@ import { motion } from "framer-motion";
 import Video from "@element/Video/Video";
 import SubscribeSection from "@module/SubscribeSection/SubscribeSection";
 import ReactTooltip from 'react-tooltip';
+import { Link } from "@mui/material";
 
 const Landing: NextPage = () => {
   const { height, width } = useWindowSize();
@@ -48,14 +49,12 @@ const Landing: NextPage = () => {
               gerakanmu dan menggapai smartphonemu untuk mengganti gerakan.{" "}
             </p>
             <div className="mt-10 flex">
-              <a
-                target="_blank"
-                href={LINKS.playstore}
-                rel="noreferrer"
-                className="cursor-pointer mr-6 py-3 px-8 font-bold text-body1 text-secondary-orange rounded-full bg-primary-50"
+              <Link
+                href="/#kontak"
+                className="cursor-pointer mr-6 py-3 px-8 font-bold text-body1 text-secondary-orange rounded-full bg-primary-50 no-underline"
               >
                 Yuk coba sekarang!
-              </a>
+              </Link>
               <a
                 href="#intro"
                 className="mr-6 py-3 px-8 font-bold text-body1 text-primary-50 rounded-full border-2 border-primary-50 flex items-center"
@@ -199,7 +198,10 @@ const Landing: NextPage = () => {
         <div className="relative w-screen h-[10vw] -mt-96">
           <Image alt="" src="/assets/vector/video-pattern.svg" layout="fill" />
         </div>
-        <div id="download" className="relative bg-primary-50 px-[100px] -mt-2 pt-[400px] pb-44">
+        <div
+          id="download"
+          className="relative bg-primary-50 px-[100px] -mt-2 pt-[400px] pb-44"
+        >
           <div className="flex flex-row items-center w-full">
             <div className="flex flex-col items-start w-2/3">
               <motion.div
@@ -220,11 +222,13 @@ const Landing: NextPage = () => {
                 variants={variantsRiseUp}
                 className="mt-8 cursor-pointer"
               >
-                <a href={LINKS.playstore}
+                <a
+                  href={LINKS.playstore}
                   target="_blank"
                   rel="noreferrer"
                   data-tip
-                  data-for="landing1">
+                  data-for="landing1"
+                >
                   <Image
                     src={"/assets/vector/playstore.svg"}
                     alt={""}
@@ -232,7 +236,29 @@ const Landing: NextPage = () => {
                     width={240}
                   />
                 </a>
-                <ReactTooltip id="landing1" place="bottom" type="warning" effect="solid">Coming soon on iOS</ReactTooltip>
+                <a
+                  href={LINKS.appstore}
+                  target="_blank"
+                  rel="noreferrer"
+                  data-tip
+                  data-for="landing1"
+                  className="ml-8"
+                >
+                  <Image
+                    src={"/assets/vector/appstore.svg"}
+                    alt={""}
+                    height={72}
+                    width={240}
+                  />
+                </a>
+                {/* <ReactTooltip
+                  id="landing1"
+                  place="bottom"
+                  type="warning"
+                  effect="solid"
+                >
+                  Coming soon on iOS
+                </ReactTooltip> */}
               </motion.div>
             </div>
             <motion.div
@@ -271,14 +297,12 @@ const Landing: NextPage = () => {
             </p>
           </div>
           <div className="mt-8 relative z-10 flex flex-col items-center justify-center">
-            <a
-              target="_blank"
-              href={LINKS.playstore}
-              rel="noreferrer"
-              className="mb-3 w-2/3 text-center py-3 px-8 font-bold text-body3 text-secondary-orange rounded-full bg-primary-50 cursor-pointer"
+            <Link
+              href="/#kontak"
+              className="mb-3 w-2/3 text-center py-3 px-8 font-bold text-body3 text-secondary-orange rounded-full bg-primary-50 cursor-pointer no-underline"
             >
               Yuk coba sekarang!
-            </a>
+            </Link>
             <a
               href="#video-m"
               className=" w-2/3 text-center py-3 px-8 font-bold text-body3 text-primary-50 rounded-full border-2 border-primary-50 flex items-center justify-center"
@@ -410,7 +434,7 @@ const Landing: NextPage = () => {
           >
             <Image alt="" src="/image/Mockup-CTA.png" layout="fill" />
           </motion.div>
-          <motion.div 
+          <motion.div
             initial={"offscreen"}
             whileInView={"onscreen"}
             viewport={{ once: true }}
@@ -426,15 +450,31 @@ const Landing: NextPage = () => {
             whileInView={"onscreen"}
             viewport={{ once: true }}
             variants={variantsRiseUp}
-            className="mt-10 cursor-pointer"
+            className="mt-10 cursor-pointer flex flex-col items-center"
           >
-            <a href={LINKS.playstore}
+            <a
+              href={LINKS.playstore}
               target="_blank"
               rel="noreferrer"
               data-tip
-              data-for="landing2">
+              data-for="landing2"
+            >
               <Image
                 src={"/assets/vector/playstore.svg"}
+                alt={""}
+                height={60}
+                width={200}
+              />
+            </a>
+            <a
+              href={LINKS.appstore}
+              target="_blank"
+              rel="noreferrer"
+              data-tip
+              data-for="landing2"
+            >
+              <Image
+                src={"/assets/vector/appstore.svg"}
                 alt={""}
                 height={60}
                 width={200}

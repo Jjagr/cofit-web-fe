@@ -135,6 +135,7 @@ export const LINKS = {
   gmail: "https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&su=Hi+Groofit!&to=jjagrteam@gmail.com",
   playstore: "https://play.google.com/store/apps/details?id=fit.groo",
   intro: "https://youtu.be/qjTrlqej8mI",
+  appstore: "",
 }
 
 export const TOUHTML = `

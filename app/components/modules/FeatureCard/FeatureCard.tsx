@@ -7,6 +7,7 @@ import Tag, { TagColor } from "@element/Tag/Tag";
 import { LINKS } from "@constant/index";
 
 import { motion } from "framer-motion";
+import { Link } from "@mui/material";
 
 type Props = {
   image: string;
@@ -51,26 +52,12 @@ const FeatureCard = ({
         {comingSoon && <Tag text="Segera hadir" color={TagColor.ORANGE} />}
         <p className={`mt-3 xl:mt-6 ${styles.cardTitle}`}>{title}</p>
         <div className={`${styles.cardCaption} xl:mb-8`}>{caption}</div>
-        <Button
-          color="white"
-          className="xl:flex hidden xl:w-[235px] bg-orange-gradient text-primary-50 font-bold xs:rounded-24"
-          onClick={() => {
-            window.open(LINKS.playstore, "_blank");
-          }}
-          rounded="rounded-24"
-        >
+        <Link href="/#kontak" className="xl:flex hidden xl:w-[235px] bg-orange-gradient text-primary-50 font-bold rounded-24 no-underline py-2 px-4 justify-center">
           Yuk coba sekarang!
-        </Button>
-        <Button
-          color="white"
-          className="xl:hidden flex xl:w-[235px] bg-orange-gradient text-primary-50 font-bold xs:rounded-24"
-          onClick={() => {
-            window.open(LINKS.playstore, "_blank");
-          }}
-          rounded="rounded-24"
-        >
+        </Link>
+        <Link href="/#kontak" className="xl:hidden flex xl:w-[235px] bg-orange-gradient text-primary-50 font-bold rounded-24 no-underline py-2 px-4 justify-center text-sm">
           Yuk coba sekarang!
-        </Button>
+        </Link>
       </div>
       <div className={`${styles.cardImg}`}>
         <Image src={image} alt="feature" width={454} height={320} />
